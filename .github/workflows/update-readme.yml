@@ -32,7 +32,7 @@ jobs:
   # ─────────────────────────────────────────
   # Job 2: 3D Contribution Graph
   # ─────────────────────────────────────────
-  3d-contrib:
+  contrib_3d:
     name: 🌐 Generate 3D Contribution Graph
     runs-on: ubuntu-latest
     steps:
@@ -127,7 +127,7 @@ jobs:
   # ─────────────────────────────────────────
   commit-assets:
     name: 📦 Commit All Assets
-    needs: [snake, 3d-contrib, terminal-stats, heatmap]
+    needs: [snake, contrib_3d, terminal-stats, heatmap]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4

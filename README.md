@@ -183,7 +183,7 @@ $ cat about.txt
 
 ### 🟡 LeetCode
 
-[![LeetCode Stats](https://leetcard.jacoblin.cool/ashmitv704?theme=dark&font=JetBrains+Mono&ext=heatmap&border=0&bg=0D1117)](https://leetcode.com/ashmitv704)
+[![LeetCode Stats](https://leetcard.jacoblin.cool/Trying_out?theme=dark&font=JetBrains+Mono&ext=heatmap&border=0&bg=0D1117)](https://leetcode.com/Trying_out)
 
 **Knight 🏅** · Max Rating **2073** · **700+** solved
 
@@ -194,11 +194,11 @@ $ cat about.txt
 
 ### 🔵 Codeforces
 
-[![Codeforces Stats](https://codeforces-readme-stats.vercel.app/api/badge?username=ashmitv704&style=for-the-badge)](https://codeforces.com/profile/ashmitv704)
+[![Codeforces Stats](https://codeforces-readme-stats.vercel.app/api/badge?username=Scarceflyer7&style=for-the-badge)](https://codeforces.com/profile/Scarceflyer7)
 
 <br/>
 
-![CF Card](https://codeforces-stats-vlx.vercel.app/api/card?username=ashmitv704&theme=github_dark)
+![CF Card](https://codeforces-stats-vlx.vercel.app/api/card?username=Scarceflyer7&theme=github_dark)
 
 **Pupil** · Current Rating **1385**
 
@@ -208,7 +208,7 @@ $ cat about.txt
 
 <!-- LeetCode heatmap / streak -->
 <br/>
-<img src="https://leetcard.jacoblin.cool/ashmitv704?theme=dark&font=JetBrains+Mono&ext=activity&border=0&bg=0D1117" width="860" alt="LeetCode Activity" />
+<img src="https://leetcard.jacoblin.cool/Trying_out?theme=dark&font=JetBrains+Mono&ext=activity&border=0&bg=0D1117" width="860" alt="LeetCode Activity" />
 
 </div>
 

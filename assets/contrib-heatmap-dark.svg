@@ -1,1983 +1,407 @@
-<svg xmlns="http://www.w3.org/2000/svg"
-     width="932" height="214"
-     viewBox="0 0 932 214">
-
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 890 265" width="890" height="265">
   <defs>
     <style>
-      @keyframes popIn {
-        from { opacity: 0; transform: scale(0.4); }
-        to   { opacity: 1; transform: scale(1);   }
+      @keyframes termReveal {
+        0% { opacity: 0; transform: translateY(-2px); }
+        100% { opacity: 1; transform: translateY(0); }
       }
-      @keyframes fadeIn {
-        from { opacity: 0; }
-        to   { opacity: 1; }
+      @keyframes blinkCursor {
+        0%, 100% { opacity: 1; }
+        50% { opacity: 0; }
       }
     </style>
   </defs>
 
-  <!-- Background -->
-  <rect width="932" height="214" rx="10" fill="#0D1117" />
-  <rect width="930" height="212" x="1" y="1" rx="10"
-        fill="none" stroke="#30363D" stroke-width="1" />
+  <!-- Terminal Window Background -->
+  <rect width="890" height="265" rx="8" fill="#0D1117" stroke="#30363D" stroke-width="1.2" />
 
-  
-  <text x="44" y="22"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" fill="#58A6FF">
-    ashmitv704@github
-  </text>
-  <text x="196" y="22"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" fill="#8B949E">
-    :~$ git log --all --oneline | wc -l
-  </text>
-  <text x="44" y="40"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="13" fill="#8B949E">
-    596 commits in the last year
-  </text>
-  
-  <text x="60" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.02s forwards;">
-    Nov
-  </text>
-  <text x="124" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.10s forwards;">
-    Dec
-  </text>
-  <text x="204" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.20s forwards;">
-    Jan
-  </text>
-  <text x="268" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.28s forwards;">
-    Feb
-  </text>
-  <text x="332" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.36s forwards;">
-    Mar
-  </text>
-  <text x="412" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.46s forwards;">
-    Apr
-  </text>
-  <text x="476" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.54s forwards;">
-    May
-  </text>
-  <text x="540" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.62s forwards;">
-    Jun
-  </text>
-  <text x="620" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.72s forwards;">
-    Jul
-  </text>
-  <text x="684" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.80s forwards;">
-    Aug
-  </text>
-  <text x="764" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.90s forwards;">
-    Sep
-  </text>
-  <text x="828" y="46"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E"
-        opacity="0"
-        style="animation: fadeIn 0.3s ease 0.98s forwards;">
-    Oct
-  </text>
-  
-  <text x="38" y="65" text-anchor="end"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="9" fill="#8B949E">Mon</text>
-  <text x="38" y="97" text-anchor="end"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="9" fill="#8B949E">Wed</text>
-  <text x="38" y="129" text-anchor="end"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="9" fill="#8B949E">Fri</text>
-  
-  <rect x="44" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.010s forwards;">
-    <title>2025-10-29: 2 contributions</title>
-  </rect>
-  <rect x="44" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.015s forwards;">
-    <title>2025-10-30: 0 contributions</title>
-  </rect>
-  <rect x="44" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.020s forwards;">
-    <title>2025-10-31: 0 contributions</title>
-  </rect>
-  <rect x="44" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.025s forwards;">
-    <title>2025-11-01: 0 contributions</title>
-  </rect>
-  <rect x="44" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.030s forwards;">
-    <title>2025-11-02: 0 contributions</title>
-  </rect>
-  <rect x="60" y="54" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.030s forwards;">
-    <title>2025-11-03: 2 contributions</title>
-  </rect>
-  <rect x="60" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.035s forwards;">
-    <title>2025-11-04: 6 contributions</title>
-  </rect>
-  <rect x="60" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.040s forwards;">
-    <title>2025-11-05: 0 contributions</title>
-  </rect>
-  <rect x="60" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.045s forwards;">
-    <title>2025-11-06: 1 contribution</title>
-  </rect>
-  <rect x="60" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.050s forwards;">
-    <title>2025-11-07: 0 contributions</title>
-  </rect>
-  <rect x="60" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.055s forwards;">
-    <title>2025-11-08: 0 contributions</title>
-  </rect>
-  <rect x="60" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.060s forwards;">
-    <title>2025-11-09: 0 contributions</title>
-  </rect>
-  <rect x="76" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.060s forwards;">
-    <title>2025-11-10: 0 contributions</title>
-  </rect>
-  <rect x="76" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.065s forwards;">
-    <title>2025-11-11: 0 contributions</title>
-  </rect>
-  <rect x="76" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.070s forwards;">
-    <title>2025-11-12: 2 contributions</title>
-  </rect>
-  <rect x="76" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.075s forwards;">
-    <title>2025-11-13: 1 contribution</title>
-  </rect>
-  <rect x="76" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.080s forwards;">
-    <title>2025-11-14: 0 contributions</title>
-  </rect>
-  <rect x="76" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.085s forwards;">
-    <title>2025-11-15: 0 contributions</title>
-  </rect>
-  <rect x="76" y="150" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.090s forwards;">
-    <title>2025-11-16: 1 contribution</title>
-  </rect>
-  <rect x="92" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.090s forwards;">
-    <title>2025-11-17: 0 contributions</title>
-  </rect>
-  <rect x="92" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.095s forwards;">
-    <title>2025-11-18: 4 contributions</title>
-  </rect>
-  <rect x="92" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.100s forwards;">
-    <title>2025-11-19: 2 contributions</title>
-  </rect>
-  <rect x="92" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.105s forwards;">
-    <title>2025-11-20: 0 contributions</title>
-  </rect>
-  <rect x="92" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.110s forwards;">
-    <title>2025-11-21: 0 contributions</title>
-  </rect>
-  <rect x="92" y="134" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.115s forwards;">
-    <title>2025-11-22: 2 contributions</title>
-  </rect>
-  <rect x="92" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.120s forwards;">
-    <title>2025-11-23: 0 contributions</title>
-  </rect>
-  <rect x="108" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.120s forwards;">
-    <title>2025-11-24: 0 contributions</title>
-  </rect>
-  <rect x="108" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.125s forwards;">
-    <title>2025-11-25: 0 contributions</title>
-  </rect>
-  <rect x="108" y="86" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.130s forwards;">
-    <title>2025-11-26: 4 contributions</title>
-  </rect>
-  <rect x="108" y="102" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.135s forwards;">
-    <title>2025-11-27: 2 contributions</title>
-  </rect>
-  <rect x="108" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.140s forwards;">
-    <title>2025-11-28: 4 contributions</title>
-  </rect>
-  <rect x="108" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.145s forwards;">
-    <title>2025-11-29: 0 contributions</title>
-  </rect>
-  <rect x="108" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.150s forwards;">
-    <title>2025-11-30: 0 contributions</title>
-  </rect>
-  <rect x="124" y="54" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 0.150s forwards;">
-    <title>2025-12-01: 9 contributions</title>
-  </rect>
-  <rect x="124" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.155s forwards;">
-    <title>2025-12-02: 0 contributions</title>
-  </rect>
-  <rect x="124" y="86" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.160s forwards;">
-    <title>2025-12-03: 1 contribution</title>
-  </rect>
-  <rect x="124" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.165s forwards;">
-    <title>2025-12-04: 4 contributions</title>
-  </rect>
-  <rect x="124" y="118" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.170s forwards;">
-    <title>2025-12-05: 2 contributions</title>
-  </rect>
-  <rect x="124" y="134" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.175s forwards;">
-    <title>2025-12-06: 1 contribution</title>
-  </rect>
-  <rect x="124" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.180s forwards;">
-    <title>2025-12-07: 0 contributions</title>
-  </rect>
-  <rect x="140" y="54" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.180s forwards;">
-    <title>2025-12-08: 2 contributions</title>
-  </rect>
-  <rect x="140" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.185s forwards;">
-    <title>2025-12-09: 0 contributions</title>
-  </rect>
-  <rect x="140" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.190s forwards;">
-    <title>2025-12-10: 0 contributions</title>
-  </rect>
-  <rect x="140" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.195s forwards;">
-    <title>2025-12-11: 0 contributions</title>
-  </rect>
-  <rect x="140" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.200s forwards;">
-    <title>2025-12-12: 0 contributions</title>
-  </rect>
-  <rect x="140" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.205s forwards;">
-    <title>2025-12-13: 0 contributions</title>
-  </rect>
-  <rect x="140" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.210s forwards;">
-    <title>2025-12-14: 0 contributions</title>
-  </rect>
-  <rect x="156" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.210s forwards;">
-    <title>2025-12-15: 0 contributions</title>
-  </rect>
-  <rect x="156" y="70" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.215s forwards;">
-    <title>2025-12-16: 2 contributions</title>
-  </rect>
-  <rect x="156" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.220s forwards;">
-    <title>2025-12-17: 0 contributions</title>
-  </rect>
-  <rect x="156" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.225s forwards;">
-    <title>2025-12-18: 0 contributions</title>
-  </rect>
-  <rect x="156" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.230s forwards;">
-    <title>2025-12-19: 0 contributions</title>
-  </rect>
-  <rect x="156" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.235s forwards;">
-    <title>2025-12-20: 0 contributions</title>
-  </rect>
-  <rect x="156" y="150" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.240s forwards;">
-    <title>2025-12-21: 1 contribution</title>
-  </rect>
-  <rect x="172" y="54" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.240s forwards;">
-    <title>2025-12-22: 2 contributions</title>
-  </rect>
-  <rect x="172" y="70" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.245s forwards;">
-    <title>2025-12-23: 2 contributions</title>
-  </rect>
-  <rect x="172" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.250s forwards;">
-    <title>2025-12-24: 0 contributions</title>
-  </rect>
-  <rect x="172" y="102" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.255s forwards;">
-    <title>2025-12-25: 2 contributions</title>
-  </rect>
-  <rect x="172" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.260s forwards;">
-    <title>2025-12-26: 0 contributions</title>
-  </rect>
-  <rect x="172" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.265s forwards;">
-    <title>2025-12-27: 0 contributions</title>
-  </rect>
-  <rect x="172" y="150" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.270s forwards;">
-    <title>2025-12-28: 2 contributions</title>
-  </rect>
-  <rect x="188" y="54" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.270s forwards;">
-    <title>2025-12-29: 2 contributions</title>
-  </rect>
-  <rect x="188" y="70" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.275s forwards;">
-    <title>2025-12-30: 1 contribution</title>
-  </rect>
-  <rect x="188" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.280s forwards;">
-    <title>2025-12-31: 2 contributions</title>
-  </rect>
-  <rect x="188" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.285s forwards;">
-    <title>2026-01-01: 4 contributions</title>
-  </rect>
-  <rect x="188" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.290s forwards;">
-    <title>2026-01-02: 4 contributions</title>
-  </rect>
-  <rect x="188" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.295s forwards;">
-    <title>2026-01-03: 0 contributions</title>
-  </rect>
-  <rect x="188" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.300s forwards;">
-    <title>2026-01-04: 0 contributions</title>
-  </rect>
-  <rect x="204" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.300s forwards;">
-    <title>2026-01-05: 0 contributions</title>
-  </rect>
-  <rect x="204" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.305s forwards;">
-    <title>2026-01-06: 0 contributions</title>
-  </rect>
-  <rect x="204" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.310s forwards;">
-    <title>2026-01-07: 0 contributions</title>
-  </rect>
-  <rect x="204" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.315s forwards;">
-    <title>2026-01-08: 6 contributions</title>
-  </rect>
-  <rect x="204" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.320s forwards;">
-    <title>2026-01-09: 6 contributions</title>
-  </rect>
-  <rect x="204" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.325s forwards;">
-    <title>2026-01-10: 0 contributions</title>
-  </rect>
-  <rect x="204" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.330s forwards;">
-    <title>2026-01-11: 0 contributions</title>
-  </rect>
-  <rect x="220" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.330s forwards;">
-    <title>2026-01-12: 0 contributions</title>
-  </rect>
-  <rect x="220" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.335s forwards;">
-    <title>2026-01-13: 6 contributions</title>
-  </rect>
-  <rect x="220" y="86" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.340s forwards;">
-    <title>2026-01-14: 1 contribution</title>
-  </rect>
-  <rect x="220" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.345s forwards;">
-    <title>2026-01-15: 0 contributions</title>
-  </rect>
-  <rect x="220" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.350s forwards;">
-    <title>2026-01-16: 0 contributions</title>
-  </rect>
-  <rect x="220" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.355s forwards;">
-    <title>2026-01-17: 0 contributions</title>
-  </rect>
-  <rect x="220" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.360s forwards;">
-    <title>2026-01-18: 0 contributions</title>
-  </rect>
-  <rect x="236" y="54" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.360s forwards;">
-    <title>2026-01-19: 1 contribution</title>
-  </rect>
-  <rect x="236" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.365s forwards;">
-    <title>2026-01-20: 6 contributions</title>
-  </rect>
-  <rect x="236" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.370s forwards;">
-    <title>2026-01-21: 0 contributions</title>
-  </rect>
-  <rect x="236" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.375s forwards;">
-    <title>2026-01-22: 0 contributions</title>
-  </rect>
-  <rect x="236" y="118" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 0.380s forwards;">
-    <title>2026-01-23: 9 contributions</title>
-  </rect>
-  <rect x="236" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.385s forwards;">
-    <title>2026-01-24: 0 contributions</title>
-  </rect>
-  <rect x="236" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.390s forwards;">
-    <title>2026-01-25: 0 contributions</title>
-  </rect>
-  <rect x="252" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.390s forwards;">
-    <title>2026-01-26: 0 contributions</title>
-  </rect>
-  <rect x="252" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.395s forwards;">
-    <title>2026-01-27: 0 contributions</title>
-  </rect>
-  <rect x="252" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.400s forwards;">
-    <title>2026-01-28: 2 contributions</title>
-  </rect>
-  <rect x="252" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.405s forwards;">
-    <title>2026-01-29: 4 contributions</title>
-  </rect>
-  <rect x="252" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.410s forwards;">
-    <title>2026-01-30: 1 contribution</title>
-  </rect>
-  <rect x="252" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.415s forwards;">
-    <title>2026-01-31: 0 contributions</title>
-  </rect>
-  <rect x="252" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.420s forwards;">
-    <title>2026-02-01: 0 contributions</title>
-  </rect>
-  <rect x="268" y="54" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 0.420s forwards;">
-    <title>2026-02-02: 9 contributions</title>
-  </rect>
-  <rect x="268" y="70" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.425s forwards;">
-    <title>2026-02-03: 1 contribution</title>
-  </rect>
-  <rect x="268" y="86" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 0.430s forwards;">
-    <title>2026-02-04: 9 contributions</title>
-  </rect>
-  <rect x="268" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.435s forwards;">
-    <title>2026-02-05: 4 contributions</title>
-  </rect>
-  <rect x="268" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.440s forwards;">
-    <title>2026-02-06: 0 contributions</title>
-  </rect>
-  <rect x="268" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.445s forwards;">
-    <title>2026-02-07: 0 contributions</title>
-  </rect>
-  <rect x="268" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.450s forwards;">
-    <title>2026-02-08: 0 contributions</title>
-  </rect>
-  <rect x="284" y="54" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.450s forwards;">
-    <title>2026-02-09: 1 contribution</title>
-  </rect>
-  <rect x="284" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.455s forwards;">
-    <title>2026-02-10: 0 contributions</title>
-  </rect>
-  <rect x="284" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.460s forwards;">
-    <title>2026-02-11: 2 contributions</title>
-  </rect>
-  <rect x="284" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.465s forwards;">
-    <title>2026-02-12: 0 contributions</title>
-  </rect>
-  <rect x="284" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.470s forwards;">
-    <title>2026-02-13: 1 contribution</title>
-  </rect>
-  <rect x="284" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.475s forwards;">
-    <title>2026-02-14: 0 contributions</title>
-  </rect>
-  <rect x="284" y="150" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.480s forwards;">
-    <title>2026-02-15: 2 contributions</title>
-  </rect>
-  <rect x="300" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.480s forwards;">
-    <title>2026-02-16: 6 contributions</title>
-  </rect>
-  <rect x="300" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.485s forwards;">
-    <title>2026-02-17: 0 contributions</title>
-  </rect>
-  <rect x="300" y="86" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.490s forwards;">
-    <title>2026-02-18: 1 contribution</title>
-  </rect>
-  <rect x="300" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.495s forwards;">
-    <title>2026-02-19: 0 contributions</title>
-  </rect>
-  <rect x="300" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.500s forwards;">
-    <title>2026-02-20: 6 contributions</title>
-  </rect>
-  <rect x="300" y="134" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.505s forwards;">
-    <title>2026-02-21: 1 contribution</title>
-  </rect>
-  <rect x="300" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.510s forwards;">
-    <title>2026-02-22: 0 contributions</title>
-  </rect>
-  <rect x="316" y="54" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.510s forwards;">
-    <title>2026-02-23: 2 contributions</title>
-  </rect>
-  <rect x="316" y="70" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.515s forwards;">
-    <title>2026-02-24: 2 contributions</title>
-  </rect>
-  <rect x="316" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.520s forwards;">
-    <title>2026-02-25: 0 contributions</title>
-  </rect>
-  <rect x="316" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.525s forwards;">
-    <title>2026-02-26: 4 contributions</title>
-  </rect>
-  <rect x="316" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.530s forwards;">
-    <title>2026-02-27: 1 contribution</title>
-  </rect>
-  <rect x="316" y="134" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.535s forwards;">
-    <title>2026-02-28: 1 contribution</title>
-  </rect>
-  <rect x="316" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.540s forwards;">
-    <title>2026-03-01: 0 contributions</title>
-  </rect>
-  <rect x="332" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.540s forwards;">
-    <title>2026-03-02: 0 contributions</title>
-  </rect>
-  <rect x="332" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.545s forwards;">
-    <title>2026-03-03: 0 contributions</title>
-  </rect>
-  <rect x="332" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.550s forwards;">
-    <title>2026-03-04: 0 contributions</title>
-  </rect>
-  <rect x="332" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.555s forwards;">
-    <title>2026-03-05: 6 contributions</title>
-  </rect>
-  <rect x="332" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.560s forwards;">
-    <title>2026-03-06: 6 contributions</title>
-  </rect>
-  <rect x="332" y="134" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.565s forwards;">
-    <title>2026-03-07: 1 contribution</title>
-  </rect>
-  <rect x="332" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.570s forwards;">
-    <title>2026-03-08: 0 contributions</title>
-  </rect>
-  <rect x="348" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.570s forwards;">
-    <title>2026-03-09: 0 contributions</title>
-  </rect>
-  <rect x="348" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.575s forwards;">
-    <title>2026-03-10: 6 contributions</title>
-  </rect>
-  <rect x="348" y="86" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.580s forwards;">
-    <title>2026-03-11: 6 contributions</title>
-  </rect>
-  <rect x="348" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.585s forwards;">
-    <title>2026-03-12: 0 contributions</title>
-  </rect>
-  <rect x="348" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.590s forwards;">
-    <title>2026-03-13: 1 contribution</title>
-  </rect>
-  <rect x="348" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.595s forwards;">
-    <title>2026-03-14: 0 contributions</title>
-  </rect>
-  <rect x="348" y="150" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.600s forwards;">
-    <title>2026-03-15: 1 contribution</title>
-  </rect>
-  <rect x="364" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.600s forwards;">
-    <title>2026-03-16: 4 contributions</title>
-  </rect>
-  <rect x="364" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.605s forwards;">
-    <title>2026-03-17: 0 contributions</title>
-  </rect>
-  <rect x="364" y="86" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.610s forwards;">
-    <title>2026-03-18: 1 contribution</title>
-  </rect>
-  <rect x="364" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.615s forwards;">
-    <title>2026-03-19: 1 contribution</title>
-  </rect>
-  <rect x="364" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.620s forwards;">
-    <title>2026-03-20: 0 contributions</title>
-  </rect>
-  <rect x="364" y="134" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.625s forwards;">
-    <title>2026-03-21: 1 contribution</title>
-  </rect>
-  <rect x="364" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.630s forwards;">
-    <title>2026-03-22: 0 contributions</title>
-  </rect>
-  <rect x="380" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.630s forwards;">
-    <title>2026-03-23: 0 contributions</title>
-  </rect>
-  <rect x="380" y="70" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.635s forwards;">
-    <title>2026-03-24: 1 contribution</title>
-  </rect>
-  <rect x="380" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.640s forwards;">
-    <title>2026-03-25: 2 contributions</title>
-  </rect>
-  <rect x="380" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.645s forwards;">
-    <title>2026-03-26: 0 contributions</title>
-  </rect>
-  <rect x="380" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.650s forwards;">
-    <title>2026-03-27: 0 contributions</title>
-  </rect>
-  <rect x="380" y="134" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.655s forwards;">
-    <title>2026-03-28: 2 contributions</title>
-  </rect>
-  <rect x="380" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.660s forwards;">
-    <title>2026-03-29: 0 contributions</title>
-  </rect>
-  <rect x="396" y="54" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.660s forwards;">
-    <title>2026-03-30: 1 contribution</title>
-  </rect>
-  <rect x="396" y="70" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.665s forwards;">
-    <title>2026-03-31: 1 contribution</title>
-  </rect>
-  <rect x="396" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.670s forwards;">
-    <title>2026-04-01: 0 contributions</title>
-  </rect>
-  <rect x="396" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.675s forwards;">
-    <title>2026-04-02: 0 contributions</title>
-  </rect>
-  <rect x="396" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.680s forwards;">
-    <title>2026-04-03: 0 contributions</title>
-  </rect>
-  <rect x="396" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.685s forwards;">
-    <title>2026-04-04: 0 contributions</title>
-  </rect>
-  <rect x="396" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.690s forwards;">
-    <title>2026-04-05: 0 contributions</title>
-  </rect>
-  <rect x="412" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.690s forwards;">
-    <title>2026-04-06: 0 contributions</title>
-  </rect>
-  <rect x="412" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.695s forwards;">
-    <title>2026-04-07: 0 contributions</title>
-  </rect>
-  <rect x="412" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.700s forwards;">
-    <title>2026-04-08: 2 contributions</title>
-  </rect>
-  <rect x="412" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.705s forwards;">
-    <title>2026-04-09: 0 contributions</title>
-  </rect>
-  <rect x="412" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.710s forwards;">
-    <title>2026-04-10: 6 contributions</title>
-  </rect>
-  <rect x="412" y="134" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.715s forwards;">
-    <title>2026-04-11: 1 contribution</title>
-  </rect>
-  <rect x="412" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.720s forwards;">
-    <title>2026-04-12: 0 contributions</title>
-  </rect>
-  <rect x="428" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.720s forwards;">
-    <title>2026-04-13: 0 contributions</title>
-  </rect>
-  <rect x="428" y="70" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.725s forwards;">
-    <title>2026-04-14: 2 contributions</title>
-  </rect>
-  <rect x="428" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.730s forwards;">
-    <title>2026-04-15: 0 contributions</title>
-  </rect>
-  <rect x="428" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.735s forwards;">
-    <title>2026-04-16: 0 contributions</title>
-  </rect>
-  <rect x="428" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.740s forwards;">
-    <title>2026-04-17: 6 contributions</title>
-  </rect>
-  <rect x="428" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.745s forwards;">
-    <title>2026-04-18: 0 contributions</title>
-  </rect>
-  <rect x="428" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.750s forwards;">
-    <title>2026-04-19: 0 contributions</title>
-  </rect>
-  <rect x="444" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.750s forwards;">
-    <title>2026-04-20: 4 contributions</title>
-  </rect>
-  <rect x="444" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.755s forwards;">
-    <title>2026-04-21: 4 contributions</title>
-  </rect>
-  <rect x="444" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.760s forwards;">
-    <title>2026-04-22: 0 contributions</title>
-  </rect>
-  <rect x="444" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.765s forwards;">
-    <title>2026-04-23: 0 contributions</title>
-  </rect>
-  <rect x="444" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.770s forwards;">
-    <title>2026-04-24: 1 contribution</title>
-  </rect>
-  <rect x="444" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.775s forwards;">
-    <title>2026-04-25: 0 contributions</title>
-  </rect>
-  <rect x="444" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.780s forwards;">
-    <title>2026-04-26: 0 contributions</title>
-  </rect>
-  <rect x="460" y="54" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.780s forwards;">
-    <title>2026-04-27: 2 contributions</title>
-  </rect>
-  <rect x="460" y="70" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.785s forwards;">
-    <title>2026-04-28: 2 contributions</title>
-  </rect>
-  <rect x="460" y="86" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 0.790s forwards;">
-    <title>2026-04-29: 9 contributions</title>
-  </rect>
-  <rect x="460" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.795s forwards;">
-    <title>2026-04-30: 0 contributions</title>
-  </rect>
-  <rect x="460" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.800s forwards;">
-    <title>2026-05-01: 1 contribution</title>
-  </rect>
-  <rect x="460" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.805s forwards;">
-    <title>2026-05-02: 0 contributions</title>
-  </rect>
-  <rect x="460" y="150" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.810s forwards;">
-    <title>2026-05-03: 1 contribution</title>
-  </rect>
-  <rect x="476" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.810s forwards;">
-    <title>2026-05-04: 0 contributions</title>
-  </rect>
-  <rect x="476" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.815s forwards;">
-    <title>2026-05-05: 0 contributions</title>
-  </rect>
-  <rect x="476" y="86" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.820s forwards;">
-    <title>2026-05-06: 1 contribution</title>
-  </rect>
-  <rect x="476" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.825s forwards;">
-    <title>2026-05-07: 1 contribution</title>
-  </rect>
-  <rect x="476" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.830s forwards;">
-    <title>2026-05-08: 0 contributions</title>
-  </rect>
-  <rect x="476" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.835s forwards;">
-    <title>2026-05-09: 0 contributions</title>
-  </rect>
-  <rect x="476" y="150" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.840s forwards;">
-    <title>2026-05-10: 1 contribution</title>
-  </rect>
-  <rect x="492" y="54" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.840s forwards;">
-    <title>2026-05-11: 1 contribution</title>
-  </rect>
-  <rect x="492" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.845s forwards;">
-    <title>2026-05-12: 4 contributions</title>
-  </rect>
-  <rect x="492" y="86" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.850s forwards;">
-    <title>2026-05-13: 1 contribution</title>
-  </rect>
-  <rect x="492" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.855s forwards;">
-    <title>2026-05-14: 0 contributions</title>
-  </rect>
-  <rect x="492" y="118" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 0.860s forwards;">
-    <title>2026-05-15: 9 contributions</title>
-  </rect>
-  <rect x="492" y="134" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.865s forwards;">
-    <title>2026-05-16: 1 contribution</title>
-  </rect>
-  <rect x="492" y="150" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.870s forwards;">
-    <title>2026-05-17: 2 contributions</title>
-  </rect>
-  <rect x="508" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.870s forwards;">
-    <title>2026-05-18: 6 contributions</title>
-  </rect>
-  <rect x="508" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.875s forwards;">
-    <title>2026-05-19: 4 contributions</title>
-  </rect>
-  <rect x="508" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.880s forwards;">
-    <title>2026-05-20: 0 contributions</title>
-  </rect>
-  <rect x="508" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.885s forwards;">
-    <title>2026-05-21: 1 contribution</title>
-  </rect>
-  <rect x="508" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.890s forwards;">
-    <title>2026-05-22: 0 contributions</title>
-  </rect>
-  <rect x="508" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.895s forwards;">
-    <title>2026-05-23: 0 contributions</title>
-  </rect>
-  <rect x="508" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.900s forwards;">
-    <title>2026-05-24: 0 contributions</title>
-  </rect>
-  <rect x="524" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.900s forwards;">
-    <title>2026-05-25: 0 contributions</title>
-  </rect>
-  <rect x="524" y="70" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 0.905s forwards;">
-    <title>2026-05-26: 9 contributions</title>
-  </rect>
-  <rect x="524" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.910s forwards;">
-    <title>2026-05-27: 0 contributions</title>
-  </rect>
-  <rect x="524" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 0.915s forwards;">
-    <title>2026-05-28: 4 contributions</title>
-  </rect>
-  <rect x="524" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.920s forwards;">
-    <title>2026-05-29: 1 contribution</title>
-  </rect>
-  <rect x="524" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.925s forwards;">
-    <title>2026-05-30: 0 contributions</title>
-  </rect>
-  <rect x="524" y="150" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.930s forwards;">
-    <title>2026-05-31: 2 contributions</title>
-  </rect>
-  <rect x="540" y="54" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 0.930s forwards;">
-    <title>2026-06-01: 9 contributions</title>
-  </rect>
-  <rect x="540" y="70" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.935s forwards;">
-    <title>2026-06-02: 1 contribution</title>
-  </rect>
-  <rect x="540" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.940s forwards;">
-    <title>2026-06-03: 2 contributions</title>
-  </rect>
-  <rect x="540" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.945s forwards;">
-    <title>2026-06-04: 0 contributions</title>
-  </rect>
-  <rect x="540" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.950s forwards;">
-    <title>2026-06-05: 0 contributions</title>
-  </rect>
-  <rect x="540" y="134" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.955s forwards;">
-    <title>2026-06-06: 2 contributions</title>
-  </rect>
-  <rect x="540" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.960s forwards;">
-    <title>2026-06-07: 0 contributions</title>
-  </rect>
-  <rect x="556" y="54" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.960s forwards;">
-    <title>2026-06-08: 1 contribution</title>
-  </rect>
-  <rect x="556" y="70" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 0.965s forwards;">
-    <title>2026-06-09: 2 contributions</title>
-  </rect>
-  <rect x="556" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.970s forwards;">
-    <title>2026-06-10: 0 contributions</title>
-  </rect>
-  <rect x="556" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.975s forwards;">
-    <title>2026-06-11: 1 contribution</title>
-  </rect>
-  <rect x="556" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.980s forwards;">
-    <title>2026-06-12: 1 contribution</title>
-  </rect>
-  <rect x="556" y="134" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 0.985s forwards;">
-    <title>2026-06-13: 1 contribution</title>
-  </rect>
-  <rect x="556" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.990s forwards;">
-    <title>2026-06-14: 0 contributions</title>
-  </rect>
-  <rect x="572" y="54" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 0.990s forwards;">
-    <title>2026-06-15: 9 contributions</title>
-  </rect>
-  <rect x="572" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 0.995s forwards;">
-    <title>2026-06-16: 0 contributions</title>
-  </rect>
-  <rect x="572" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.000s forwards;">
-    <title>2026-06-17: 0 contributions</title>
-  </rect>
-  <rect x="572" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.005s forwards;">
-    <title>2026-06-18: 1 contribution</title>
-  </rect>
-  <rect x="572" y="118" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.010s forwards;">
-    <title>2026-06-19: 2 contributions</title>
-  </rect>
-  <rect x="572" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.015s forwards;">
-    <title>2026-06-20: 0 contributions</title>
-  </rect>
-  <rect x="572" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.020s forwards;">
-    <title>2026-06-21: 0 contributions</title>
-  </rect>
-  <rect x="588" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.020s forwards;">
-    <title>2026-06-22: 6 contributions</title>
-  </rect>
-  <rect x="588" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.025s forwards;">
-    <title>2026-06-23: 0 contributions</title>
-  </rect>
-  <rect x="588" y="86" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.030s forwards;">
-    <title>2026-06-24: 1 contribution</title>
-  </rect>
-  <rect x="588" y="102" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.035s forwards;">
-    <title>2026-06-25: 2 contributions</title>
-  </rect>
-  <rect x="588" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.040s forwards;">
-    <title>2026-06-26: 1 contribution</title>
-  </rect>
-  <rect x="588" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.045s forwards;">
-    <title>2026-06-27: 0 contributions</title>
-  </rect>
-  <rect x="588" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.050s forwards;">
-    <title>2026-06-28: 0 contributions</title>
-  </rect>
-  <rect x="604" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.050s forwards;">
-    <title>2026-06-29: 6 contributions</title>
-  </rect>
-  <rect x="604" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.055s forwards;">
-    <title>2026-06-30: 0 contributions</title>
-  </rect>
-  <rect x="604" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.060s forwards;">
-    <title>2026-07-01: 2 contributions</title>
-  </rect>
-  <rect x="604" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.065s forwards;">
-    <title>2026-07-02: 0 contributions</title>
-  </rect>
-  <rect x="604" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.070s forwards;">
-    <title>2026-07-03: 0 contributions</title>
-  </rect>
-  <rect x="604" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.075s forwards;">
-    <title>2026-07-04: 0 contributions</title>
-  </rect>
-  <rect x="604" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.080s forwards;">
-    <title>2026-07-05: 0 contributions</title>
-  </rect>
-  <rect x="620" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.080s forwards;">
-    <title>2026-07-06: 0 contributions</title>
-  </rect>
-  <rect x="620" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.085s forwards;">
-    <title>2026-07-07: 4 contributions</title>
-  </rect>
-  <rect x="620" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.090s forwards;">
-    <title>2026-07-08: 0 contributions</title>
-  </rect>
-  <rect x="620" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.095s forwards;">
-    <title>2026-07-09: 1 contribution</title>
-  </rect>
-  <rect x="620" y="118" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 1.100s forwards;">
-    <title>2026-07-10: 9 contributions</title>
-  </rect>
-  <rect x="620" y="134" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.105s forwards;">
-    <title>2026-07-11: 2 contributions</title>
-  </rect>
-  <rect x="620" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.110s forwards;">
-    <title>2026-07-12: 0 contributions</title>
-  </rect>
-  <rect x="636" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.110s forwards;">
-    <title>2026-07-13: 0 contributions</title>
-  </rect>
-  <rect x="636" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.115s forwards;">
-    <title>2026-07-14: 0 contributions</title>
-  </rect>
-  <rect x="636" y="86" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.120s forwards;">
-    <title>2026-07-15: 6 contributions</title>
-  </rect>
-  <rect x="636" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.125s forwards;">
-    <title>2026-07-16: 6 contributions</title>
-  </rect>
-  <rect x="636" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.130s forwards;">
-    <title>2026-07-17: 6 contributions</title>
-  </rect>
-  <rect x="636" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.135s forwards;">
-    <title>2026-07-18: 0 contributions</title>
-  </rect>
-  <rect x="636" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.140s forwards;">
-    <title>2026-07-19: 0 contributions</title>
-  </rect>
-  <rect x="652" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.140s forwards;">
-    <title>2026-07-20: 4 contributions</title>
-  </rect>
-  <rect x="652" y="70" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.145s forwards;">
-    <title>2026-07-21: 2 contributions</title>
-  </rect>
-  <rect x="652" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.150s forwards;">
-    <title>2026-07-22: 2 contributions</title>
-  </rect>
-  <rect x="652" y="102" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 1.155s forwards;">
-    <title>2026-07-23: 9 contributions</title>
-  </rect>
-  <rect x="652" y="118" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.160s forwards;">
-    <title>2026-07-24: 2 contributions</title>
-  </rect>
-  <rect x="652" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.165s forwards;">
-    <title>2026-07-25: 0 contributions</title>
-  </rect>
-  <rect x="652" y="150" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.170s forwards;">
-    <title>2026-07-26: 1 contribution</title>
-  </rect>
-  <rect x="668" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.170s forwards;">
-    <title>2026-07-27: 0 contributions</title>
-  </rect>
-  <rect x="668" y="70" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.175s forwards;">
-    <title>2026-07-28: 2 contributions</title>
-  </rect>
-  <rect x="668" y="86" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.180s forwards;">
-    <title>2026-07-29: 6 contributions</title>
-  </rect>
-  <rect x="668" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.185s forwards;">
-    <title>2026-07-30: 0 contributions</title>
-  </rect>
-  <rect x="668" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.190s forwards;">
-    <title>2026-07-31: 0 contributions</title>
-  </rect>
-  <rect x="668" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.195s forwards;">
-    <title>2026-08-01: 0 contributions</title>
-  </rect>
-  <rect x="668" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.200s forwards;">
-    <title>2026-08-02: 0 contributions</title>
-  </rect>
-  <rect x="684" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.200s forwards;">
-    <title>2026-08-03: 0 contributions</title>
-  </rect>
-  <rect x="684" y="70" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.205s forwards;">
-    <title>2026-08-04: 2 contributions</title>
-  </rect>
-  <rect x="684" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.210s forwards;">
-    <title>2026-08-05: 2 contributions</title>
-  </rect>
-  <rect x="684" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.215s forwards;">
-    <title>2026-08-06: 0 contributions</title>
-  </rect>
-  <rect x="684" y="118" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.220s forwards;">
-    <title>2026-08-07: 2 contributions</title>
-  </rect>
-  <rect x="684" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.225s forwards;">
-    <title>2026-08-08: 0 contributions</title>
-  </rect>
-  <rect x="684" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.230s forwards;">
-    <title>2026-08-09: 0 contributions</title>
-  </rect>
-  <rect x="700" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.230s forwards;">
-    <title>2026-08-10: 6 contributions</title>
-  </rect>
-  <rect x="700" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.235s forwards;">
-    <title>2026-08-11: 4 contributions</title>
-  </rect>
-  <rect x="700" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.240s forwards;">
-    <title>2026-08-12: 0 contributions</title>
-  </rect>
-  <rect x="700" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.245s forwards;">
-    <title>2026-08-13: 1 contribution</title>
-  </rect>
-  <rect x="700" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.250s forwards;">
-    <title>2026-08-14: 0 contributions</title>
-  </rect>
-  <rect x="700" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.255s forwards;">
-    <title>2026-08-15: 0 contributions</title>
-  </rect>
-  <rect x="700" y="150" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.260s forwards;">
-    <title>2026-08-16: 1 contribution</title>
-  </rect>
-  <rect x="716" y="54" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.260s forwards;">
-    <title>2026-08-17: 2 contributions</title>
-  </rect>
-  <rect x="716" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.265s forwards;">
-    <title>2026-08-18: 0 contributions</title>
-  </rect>
-  <rect x="716" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.270s forwards;">
-    <title>2026-08-19: 2 contributions</title>
-  </rect>
-  <rect x="716" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.275s forwards;">
-    <title>2026-08-20: 1 contribution</title>
-  </rect>
-  <rect x="716" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.280s forwards;">
-    <title>2026-08-21: 1 contribution</title>
-  </rect>
-  <rect x="716" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.285s forwards;">
-    <title>2026-08-22: 0 contributions</title>
-  </rect>
-  <rect x="716" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.290s forwards;">
-    <title>2026-08-23: 0 contributions</title>
-  </rect>
-  <rect x="732" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.290s forwards;">
-    <title>2026-08-24: 6 contributions</title>
-  </rect>
-  <rect x="732" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.295s forwards;">
-    <title>2026-08-25: 6 contributions</title>
-  </rect>
-  <rect x="732" y="86" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.300s forwards;">
-    <title>2026-08-26: 1 contribution</title>
-  </rect>
-  <rect x="732" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.305s forwards;">
-    <title>2026-08-27: 4 contributions</title>
-  </rect>
-  <rect x="732" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.310s forwards;">
-    <title>2026-08-28: 1 contribution</title>
-  </rect>
-  <rect x="732" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.315s forwards;">
-    <title>2026-08-29: 0 contributions</title>
-  </rect>
-  <rect x="732" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.320s forwards;">
-    <title>2026-08-30: 0 contributions</title>
-  </rect>
-  <rect x="748" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.320s forwards;">
-    <title>2026-08-31: 0 contributions</title>
-  </rect>
-  <rect x="748" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.325s forwards;">
-    <title>2026-09-01: 6 contributions</title>
-  </rect>
-  <rect x="748" y="86" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.330s forwards;">
-    <title>2026-09-02: 4 contributions</title>
-  </rect>
-  <rect x="748" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.335s forwards;">
-    <title>2026-09-03: 4 contributions</title>
-  </rect>
-  <rect x="748" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.340s forwards;">
-    <title>2026-09-04: 6 contributions</title>
-  </rect>
-  <rect x="748" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.345s forwards;">
-    <title>2026-09-05: 0 contributions</title>
-  </rect>
-  <rect x="748" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.350s forwards;">
-    <title>2026-09-06: 0 contributions</title>
-  </rect>
-  <rect x="764" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.350s forwards;">
-    <title>2026-09-07: 0 contributions</title>
-  </rect>
-  <rect x="764" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.355s forwards;">
-    <title>2026-09-08: 4 contributions</title>
-  </rect>
-  <rect x="764" y="86" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.360s forwards;">
-    <title>2026-09-09: 6 contributions</title>
-  </rect>
-  <rect x="764" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.365s forwards;">
-    <title>2026-09-10: 1 contribution</title>
-  </rect>
-  <rect x="764" y="118" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.370s forwards;">
-    <title>2026-09-11: 2 contributions</title>
-  </rect>
-  <rect x="764" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.375s forwards;">
-    <title>2026-09-12: 0 contributions</title>
-  </rect>
-  <rect x="764" y="150" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.380s forwards;">
-    <title>2026-09-13: 1 contribution</title>
-  </rect>
-  <rect x="780" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.380s forwards;">
-    <title>2026-09-14: 4 contributions</title>
-  </rect>
-  <rect x="780" y="70" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 1.385s forwards;">
-    <title>2026-09-15: 9 contributions</title>
-  </rect>
-  <rect x="780" y="86" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.390s forwards;">
-    <title>2026-09-16: 4 contributions</title>
-  </rect>
-  <rect x="780" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.395s forwards;">
-    <title>2026-09-17: 6 contributions</title>
-  </rect>
-  <rect x="780" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.400s forwards;">
-    <title>2026-09-18: 0 contributions</title>
-  </rect>
-  <rect x="780" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.405s forwards;">
-    <title>2026-09-19: 0 contributions</title>
-  </rect>
-  <rect x="780" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.410s forwards;">
-    <title>2026-09-20: 0 contributions</title>
-  </rect>
-  <rect x="796" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.410s forwards;">
-    <title>2026-09-21: 6 contributions</title>
-  </rect>
-  <rect x="796" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.415s forwards;">
-    <title>2026-09-22: 4 contributions</title>
-  </rect>
-  <rect x="796" y="86" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.420s forwards;">
-    <title>2026-09-23: 4 contributions</title>
-  </rect>
-  <rect x="796" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.425s forwards;">
-    <title>2026-09-24: 4 contributions</title>
-  </rect>
-  <rect x="796" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.430s forwards;">
-    <title>2026-09-25: 0 contributions</title>
-  </rect>
-  <rect x="796" y="134" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.435s forwards;">
-    <title>2026-09-26: 1 contribution</title>
-  </rect>
-  <rect x="796" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.440s forwards;">
-    <title>2026-09-27: 0 contributions</title>
-  </rect>
-  <rect x="812" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.440s forwards;">
-    <title>2026-09-28: 6 contributions</title>
-  </rect>
-  <rect x="812" y="70" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.445s forwards;">
-    <title>2026-09-29: 4 contributions</title>
-  </rect>
-  <rect x="812" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.450s forwards;">
-    <title>2026-09-30: 0 contributions</title>
-  </rect>
-  <rect x="812" y="102" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.455s forwards;">
-    <title>2026-10-01: 4 contributions</title>
-  </rect>
-  <rect x="812" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.460s forwards;">
-    <title>2026-10-02: 1 contribution</title>
-  </rect>
-  <rect x="812" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.465s forwards;">
-    <title>2026-10-03: 0 contributions</title>
-  </rect>
-  <rect x="812" y="150" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.470s forwards;">
-    <title>2026-10-04: 1 contribution</title>
-  </rect>
-  <rect x="828" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.470s forwards;">
-    <title>2026-10-05: 0 contributions</title>
-  </rect>
-  <rect x="828" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.475s forwards;">
-    <title>2026-10-06: 0 contributions</title>
-  </rect>
-  <rect x="828" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.480s forwards;">
-    <title>2026-10-07: 0 contributions</title>
-  </rect>
-  <rect x="828" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.485s forwards;">
-    <title>2026-10-08: 0 contributions</title>
-  </rect>
-  <rect x="828" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.490s forwards;">
-    <title>2026-10-09: 4 contributions</title>
-  </rect>
-  <rect x="828" y="134" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.495s forwards;">
-    <title>2026-10-10: 2 contributions</title>
-  </rect>
-  <rect x="828" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.500s forwards;">
-    <title>2026-10-11: 0 contributions</title>
-  </rect>
-  <rect x="844" y="54" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.500s forwards;">
-    <title>2026-10-12: 2 contributions</title>
-  </rect>
-  <rect x="844" y="70" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.505s forwards;">
-    <title>2026-10-13: 0 contributions</title>
-  </rect>
-  <rect x="844" y="86" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 1.510s forwards;">
-    <title>2026-10-14: 9 contributions</title>
-  </rect>
-  <rect x="844" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.515s forwards;">
-    <title>2026-10-15: 1 contribution</title>
-  </rect>
-  <rect x="844" y="118" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.520s forwards;">
-    <title>2026-10-16: 6 contributions</title>
-  </rect>
-  <rect x="844" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.525s forwards;">
-    <title>2026-10-17: 0 contributions</title>
-  </rect>
-  <rect x="844" y="150" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.530s forwards;">
-    <title>2026-10-18: 2 contributions</title>
-  </rect>
-  <rect x="860" y="54" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.530s forwards;">
-    <title>2026-10-19: 0 contributions</title>
-  </rect>
-  <rect x="860" y="70" width="13" height="13" rx="2"
-        fill="#39D353" opacity="0"
-        style="animation: popIn 0.25s ease 1.535s forwards;">
-    <title>2026-10-20: 9 contributions</title>
-  </rect>
-  <rect x="860" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.540s forwards;">
-    <title>2026-10-21: 0 contributions</title>
-  </rect>
-  <rect x="860" y="102" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.545s forwards;">
-    <title>2026-10-22: 0 contributions</title>
-  </rect>
-  <rect x="860" y="118" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.550s forwards;">
-    <title>2026-10-23: 1 contribution</title>
-  </rect>
-  <rect x="860" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.555s forwards;">
-    <title>2026-10-24: 0 contributions</title>
-  </rect>
-  <rect x="860" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.560s forwards;">
-    <title>2026-10-25: 0 contributions</title>
-  </rect>
-  <rect x="876" y="54" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.560s forwards;">
-    <title>2026-10-26: 2 contributions</title>
-  </rect>
-  <rect x="876" y="70" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.565s forwards;">
-    <title>2026-10-27: 1 contribution</title>
-  </rect>
-  <rect x="876" y="86" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.570s forwards;">
-    <title>2026-10-28: 0 contributions</title>
-  </rect>
-  <rect x="876" y="102" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.575s forwards;">
-    <title>2026-10-29: 1 contribution</title>
-  </rect>
-  <rect x="876" y="118" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.580s forwards;">
-    <title>2026-10-30: 0 contributions</title>
-  </rect>
-  <rect x="876" y="134" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.585s forwards;">
-    <title>2026-10-31: 0 contributions</title>
-  </rect>
-  <rect x="876" y="150" width="13" height="13" rx="2"
-        fill="#161B22" opacity="0"
-        style="animation: popIn 0.25s ease 1.590s forwards;">
-    <title>2026-11-01: 0 contributions</title>
-  </rect>
-  <rect x="892" y="54" width="13" height="13" rx="2"
-        fill="#26A641" opacity="0"
-        style="animation: popIn 0.25s ease 1.590s forwards;">
-    <title>2026-11-02: 6 contributions</title>
-  </rect>
-  <rect x="892" y="70" width="13" height="13" rx="2"
-        fill="#0E4429" opacity="0"
-        style="animation: popIn 0.25s ease 1.595s forwards;">
-    <title>2026-11-03: 1 contribution</title>
-  </rect>
-  <rect x="892" y="86" width="13" height="13" rx="2"
-        fill="#006D32" opacity="0"
-        style="animation: popIn 0.25s ease 1.600s forwards;">
-    <title>2026-11-04: 2 contributions</title>
-  </rect>
-  
-  <text x="44" y="197"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E">Less</text><rect x="80" y="186" width="13" height="13" rx="2" fill="#161B22" /><rect x="96" y="186" width="13" height="13" rx="2" fill="#0E4429" /><rect x="112" y="186" width="13" height="13" rx="2" fill="#006D32" /><rect x="128" y="186" width="13" height="13" rx="2" fill="#26A641" /><rect x="144" y="186" width="13" height="13" rx="2" fill="#39D353" />
-  <text x="164" y="197"
-        font-family="JetBrains Mono, Fira Code, Consolas, monospace" font-size="10" fill="#8B949E">More</text>
+  <!-- Prompt Command -->
+  <g font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13">
+    <text x="35" y="42" fill="#58A6FF" font-weight="600">ashmitv704@github</text>
+    <text x="180" y="42" fill="#8B949E">~ $</text>
+    <text x="213" y="42" fill="#39D353" font-weight="600">./contributions.sh</text>
+    <rect x="365" y="31" width="7" height="14" fill="#39D353" style="animation: blinkCursor 1s step-end infinite;" />
+  </g>
 
+  <!-- ASCII Glyphs Grid (. : + # @) -->
+  <g>
+    <text x="35.0" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.015s forwards;"><title>2025-10-30: 8 contributions</title>@</text>
+    <text x="35.0" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.02s forwards;"><title>2025-10-31: 8 contributions</title>@</text>
+    <text x="35.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.025s forwards;"><title>2025-11-01: 0 contributions</title>.</text>
+    <text x="35.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.03s forwards;"><title>2025-11-02: 0 contributions</title>.</text>
+    <text x="50.5" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.02s forwards;"><title>2025-11-03: 5 contributions</title>+</text>
+    <text x="50.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.025s forwards;"><title>2025-11-04: 3 contributions</title>:</text>
+    <text x="50.5" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.03s forwards;"><title>2025-11-05: 3 contributions</title>:</text>
+    <text x="50.5" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.035s forwards;"><title>2025-11-06: 12 contributions</title>@</text>
+    <text x="50.5" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.04s forwards;"><title>2025-11-07: 0 contributions</title>.</text>
+    <text x="50.5" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.045s forwards;"><title>2025-11-08: 2 contributions</title>:</text>
+    <text x="50.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.05s forwards;"><title>2025-11-09: 0 contributions</title>.</text>
+    <text x="66.0" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.04s forwards;"><title>2025-11-10: 5 contributions</title>+</text>
+    <text x="66.0" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.045s forwards;"><title>2025-11-11: 8 contributions</title>@</text>
+    <text x="66.0" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.05s forwards;"><title>2025-11-12: 3 contributions</title>:</text>
+    <text x="66.0" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.055s forwards;"><title>2025-11-13: 5 contributions</title>+</text>
+    <text x="66.0" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.06s forwards;"><title>2025-11-14: 3 contributions</title>:</text>
+    <text x="66.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.065s forwards;"><title>2025-11-15: 2 contributions</title>:</text>
+    <text x="66.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.07s forwards;"><title>2025-11-16: 0 contributions</title>.</text>
+    <text x="81.5" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.06s forwards;"><title>2025-11-17: 2 contributions</title>:</text>
+    <text x="81.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.065s forwards;"><title>2025-11-18: 3 contributions</title>:</text>
+    <text x="81.5" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.07s forwards;"><title>2025-11-19: 8 contributions</title>@</text>
+    <text x="81.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.075s forwards;"><title>2025-11-20: 3 contributions</title>:</text>
+    <text x="81.5" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.08s forwards;"><title>2025-11-21: 8 contributions</title>@</text>
+    <text x="81.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.085s forwards;"><title>2025-11-22: 0 contributions</title>.</text>
+    <text x="81.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.09s forwards;"><title>2025-11-23: 0 contributions</title>.</text>
+    <text x="97.0" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.08s forwards;"><title>2025-11-24: 8 contributions</title>@</text>
+    <text x="97.0" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.085s forwards;"><title>2025-11-25: 1 contribution</title>:</text>
+    <text x="97.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.09s forwards;"><title>2025-11-26: 12 contributions</title>@</text>
+    <text x="97.0" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.095s forwards;"><title>2025-11-27: 1 contribution</title>:</text>
+    <text x="97.0" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.1s forwards;"><title>2025-11-28: 12 contributions</title>@</text>
+    <text x="97.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.105s forwards;"><title>2025-11-29: 0 contributions</title>.</text>
+    <text x="97.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.11s forwards;"><title>2025-11-30: 0 contributions</title>.</text>
+    <text x="112.5" y="85.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.1s forwards;"><title>2025-12-01: 0 contributions</title>.</text>
+    <text x="112.5" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.105s forwards;"><title>2025-12-02: 8 contributions</title>@</text>
+    <text x="112.5" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.11s forwards;"><title>2025-12-03: 8 contributions</title>@</text>
+    <text x="112.5" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.115s forwards;"><title>2025-12-04: 8 contributions</title>@</text>
+    <text x="112.5" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.12s forwards;"><title>2025-12-05: 8 contributions</title>@</text>
+    <text x="112.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.125s forwards;"><title>2025-12-06: 0 contributions</title>.</text>
+    <text x="112.5" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.13s forwards;"><title>2025-12-07: 4 contributions</title>:</text>
+    <text x="128.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.12s forwards;"><title>2025-12-08: 2 contributions</title>:</text>
+    <text x="128.0" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.125s forwards;"><title>2025-12-09: 2 contributions</title>:</text>
+    <text x="128.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.13s forwards;"><title>2025-12-10: 8 contributions</title>@</text>
+    <text x="128.0" y="136.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.135s forwards;"><title>2025-12-11: 0 contributions</title>.</text>
+    <text x="128.0" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.14s forwards;"><title>2025-12-12: 12 contributions</title>@</text>
+    <text x="128.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.145s forwards;"><title>2025-12-13: 0 contributions</title>.</text>
+    <text x="128.0" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.15s forwards;"><title>2025-12-14: 2 contributions</title>:</text>
+    <text x="143.5" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.14s forwards;"><title>2025-12-15: 1 contribution</title>:</text>
+    <text x="143.5" y="102.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.145s forwards;"><title>2025-12-16: 5 contributions</title>+</text>
+    <text x="143.5" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.15s forwards;"><title>2025-12-17: 12 contributions</title>@</text>
+    <text x="143.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.155s forwards;"><title>2025-12-18: 3 contributions</title>:</text>
+    <text x="143.5" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.16s forwards;"><title>2025-12-19: 8 contributions</title>@</text>
+    <text x="143.5" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.165s forwards;"><title>2025-12-20: 2 contributions</title>:</text>
+    <text x="143.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.17s forwards;"><title>2025-12-21: 0 contributions</title>.</text>
+    <text x="159.0" y="85.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.16s forwards;"><title>2025-12-22: 0 contributions</title>.</text>
+    <text x="159.0" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.165s forwards;"><title>2025-12-23: 0 contributions</title>.</text>
+    <text x="159.0" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.17s forwards;"><title>2025-12-24: 0 contributions</title>.</text>
+    <text x="159.0" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.175s forwards;"><title>2025-12-25: 2 contributions</title>:</text>
+    <text x="159.0" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.18s forwards;"><title>2025-12-26: 8 contributions</title>@</text>
+    <text x="159.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.185s forwards;"><title>2025-12-27: 1 contribution</title>:</text>
+    <text x="159.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.19s forwards;"><title>2025-12-28: 0 contributions</title>.</text>
+    <text x="174.5" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.18s forwards;"><title>2025-12-29: 8 contributions</title>@</text>
+    <text x="174.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.185s forwards;"><title>2025-12-30: 1 contribution</title>:</text>
+    <text x="174.5" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.19s forwards;"><title>2025-12-31: 12 contributions</title>@</text>
+    <text x="174.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.195s forwards;"><title>2026-01-01: 1 contribution</title>:</text>
+    <text x="174.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.2s forwards;"><title>2026-01-02: 3 contributions</title>:</text>
+    <text x="174.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.205s forwards;"><title>2026-01-03: 0 contributions</title>.</text>
+    <text x="174.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.21s forwards;"><title>2026-01-04: 0 contributions</title>.</text>
+    <text x="190.0" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.2s forwards;"><title>2026-01-05: 12 contributions</title>@</text>
+    <text x="190.0" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.205s forwards;"><title>2026-01-06: 12 contributions</title>@</text>
+    <text x="190.0" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.21s forwards;"><title>2026-01-07: 0 contributions</title>.</text>
+    <text x="190.0" y="136.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.215s forwards;"><title>2026-01-08: 0 contributions</title>.</text>
+    <text x="190.0" y="153.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.22s forwards;"><title>2026-01-09: 5 contributions</title>+</text>
+    <text x="190.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.225s forwards;"><title>2026-01-10: 0 contributions</title>.</text>
+    <text x="190.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.23s forwards;"><title>2026-01-11: 0 contributions</title>.</text>
+    <text x="205.5" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.22s forwards;"><title>2026-01-12: 3 contributions</title>:</text>
+    <text x="205.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.225s forwards;"><title>2026-01-13: 2 contributions</title>:</text>
+    <text x="205.5" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.23s forwards;"><title>2026-01-14: 8 contributions</title>@</text>
+    <text x="205.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.235s forwards;"><title>2026-01-15: 2 contributions</title>:</text>
+    <text x="205.5" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.24s forwards;"><title>2026-01-16: 8 contributions</title>@</text>
+    <text x="205.5" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.245s forwards;"><title>2026-01-17: 2 contributions</title>:</text>
+    <text x="205.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.25s forwards;"><title>2026-01-18: 0 contributions</title>.</text>
+    <text x="221.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.24s forwards;"><title>2026-01-19: 2 contributions</title>:</text>
+    <text x="221.0" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.245s forwards;"><title>2026-01-20: 3 contributions</title>:</text>
+    <text x="221.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.25s forwards;"><title>2026-01-21: 8 contributions</title>@</text>
+    <text x="221.0" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.255s forwards;"><title>2026-01-22: 5 contributions</title>+</text>
+    <text x="221.0" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.26s forwards;"><title>2026-01-23: 2 contributions</title>:</text>
+    <text x="221.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.265s forwards;"><title>2026-01-24: 2 contributions</title>:</text>
+    <text x="221.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.27s forwards;"><title>2026-01-25: 0 contributions</title>.</text>
+    <text x="236.5" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.26s forwards;"><title>2026-01-26: 5 contributions</title>+</text>
+    <text x="236.5" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.265s forwards;"><title>2026-01-27: 0 contributions</title>.</text>
+    <text x="236.5" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.27s forwards;"><title>2026-01-28: 12 contributions</title>@</text>
+    <text x="236.5" y="136.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.275s forwards;"><title>2026-01-29: 0 contributions</title>.</text>
+    <text x="236.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.28s forwards;"><title>2026-01-30: 1 contribution</title>:</text>
+    <text x="236.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.285s forwards;"><title>2026-01-31: 0 contributions</title>.</text>
+    <text x="236.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.29s forwards;"><title>2026-02-01: 0 contributions</title>.</text>
+    <text x="252.0" y="85.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.28s forwards;"><title>2026-02-02: 0 contributions</title>.</text>
+    <text x="252.0" y="102.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.285s forwards;"><title>2026-02-03: 5 contributions</title>+</text>
+    <text x="252.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.29s forwards;"><title>2026-02-04: 8 contributions</title>@</text>
+    <text x="252.0" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.295s forwards;"><title>2026-02-05: 2 contributions</title>:</text>
+    <text x="252.0" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.3s forwards;"><title>2026-02-06: 0 contributions</title>.</text>
+    <text x="252.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.305s forwards;"><title>2026-02-07: 4 contributions</title>:</text>
+    <text x="252.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.31s forwards;"><title>2026-02-08: 0 contributions</title>.</text>
+    <text x="267.5" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.3s forwards;"><title>2026-02-09: 1 contribution</title>:</text>
+    <text x="267.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.305s forwards;"><title>2026-02-10: 3 contributions</title>:</text>
+    <text x="267.5" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.31s forwards;"><title>2026-02-11: 0 contributions</title>.</text>
+    <text x="267.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.315s forwards;"><title>2026-02-12: 2 contributions</title>:</text>
+    <text x="267.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.32s forwards;"><title>2026-02-13: 3 contributions</title>:</text>
+    <text x="267.5" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.325s forwards;"><title>2026-02-14: 4 contributions</title>:</text>
+    <text x="267.5" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.33s forwards;"><title>2026-02-15: 4 contributions</title>:</text>
+    <text x="283.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.32s forwards;"><title>2026-02-16: 2 contributions</title>:</text>
+    <text x="283.0" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.325s forwards;"><title>2026-02-17: 8 contributions</title>@</text>
+    <text x="283.0" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.33s forwards;"><title>2026-02-18: 1 contribution</title>:</text>
+    <text x="283.0" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.335s forwards;"><title>2026-02-19: 5 contributions</title>+</text>
+    <text x="283.0" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.34s forwards;"><title>2026-02-20: 2 contributions</title>:</text>
+    <text x="283.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.345s forwards;"><title>2026-02-21: 0 contributions</title>.</text>
+    <text x="283.0" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.35s forwards;"><title>2026-02-22: 4 contributions</title>:</text>
+    <text x="298.5" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.34s forwards;"><title>2026-02-23: 5 contributions</title>+</text>
+    <text x="298.5" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.345s forwards;"><title>2026-02-24: 12 contributions</title>@</text>
+    <text x="298.5" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.35s forwards;"><title>2026-02-25: 2 contributions</title>:</text>
+    <text x="298.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.355s forwards;"><title>2026-02-26: 2 contributions</title>:</text>
+    <text x="298.5" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.36s forwards;"><title>2026-02-27: 0 contributions</title>.</text>
+    <text x="298.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.365s forwards;"><title>2026-02-28: 0 contributions</title>.</text>
+    <text x="298.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.37s forwards;"><title>2026-03-01: 0 contributions</title>.</text>
+    <text x="314.0" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.36s forwards;"><title>2026-03-02: 5 contributions</title>+</text>
+    <text x="314.0" y="102.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.365s forwards;"><title>2026-03-03: 5 contributions</title>+</text>
+    <text x="314.0" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.37s forwards;"><title>2026-03-04: 3 contributions</title>:</text>
+    <text x="314.0" y="136.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.375s forwards;"><title>2026-03-05: 0 contributions</title>.</text>
+    <text x="314.0" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.38s forwards;"><title>2026-03-06: 12 contributions</title>@</text>
+    <text x="314.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.385s forwards;"><title>2026-03-07: 0 contributions</title>.</text>
+    <text x="314.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.39s forwards;"><title>2026-03-08: 0 contributions</title>.</text>
+    <text x="329.5" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.38s forwards;"><title>2026-03-09: 3 contributions</title>:</text>
+    <text x="329.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.385s forwards;"><title>2026-03-10: 2 contributions</title>:</text>
+    <text x="329.5" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.39s forwards;"><title>2026-03-11: 0 contributions</title>.</text>
+    <text x="329.5" y="136.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.395s forwards;"><title>2026-03-12: 0 contributions</title>.</text>
+    <text x="329.5" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.4s forwards;"><title>2026-03-13: 0 contributions</title>.</text>
+    <text x="329.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.405s forwards;"><title>2026-03-14: 0 contributions</title>.</text>
+    <text x="329.5" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.41s forwards;"><title>2026-03-15: 4 contributions</title>:</text>
+    <text x="345.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.4s forwards;"><title>2026-03-16: 1 contribution</title>:</text>
+    <text x="345.0" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.405s forwards;"><title>2026-03-17: 12 contributions</title>@</text>
+    <text x="345.0" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.41s forwards;"><title>2026-03-18: 3 contributions</title>:</text>
+    <text x="345.0" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.415s forwards;"><title>2026-03-19: 5 contributions</title>+</text>
+    <text x="345.0" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.42s forwards;"><title>2026-03-20: 2 contributions</title>:</text>
+    <text x="345.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.425s forwards;"><title>2026-03-21: 0 contributions</title>.</text>
+    <text x="345.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.43s forwards;"><title>2026-03-22: 0 contributions</title>.</text>
+    <text x="360.5" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.42s forwards;"><title>2026-03-23: 2 contributions</title>:</text>
+    <text x="360.5" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.425s forwards;"><title>2026-03-24: 8 contributions</title>@</text>
+    <text x="360.5" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.43s forwards;"><title>2026-03-25: 1 contribution</title>:</text>
+    <text x="360.5" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.435s forwards;"><title>2026-03-26: 12 contributions</title>@</text>
+    <text x="360.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.44s forwards;"><title>2026-03-27: 2 contributions</title>:</text>
+    <text x="360.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.445s forwards;"><title>2026-03-28: 0 contributions</title>.</text>
+    <text x="360.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.45s forwards;"><title>2026-03-29: 0 contributions</title>.</text>
+    <text x="376.0" y="85.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.44s forwards;"><title>2026-03-30: 0 contributions</title>.</text>
+    <text x="376.0" y="102.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.445s forwards;"><title>2026-03-31: 5 contributions</title>+</text>
+    <text x="376.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.45s forwards;"><title>2026-04-01: 8 contributions</title>@</text>
+    <text x="376.0" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.455s forwards;"><title>2026-04-02: 3 contributions</title>:</text>
+    <text x="376.0" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.46s forwards;"><title>2026-04-03: 0 contributions</title>.</text>
+    <text x="376.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.465s forwards;"><title>2026-04-04: 2 contributions</title>:</text>
+    <text x="376.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.47s forwards;"><title>2026-04-05: 0 contributions</title>.</text>
+    <text x="391.5" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.46s forwards;"><title>2026-04-06: 12 contributions</title>@</text>
+    <text x="391.5" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.465s forwards;"><title>2026-04-07: 8 contributions</title>@</text>
+    <text x="391.5" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.47s forwards;"><title>2026-04-08: 0 contributions</title>.</text>
+    <text x="391.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.475s forwards;"><title>2026-04-09: 1 contribution</title>:</text>
+    <text x="391.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.48s forwards;"><title>2026-04-10: 3 contributions</title>:</text>
+    <text x="391.5" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.485s forwards;"><title>2026-04-11: 4 contributions</title>:</text>
+    <text x="391.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.49s forwards;"><title>2026-04-12: 0 contributions</title>.</text>
+    <text x="407.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.48s forwards;"><title>2026-04-13: 1 contribution</title>:</text>
+    <text x="407.0" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.485s forwards;"><title>2026-04-14: 12 contributions</title>@</text>
+    <text x="407.0" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.49s forwards;"><title>2026-04-15: 2 contributions</title>:</text>
+    <text x="407.0" y="136.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.495s forwards;"><title>2026-04-16: 0 contributions</title>.</text>
+    <text x="407.0" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.5s forwards;"><title>2026-04-17: 0 contributions</title>.</text>
+    <text x="407.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.505s forwards;"><title>2026-04-18: 4 contributions</title>:</text>
+    <text x="407.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.51s forwards;"><title>2026-04-19: 0 contributions</title>.</text>
+    <text x="422.5" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.5s forwards;"><title>2026-04-20: 5 contributions</title>+</text>
+    <text x="422.5" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.505s forwards;"><title>2026-04-21: 0 contributions</title>.</text>
+    <text x="422.5" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.51s forwards;"><title>2026-04-22: 1 contribution</title>:</text>
+    <text x="422.5" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.515s forwards;"><title>2026-04-23: 8 contributions</title>@</text>
+    <text x="422.5" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.52s forwards;"><title>2026-04-24: 0 contributions</title>.</text>
+    <text x="422.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.525s forwards;"><title>2026-04-25: 0 contributions</title>.</text>
+    <text x="422.5" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.53s forwards;"><title>2026-04-26: 4 contributions</title>:</text>
+    <text x="438.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.52s forwards;"><title>2026-04-27: 3 contributions</title>:</text>
+    <text x="438.0" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.525s forwards;"><title>2026-04-28: 0 contributions</title>.</text>
+    <text x="438.0" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.53s forwards;"><title>2026-04-29: 3 contributions</title>:</text>
+    <text x="438.0" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.535s forwards;"><title>2026-04-30: 12 contributions</title>@</text>
+    <text x="438.0" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.54s forwards;"><title>2026-05-01: 3 contributions</title>:</text>
+    <text x="438.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.545s forwards;"><title>2026-05-02: 2 contributions</title>:</text>
+    <text x="438.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.55s forwards;"><title>2026-05-03: 0 contributions</title>.</text>
+    <text x="453.5" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.54s forwards;"><title>2026-05-04: 8 contributions</title>@</text>
+    <text x="453.5" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.545s forwards;"><title>2026-05-05: 12 contributions</title>@</text>
+    <text x="453.5" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.55s forwards;"><title>2026-05-06: 0 contributions</title>.</text>
+    <text x="453.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.555s forwards;"><title>2026-05-07: 1 contribution</title>:</text>
+    <text x="453.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.56s forwards;"><title>2026-05-08: 1 contribution</title>:</text>
+    <text x="453.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.565s forwards;"><title>2026-05-09: 0 contributions</title>.</text>
+    <text x="453.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.57s forwards;"><title>2026-05-10: 0 contributions</title>.</text>
+    <text x="469.0" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.56s forwards;"><title>2026-05-11: 5 contributions</title>+</text>
+    <text x="469.0" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.565s forwards;"><title>2026-05-12: 0 contributions</title>.</text>
+    <text x="469.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.57s forwards;"><title>2026-05-13: 12 contributions</title>@</text>
+    <text x="469.0" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.575s forwards;"><title>2026-05-14: 5 contributions</title>+</text>
+    <text x="469.0" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.58s forwards;"><title>2026-05-15: 1 contribution</title>:</text>
+    <text x="469.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.585s forwards;"><title>2026-05-16: 4 contributions</title>:</text>
+    <text x="469.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.59s forwards;"><title>2026-05-17: 0 contributions</title>.</text>
+    <text x="484.5" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.58s forwards;"><title>2026-05-18: 8 contributions</title>@</text>
+    <text x="484.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.585s forwards;"><title>2026-05-19: 1 contribution</title>:</text>
+    <text x="484.5" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.59s forwards;"><title>2026-05-20: 8 contributions</title>@</text>
+    <text x="484.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.595s forwards;"><title>2026-05-21: 3 contributions</title>:</text>
+    <text x="484.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.6s forwards;"><title>2026-05-22: 1 contribution</title>:</text>
+    <text x="484.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.605s forwards;"><title>2026-05-23: 0 contributions</title>.</text>
+    <text x="484.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.61s forwards;"><title>2026-05-24: 0 contributions</title>.</text>
+    <text x="500.0" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.6s forwards;"><title>2026-05-25: 5 contributions</title>+</text>
+    <text x="500.0" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.605s forwards;"><title>2026-05-26: 0 contributions</title>.</text>
+    <text x="500.0" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.61s forwards;"><title>2026-05-27: 0 contributions</title>.</text>
+    <text x="500.0" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.615s forwards;"><title>2026-05-28: 5 contributions</title>+</text>
+    <text x="500.0" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.62s forwards;"><title>2026-05-29: 1 contribution</title>:</text>
+    <text x="500.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.625s forwards;"><title>2026-05-30: 0 contributions</title>.</text>
+    <text x="500.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.63s forwards;"><title>2026-05-31: 0 contributions</title>.</text>
+    <text x="515.5" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.62s forwards;"><title>2026-06-01: 5 contributions</title>+</text>
+    <text x="515.5" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.625s forwards;"><title>2026-06-02: 8 contributions</title>@</text>
+    <text x="515.5" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.63s forwards;"><title>2026-06-03: 12 contributions</title>@</text>
+    <text x="515.5" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.635s forwards;"><title>2026-06-04: 5 contributions</title>+</text>
+    <text x="515.5" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.64s forwards;"><title>2026-06-05: 12 contributions</title>@</text>
+    <text x="515.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.645s forwards;"><title>2026-06-06: 0 contributions</title>.</text>
+    <text x="515.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.65s forwards;"><title>2026-06-07: 0 contributions</title>.</text>
+    <text x="531.0" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.64s forwards;"><title>2026-06-08: 12 contributions</title>@</text>
+    <text x="531.0" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.645s forwards;"><title>2026-06-09: 2 contributions</title>:</text>
+    <text x="531.0" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.65s forwards;"><title>2026-06-10: 0 contributions</title>.</text>
+    <text x="531.0" y="136.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.655s forwards;"><title>2026-06-11: 0 contributions</title>.</text>
+    <text x="531.0" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.66s forwards;"><title>2026-06-12: 0 contributions</title>.</text>
+    <text x="531.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.665s forwards;"><title>2026-06-13: 0 contributions</title>.</text>
+    <text x="531.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.67s forwards;"><title>2026-06-14: 0 contributions</title>.</text>
+    <text x="546.5" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.66s forwards;"><title>2026-06-15: 12 contributions</title>@</text>
+    <text x="546.5" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.665s forwards;"><title>2026-06-16: 8 contributions</title>@</text>
+    <text x="546.5" y="119.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.67s forwards;"><title>2026-06-17: 5 contributions</title>+</text>
+    <text x="546.5" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.675s forwards;"><title>2026-06-18: 5 contributions</title>+</text>
+    <text x="546.5" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.68s forwards;"><title>2026-06-19: 0 contributions</title>.</text>
+    <text x="546.5" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.685s forwards;"><title>2026-06-20: 4 contributions</title>:</text>
+    <text x="546.5" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.69s forwards;"><title>2026-06-21: 4 contributions</title>:</text>
+    <text x="562.0" y="85.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.68s forwards;"><title>2026-06-22: 0 contributions</title>.</text>
+    <text x="562.0" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.685s forwards;"><title>2026-06-23: 12 contributions</title>@</text>
+    <text x="562.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.69s forwards;"><title>2026-06-24: 12 contributions</title>@</text>
+    <text x="562.0" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.695s forwards;"><title>2026-06-25: 1 contribution</title>:</text>
+    <text x="562.0" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.7s forwards;"><title>2026-06-26: 3 contributions</title>:</text>
+    <text x="562.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.705s forwards;"><title>2026-06-27: 0 contributions</title>.</text>
+    <text x="562.0" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.71s forwards;"><title>2026-06-28: 1 contribution</title>:</text>
+    <text x="577.5" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.7s forwards;"><title>2026-06-29: 3 contributions</title>:</text>
+    <text x="577.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.705s forwards;"><title>2026-06-30: 1 contribution</title>:</text>
+    <text x="577.5" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.71s forwards;"><title>2026-07-01: 8 contributions</title>@</text>
+    <text x="577.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.715s forwards;"><title>2026-07-02: 3 contributions</title>:</text>
+    <text x="577.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.72s forwards;"><title>2026-07-03: 1 contribution</title>:</text>
+    <text x="577.5" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.725s forwards;"><title>2026-07-04: 1 contribution</title>:</text>
+    <text x="577.5" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.73s forwards;"><title>2026-07-05: 2 contributions</title>:</text>
+    <text x="593.0" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.72s forwards;"><title>2026-07-06: 5 contributions</title>+</text>
+    <text x="593.0" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.725s forwards;"><title>2026-07-07: 8 contributions</title>@</text>
+    <text x="593.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.73s forwards;"><title>2026-07-08: 8 contributions</title>@</text>
+    <text x="593.0" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.735s forwards;"><title>2026-07-09: 8 contributions</title>@</text>
+    <text x="593.0" y="153.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.74s forwards;"><title>2026-07-10: 5 contributions</title>+</text>
+    <text x="593.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.745s forwards;"><title>2026-07-11: 0 contributions</title>.</text>
+    <text x="593.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.75s forwards;"><title>2026-07-12: 0 contributions</title>.</text>
+    <text x="608.5" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.74s forwards;"><title>2026-07-13: 5 contributions</title>+</text>
+    <text x="608.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.745s forwards;"><title>2026-07-14: 2 contributions</title>:</text>
+    <text x="608.5" y="119.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.75s forwards;"><title>2026-07-15: 5 contributions</title>+</text>
+    <text x="608.5" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.755s forwards;"><title>2026-07-16: 8 contributions</title>@</text>
+    <text x="608.5" y="153.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.76s forwards;"><title>2026-07-17: 5 contributions</title>+</text>
+    <text x="608.5" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.765s forwards;"><title>2026-07-18: 4 contributions</title>:</text>
+    <text x="608.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.77s forwards;"><title>2026-07-19: 0 contributions</title>.</text>
+    <text x="624.0" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.76s forwards;"><title>2026-07-20: 5 contributions</title>+</text>
+    <text x="624.0" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.765s forwards;"><title>2026-07-21: 0 contributions</title>.</text>
+    <text x="624.0" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.77s forwards;"><title>2026-07-22: 2 contributions</title>:</text>
+    <text x="624.0" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.775s forwards;"><title>2026-07-23: 8 contributions</title>@</text>
+    <text x="624.0" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.78s forwards;"><title>2026-07-24: 8 contributions</title>@</text>
+    <text x="624.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.785s forwards;"><title>2026-07-25: 0 contributions</title>.</text>
+    <text x="624.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.79s forwards;"><title>2026-07-26: 0 contributions</title>.</text>
+    <text x="639.5" y="85.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.78s forwards;"><title>2026-07-27: 0 contributions</title>.</text>
+    <text x="639.5" y="102.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.785s forwards;"><title>2026-07-28: 5 contributions</title>+</text>
+    <text x="639.5" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.79s forwards;"><title>2026-07-29: 0 contributions</title>.</text>
+    <text x="639.5" y="136.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.795s forwards;"><title>2026-07-30: 0 contributions</title>.</text>
+    <text x="639.5" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.8s forwards;"><title>2026-07-31: 0 contributions</title>.</text>
+    <text x="639.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.805s forwards;"><title>2026-08-01: 0 contributions</title>.</text>
+    <text x="639.5" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.81s forwards;"><title>2026-08-02: 2 contributions</title>:</text>
+    <text x="655.0" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.8s forwards;"><title>2026-08-03: 8 contributions</title>@</text>
+    <text x="655.0" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.805s forwards;"><title>2026-08-04: 0 contributions</title>.</text>
+    <text x="655.0" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.81s forwards;"><title>2026-08-05: 1 contribution</title>:</text>
+    <text x="655.0" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.815s forwards;"><title>2026-08-06: 5 contributions</title>+</text>
+    <text x="655.0" y="153.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.82s forwards;"><title>2026-08-07: 5 contributions</title>+</text>
+    <text x="655.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.825s forwards;"><title>2026-08-08: 1 contribution</title>:</text>
+    <text x="655.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.83s forwards;"><title>2026-08-09: 0 contributions</title>.</text>
+    <text x="670.5" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.82s forwards;"><title>2026-08-10: 2 contributions</title>:</text>
+    <text x="670.5" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.825s forwards;"><title>2026-08-11: 0 contributions</title>.</text>
+    <text x="670.5" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.83s forwards;"><title>2026-08-12: 0 contributions</title>.</text>
+    <text x="670.5" y="136.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.835s forwards;"><title>2026-08-13: 0 contributions</title>.</text>
+    <text x="670.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.84s forwards;"><title>2026-08-14: 1 contribution</title>:</text>
+    <text x="670.5" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.845s forwards;"><title>2026-08-15: 1 contribution</title>:</text>
+    <text x="670.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.85s forwards;"><title>2026-08-16: 0 contributions</title>.</text>
+    <text x="686.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.84s forwards;"><title>2026-08-17: 1 contribution</title>:</text>
+    <text x="686.0" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.845s forwards;"><title>2026-08-18: 3 contributions</title>:</text>
+    <text x="686.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.85s forwards;"><title>2026-08-19: 8 contributions</title>@</text>
+    <text x="686.0" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.855s forwards;"><title>2026-08-20: 2 contributions</title>:</text>
+    <text x="686.0" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.86s forwards;"><title>2026-08-21: 12 contributions</title>@</text>
+    <text x="686.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.865s forwards;"><title>2026-08-22: 0 contributions</title>.</text>
+    <text x="686.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.87s forwards;"><title>2026-08-23: 0 contributions</title>.</text>
+    <text x="701.5" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.86s forwards;"><title>2026-08-24: 8 contributions</title>@</text>
+    <text x="701.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.865s forwards;"><title>2026-08-25: 3 contributions</title>:</text>
+    <text x="701.5" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.87s forwards;"><title>2026-08-26: 1 contribution</title>:</text>
+    <text x="701.5" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.875s forwards;"><title>2026-08-27: 5 contributions</title>+</text>
+    <text x="701.5" y="153.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.88s forwards;"><title>2026-08-28: 5 contributions</title>+</text>
+    <text x="701.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.885s forwards;"><title>2026-08-29: 0 contributions</title>.</text>
+    <text x="701.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.89s forwards;"><title>2026-08-30: 0 contributions</title>.</text>
+    <text x="717.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.88s forwards;"><title>2026-08-31: 1 contribution</title>:</text>
+    <text x="717.0" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.885s forwards;"><title>2026-09-01: 0 contributions</title>.</text>
+    <text x="717.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.89s forwards;"><title>2026-09-02: 8 contributions</title>@</text>
+    <text x="717.0" y="136.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.895s forwards;"><title>2026-09-03: 0 contributions</title>.</text>
+    <text x="717.0" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.9s forwards;"><title>2026-09-04: 8 contributions</title>@</text>
+    <text x="717.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.905s forwards;"><title>2026-09-05: 0 contributions</title>.</text>
+    <text x="717.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.91s forwards;"><title>2026-09-06: 0 contributions</title>.</text>
+    <text x="732.5" y="85.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.9s forwards;"><title>2026-09-07: 0 contributions</title>.</text>
+    <text x="732.5" y="102.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.905s forwards;"><title>2026-09-08: 0 contributions</title>.</text>
+    <text x="732.5" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.91s forwards;"><title>2026-09-09: 3 contributions</title>:</text>
+    <text x="732.5" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.915s forwards;"><title>2026-09-10: 12 contributions</title>@</text>
+    <text x="732.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.92s forwards;"><title>2026-09-11: 2 contributions</title>:</text>
+    <text x="732.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.925s forwards;"><title>2026-09-12: 0 contributions</title>.</text>
+    <text x="732.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.93s forwards;"><title>2026-09-13: 0 contributions</title>.</text>
+    <text x="748.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.92s forwards;"><title>2026-09-14: 1 contribution</title>:</text>
+    <text x="748.0" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.925s forwards;"><title>2026-09-15: 8 contributions</title>@</text>
+    <text x="748.0" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.93s forwards;"><title>2026-09-16: 8 contributions</title>@</text>
+    <text x="748.0" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.935s forwards;"><title>2026-09-17: 5 contributions</title>+</text>
+    <text x="748.0" y="153.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.94s forwards;"><title>2026-09-18: 0 contributions</title>.</text>
+    <text x="748.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.945s forwards;"><title>2026-09-19: 4 contributions</title>:</text>
+    <text x="748.0" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.95s forwards;"><title>2026-09-20: 4 contributions</title>:</text>
+    <text x="763.5" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.94s forwards;"><title>2026-09-21: 8 contributions</title>@</text>
+    <text x="763.5" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.945s forwards;"><title>2026-09-22: 1 contribution</title>:</text>
+    <text x="763.5" y="119.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.95s forwards;"><title>2026-09-23: 12 contributions</title>@</text>
+    <text x="763.5" y="136.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.955s forwards;"><title>2026-09-24: 5 contributions</title>+</text>
+    <text x="763.5" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.96s forwards;"><title>2026-09-25: 8 contributions</title>@</text>
+    <text x="763.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.965s forwards;"><title>2026-09-26: 0 contributions</title>.</text>
+    <text x="763.5" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.97s forwards;"><title>2026-09-27: 2 contributions</title>:</text>
+    <text x="779.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.96s forwards;"><title>2026-09-28: 2 contributions</title>:</text>
+    <text x="779.0" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.965s forwards;"><title>2026-09-29: 8 contributions</title>@</text>
+    <text x="779.0" y="119.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.97s forwards;"><title>2026-09-30: 5 contributions</title>+</text>
+    <text x="779.0" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.975s forwards;"><title>2026-10-01: 8 contributions</title>@</text>
+    <text x="779.0" y="153.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.98s forwards;"><title>2026-10-02: 8 contributions</title>@</text>
+    <text x="779.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.985s forwards;"><title>2026-10-03: 0 contributions</title>.</text>
+    <text x="779.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.99s forwards;"><title>2026-10-04: 0 contributions</title>.</text>
+    <text x="794.5" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.98s forwards;"><title>2026-10-05: 1 contribution</title>:</text>
+    <text x="794.5" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.985s forwards;"><title>2026-10-06: 8 contributions</title>@</text>
+    <text x="794.5" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.99s forwards;"><title>2026-10-07: 1 contribution</title>:</text>
+    <text x="794.5" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 0.995s forwards;"><title>2026-10-08: 8 contributions</title>@</text>
+    <text x="794.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.0s forwards;"><title>2026-10-09: 2 contributions</title>:</text>
+    <text x="794.5" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.005s forwards;"><title>2026-10-10: 0 contributions</title>.</text>
+    <text x="794.5" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.01s forwards;"><title>2026-10-11: 0 contributions</title>.</text>
+    <text x="810.0" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.0s forwards;"><title>2026-10-12: 2 contributions</title>:</text>
+    <text x="810.0" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.005s forwards;"><title>2026-10-13: 1 contribution</title>:</text>
+    <text x="810.0" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.01s forwards;"><title>2026-10-14: 1 contribution</title>:</text>
+    <text x="810.0" y="136.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.015s forwards;"><title>2026-10-15: 8 contributions</title>@</text>
+    <text x="810.0" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.02s forwards;"><title>2026-10-16: 2 contributions</title>:</text>
+    <text x="810.0" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.025s forwards;"><title>2026-10-17: 1 contribution</title>:</text>
+    <text x="810.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.03s forwards;"><title>2026-10-18: 0 contributions</title>.</text>
+    <text x="825.5" y="85.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.02s forwards;"><title>2026-10-19: 8 contributions</title>@</text>
+    <text x="825.5" y="102.0" fill="#39D353" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13" font-weight="700" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.025s forwards;"><title>2026-10-20: 12 contributions</title>@</text>
+    <text x="825.5" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.03s forwards;"><title>2026-10-21: 1 contribution</title>:</text>
+    <text x="825.5" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.035s forwards;"><title>2026-10-22: 1 contribution</title>:</text>
+    <text x="825.5" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.04s forwards;"><title>2026-10-23: 2 contributions</title>:</text>
+    <text x="825.5" y="170.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.045s forwards;"><title>2026-10-24: 4 contributions</title>:</text>
+    <text x="825.5" y="187.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.05s forwards;"><title>2026-10-25: 2 contributions</title>:</text>
+    <text x="841.0" y="85.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.04s forwards;"><title>2026-10-26: 5 contributions</title>+</text>
+    <text x="841.0" y="102.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.045s forwards;"><title>2026-10-27: 1 contribution</title>:</text>
+    <text x="841.0" y="119.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.05s forwards;"><title>2026-10-28: 0 contributions</title>.</text>
+    <text x="841.0" y="136.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.055s forwards;"><title>2026-10-29: 3 contributions</title>:</text>
+    <text x="841.0" y="153.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.06s forwards;"><title>2026-10-30: 2 contributions</title>:</text>
+    <text x="841.0" y="170.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.065s forwards;"><title>2026-10-31: 0 contributions</title>.</text>
+    <text x="841.0" y="187.0" fill="#30363D" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.07s forwards;"><title>2026-11-01: 0 contributions</title>.</text>
+    <text x="856.5" y="85.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.06s forwards;"><title>2026-11-02: 3 contributions</title>:</text>
+    <text x="856.5" y="102.0" fill="#006D32" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="600" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.065s forwards;"><title>2026-11-03: 5 contributions</title>+</text>
+    <text x="856.5" y="119.0" fill="#0E4429" font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="14" font-weight="400" text-anchor="middle" opacity="0" style="animation: termReveal 0.2s ease 1.07s forwards;"><title>2026-11-04: 1 contribution</title>:</text>
+  </g>
+
+  <!-- Terminal Bottom Status Bar -->
+  <g font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="12" fill="#39D353" font-weight="500">
+    <text x="35" y="235">
+      1,219 contributions   ·   3 day streak   ·   best day 12
+    </text>
+  </g>
 </svg>
