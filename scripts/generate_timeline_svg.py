@@ -1,0 +1,95 @@
+#!/usr/bin/env python3
+"""
+generate_timeline_svg.py
+Generates a horizontal timeline SVG for the Experience & Education section.
+Width: 860px.
+"""
+
+import os
+
+SVG_CONTENT = """<svg xmlns="http://www.w3.org/2000/svg" width="860" height="205" viewBox="0 0 860 205">
+  <defs>
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58A6FF" />
+      <stop offset="50%" stop-color="#3FB950" />
+      <stop offset="100%" stop-color="#A371F7" />
+    </linearGradient>
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="2.5" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
+    </filter>
+  </defs>
+
+  <style>
+    .font-mono { font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, monospace; }
+    .card-title { font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+    .card-sub { font-size: 11px; font-weight: 600; }
+    .card-body { font-size: 10px; fill: #8B949E; }
+  </style>
+
+  <!-- Container Box -->
+  <rect width="860" height="205" rx="12" fill="#0D1117" stroke="#30363D" stroke-width="1.2" />
+
+  <!-- Horizontal Axis Line -->
+  <line x1="50" y1="46" x2="810" y2="46" stroke="#21262D" stroke-width="3" stroke-linecap="round" />
+  <line x1="50" y1="46" x2="795" y2="46" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+  <polygon points="808,46 795,41 795,51" fill="#A371F7" />
+
+  <!-- ── Milestone 1: Education ────────────────────────────────────────── -->
+  <g transform="translate(140, 0)">
+    <circle cx="0" cy="46" r="8" fill="#0D1117" stroke="#58A6FF" stroke-width="2.5" />
+    <circle cx="0" cy="46" r="3.5" fill="#58A6FF" />
+
+    <rect x="-60" y="14" width="120" height="20" rx="10" fill="#1F2D40" stroke="#58A6FF" stroke-width="0.8" />
+    <text x="0" y="28" class="font-mono" font-size="9" font-weight="700" fill="#58A6FF" text-anchor="middle">2024 — PRESENT</text>
+
+    <rect x="-110" y="66" width="220" height="118" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="-96" y="88" class="font-mono card-title">🎓 B.Tech CSE</text>
+    <text x="-96" y="106" class="font-mono card-sub" fill="#58A6FF">Dayananda Sagar Univ.</text>
+    <text x="-96" y="126" class="font-mono card-body">• CGPA: 9.38 / 10.0</text>
+    <text x="-96" y="144" class="font-mono card-body">• Core CS &amp; Systems</text>
+    <text x="-96" y="162" class="font-mono card-body">• Bengaluru, Karnataka</text>
+  </g>
+
+  <!-- ── Milestone 2: Tata Communications ─────────────────────────────── -->
+  <g transform="translate(420, 0)">
+    <circle cx="0" cy="46" r="8" fill="#0D1117" stroke="#3FB950" stroke-width="2.5" />
+    <circle cx="0" cy="46" r="3.5" fill="#3FB950" />
+
+    <rect x="-65" y="14" width="130" height="20" rx="10" fill="#162F1E" stroke="#3FB950" stroke-width="0.8" />
+    <text x="0" y="28" class="font-mono" font-size="9" font-weight="700" fill="#3FB950" text-anchor="middle">AUG 2025 — SEP 2025</text>
+
+    <rect x="-115" y="66" width="230" height="118" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="-101" y="88" class="font-mono card-title">📡 Project Trainee</text>
+    <text x="-101" y="106" class="font-mono card-sub" fill="#3FB950">Tata Communications</text>
+    <text x="-101" y="126" class="font-mono card-body">• Incident Mgmt System</text>
+    <text x="-101" y="144" class="font-mono card-body">• ServiceNow + New Relic</text>
+    <text x="-101" y="162" class="font-mono card-body">• Pune, India</text>
+  </g>
+
+  <!-- ── Milestone 3: Rtifact Internship ───────────────────────────────── -->
+  <g transform="translate(710, 0)">
+    <circle cx="0" cy="46" r="8" fill="#0D1117" stroke="#A371F7" stroke-width="2.5" />
+    <circle cx="0" cy="46" r="3.5" fill="#A371F7" />
+
+    <rect x="-65" y="14" width="130" height="20" rx="10" fill="#2E1B4E" stroke="#A371F7" stroke-width="0.8" />
+    <text x="0" y="28" class="font-mono" font-size="9" font-weight="700" fill="#A371F7" text-anchor="middle">JUL 2026 — SEP 2026</text>
+
+    <rect x="-120" y="66" width="240" height="118" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="-106" y="88" class="font-mono card-title">🤖 AI Engineer Intern</text>
+    <text x="-106" y="106" class="font-mono card-sub" fill="#A371F7">Rtifact</text>
+    <text x="-106" y="126" class="font-mono card-body">• Agentic workflows (LangChain)</text>
+    <text x="-106" y="144" class="font-mono card-body">• Neo4j Knowledge Graph NLQ</text>
+    <text x="-106" y="162" class="font-mono card-body">• -38% latency via Redis cache</text>
+  </g>
+
+</svg>
+"""
+
+if __name__ == "__main__":
+    out_path = os.path.join(os.path.dirname(__file__), "..", "assets", "timeline-horizontal.svg")
+    out_path = os.path.normpath(out_path)
+    os.makedirs(os.path.dirname(out_path), exist_ok=True)
+    with open(out_path, "w", encoding="utf-8") as f:
+        f.write(SVG_CONTENT.strip() + "\n")
+    print(f"✅ Generated horizontal timeline SVG: {out_path}")

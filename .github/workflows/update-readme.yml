@@ -11,45 +11,7 @@ permissions:
 
 jobs:
   # ─────────────────────────────────────────
-  # Job 1: Snake contribution animation
-  # ─────────────────────────────────────────
-  snake:
-    name: 🐍 Generate Snake Animation
-    runs-on: ubuntu-latest
-    steps:
-      - uses: Platane/snk/svg-only@v3
-        with:
-          github_user_name: ${{ github.repository_owner }}
-          outputs: |
-            assets/github-snake.svg?palette=github
-            assets/github-snake-dark.svg?palette=github-dark
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: snake-svgs
-          path: assets/
-
-  # ─────────────────────────────────────────
-  # Job 2: 3D Contribution Graph
-  # ─────────────────────────────────────────
-  contrib_3d:
-    name: 🌐 Generate 3D Contribution Graph
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          USERNAME: ${{ github.repository_owner }}
-
-      - uses: actions/upload-artifact@v4
-        with:
-          name: 3d-contrib
-          path: profile-3d-contrib/
-
-  # ─────────────────────────────────────────
-  # Job 3: Neofetch / Terminal Stats SVG
+  # Job 1: Neofetch / Terminal Stats SVG
   # ─────────────────────────────────────────
   terminal-stats:
     name: 💻 Generate Terminal Stats SVG
@@ -83,7 +45,7 @@ jobs:
           path: assets/*.svg
 
   # ─────────────────────────────────────────
-  # Job 4: Contribution Heatmap (terminal style)
+  # Job 2: Contribution Heatmap (terminal style)
   # ─────────────────────────────────────────
   heatmap:
     name: 🔥 Generate Contribution Heatmap
@@ -111,7 +73,7 @@ jobs:
           path: assets/*.svg
 
   # ─────────────────────────────────────────
-  # Job 5: 3D Tech Stack SVG
+  # Job 3: 3D Tech Stack SVG
   # ─────────────────────────────────────────
   techstack:
     name: 🎹 Generate 3D Tech Stack SVG
@@ -133,26 +95,14 @@ jobs:
           path: assets/techstack-3d-dark.svg
 
   # ─────────────────────────────────────────
-  # Job 6: Commit all generated assets
+  # Job 4: Commit all generated assets
   # ─────────────────────────────────────────
   commit-assets:
     name: 📦 Commit All Assets
-    needs: [snake, contrib_3d, terminal-stats, heatmap, techstack]
+    needs: [terminal-stats, heatmap, techstack]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-
-      - name: Download snake SVGs
-        uses: actions/download-artifact@v4
-        with:
-          name: snake-svgs
-          path: assets/
-
-      - name: Download 3D contrib
-        uses: actions/download-artifact@v4
-        with:
-          name: 3d-contrib
-          path: assets/profile-3d-contrib/
 
       - name: Download terminal SVGs
         uses: actions/download-artifact@v4
@@ -179,4 +129,3 @@ jobs:
           git add assets/
           git diff --cached --quiet || git commit -m "chore: auto-update readme assets [skip ci]"
           git push
-

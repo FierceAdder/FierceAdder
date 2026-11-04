@@ -76,6 +76,7 @@ def fetch_stats():
         print(f"[terminal-svg] Notice: User REST call failed ({e}). Using defaults.")
 
     commits = 0
+    total_contribs = 0
     prs = 0
     issues = 0
     total_stars = 0
@@ -86,6 +87,9 @@ def fetch_stats():
             query($login: String!) {
               user(login: $login) {
                 contributionsCollection {
+                  contributionCalendar {
+                    totalContributions
+                  }
                   totalCommitContributions
                   totalPullRequestContributions
                   totalIssueContributions
@@ -102,6 +106,8 @@ def fetch_stats():
             cc = gql_user.get("contributionsCollection", {})
             repos_data = gql_user.get("repositories", {})
 
+            calendar = cc.get("contributionCalendar", {})
+            total_contribs = calendar.get("totalContributions", 0)
             commits = cc.get("totalCommitContributions", 0)
             prs = cc.get("totalPullRequestContributions", 0)
             issues = cc.get("totalIssueContributions", 0)
@@ -130,7 +136,7 @@ def fetch_stats():
         "followers":    user.get("followers", 7),
         "following":    user.get("following", 7),
         "public_repos": user.get("public_repos", 22),
-        "commits":      commits if commits > 0 else 1219,
+        "commits":      total_contribs if total_contribs > 0 else (commits if commits > 0 else 340),
         "prs":          prs,
         "issues":       issues,
         "stars":        total_stars if total_stars > 0 else 4,

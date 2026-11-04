@@ -26,15 +26,6 @@
 
 <div align="center">
 
-<!-- Snake animation eats your contribution graph -->
-<picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="./assets/github-snake-dark.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./assets/github-snake.svg" />
-  <img alt="github contribution snake animation" src="./assets/github-snake-dark.svg" />
-</picture>
-
-<br/>
-
 <!-- Terminal-style contribution heatmap -->
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/contrib-heatmap-dark.svg" />
@@ -57,15 +48,15 @@
 <table>
   <tr>
     <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=FierceAdder&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9&rank_icon=github" width="420" />
+      <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=FierceAdder&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9&rank_icon=github" width="420" />
     </td>
     <td>
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=FierceAdder&theme=github-dark-blue&hide_border=true&background=0D1117&ring=58A6FF&fire=FF7B72&currStreakLabel=58A6FF" width="420" />
+      <img src="https://streak-stats.demolab.com/?user=FierceAdder&theme=github-dark-blue&hide_border=true&background=0D1117&ring=58A6FF&fire=FF7B72&currStreakLabel=58A6FF" width="420" />
     </td>
   </tr>
   <tr>
     <td colspan="2" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=FierceAdder&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&langs_count=8" width="420" />
+      <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=FierceAdder&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&langs_count=8" width="420" />
     </td>
   </tr>
 </table>
@@ -102,7 +93,7 @@
   <tr>
     <td align="center" width="50%">
 
-### 🟡 LeetCode
+### LeetCode
 
 [![LeetCode Stats](https://leetcard.jacoblin.cool/Trying_out?theme=dark&font=JetBrains+Mono&ext=heatmap&border=0&bg=0D1117)](https://leetcode.com/Trying_out)
 
@@ -115,12 +106,7 @@
 </td>
     <td align="center" width="50%">
 
-### 🔵 Codeforces
-
-[![Codeforces Stats](https://codeforces-readme-stats.vercel.app/api/badge?username=Scarceflyer7&style=for-the-badge)](https://codeforces.com/profile/Scarceflyer7)
-
-<br/>
-
+### Codeforces
 ![CF Card](https://codeforces-stats-vlx.vercel.app/api/card?username=Scarceflyer7&theme=github_dark)
 
 <p align="center">
@@ -257,56 +243,21 @@ Venue  →  Scaler Rethesis (2nd Prize 🥈)
 ---
 
 <!-- ════════════════════════════════════════
-     §8  EXPERIENCE TIMELINE
+     §8  EXPERIENCE & EDUCATION TIMELINE
      ════════════════════════════════════════ -->
 
-## 🏢 Experience
-
-```text
-  Jul 2026 ──────────────────────────────── Sep 2026
-  │
-  ├── 🤖  AI Engineer Intern @ Rtifact  (Remote / Bengaluru)
-  │       • Graphify-native GitHub issue grounding engine
-  │         → 70ms warm latency · 0.95 confidence · Python/FastAPI
-  │       • 5-level prioritized signal cascade
-  │         → 11,600+ nodes · 23,700+ edges (Neo4j graph)
-  │       • 5-pass multi-tier extraction pipeline
-  │         → Tree-sitter AST across 37 languages · OpenAI enrichment
-  │       • AWS asset cartography platform
-  │         → <50ms Neo4j Cypher mutations · <185ms per state-change
-  │       • GraphRAG NLQ engine
-  │         → FAISS semantic router · <30ms · zero LLM cost (50 Cypher templates)
-  │
-  Aug 2025 ──────────────────────────────── Sep 2025
-  │
-  └── 📡  Project Trainee @ Tata Communications  (Pune, India)
-          • RESTful endpoints for Automated Incident Management System
-          • New Relic + ServiceNow integration
-          • Solution positioned to cut NOC triage staff: 5 → 1 engineer
-```
-
----
-
-<!-- ════════════════════════════════════════
-     §9  3D CONTRIBUTION GLOBE
-     ════════════════════════════════════════ -->
-
-## 🌐 3D Contribution Globe
+## 🏢 Experience & Education
 
 <div align="center">
 
-<picture>
-  <source media="(prefers-color-scheme: dark)"  srcset="./assets/profile-3d-contrib/profile-night-rainbow.svg" />
-  <source media="(prefers-color-scheme: light)" srcset="./assets/profile-3d-contrib/profile-south-asia-light.svg" />
-  <img alt="3D Contribution Graph" src="./assets/profile-3d-contrib/profile-night-rainbow.svg" />
-</picture>
+<img src="./assets/timeline-horizontal.svg" alt="Experience & Education Horizontal Timeline" width="860" />
 
 </div>
 
 ---
 
 <!-- ════════════════════════════════════════
-     §10  CERTIFICATIONS & LEARNING
+     §9  CERTIFICATIONS & LEARNING
      ════════════════════════════════════════ -->
 
 ## 📜 Certifications & Learning
@@ -323,19 +274,26 @@ Venue  →  Scaler Rethesis (2nd Prize 🥈)
 ---
 
 <!-- ════════════════════════════════════════
-     §11  FOOTER
+     §10  FOOTER
      ════════════════════════════════════════ -->
 
 <div align="center">
 
-```text
-╔══════════════════════════════════════════════════════════╗
-║          Thanks for visiting — have a great day! 👾      ║
-║  ashmitv704@gmail.com  |  Bengaluru, India               ║
-╚══════════════════════════════════════════════════════════╝
-```
+<a href="mailto:ashmitv704@gmail.com"><img src="https://img.shields.io/badge/Email-ashmitv704%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+&nbsp;
+<a href="https://linkedin.com/in/ashmit-kumar-verma-9ba14a274"><img src="https://img.shields.io/badge/LinkedIn-Ashmit%20Kumar%20Verma-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+&nbsp;
+<a href="https://github.com/FierceAdder"><img src="https://img.shields.io/badge/GitHub-FierceAdder-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=4000&pause=1000&color=3FB950&center=true&vCenter=true&width=600&lines=Building+at+the+intersection+of+AI+%26+Systems+Engineering;Turning+coffee+into+commits+since+2024+☕;Always+learning%2C+always+building+🚀" />
+<br/><br/>
+
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=4000&pause=1000&color=3FB950&center=true&vCenter=true&width=600&lines=Thanks+for+stopping+by!+Have+a+great+day+%F0%9F%91%BE;Building+at+the+intersection+of+AI+%26+Systems+Engineering;Always+learning%2C+always+building+%F0%9F%9A%80" alt="Footer Typing" />
+
+<br/>
+
+<sub>Crafted with precision &amp; code · Ashmit Kumar Verma © 2026</sub>
+
+</div>
 
 <br/>
 
