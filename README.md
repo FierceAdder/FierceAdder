@@ -115,93 +115,11 @@
 
 ## 🛸 Projects
 
+> *`$ ls -la ./projects/` — hover to explore*
+
 <div align="center">
 
-<table>
-  <tr>
-
-<!-- Project Card 1 -->
-<td width="50%" valign="top">
-
-### 📈 FinSocial
-**Full-stack NSE/BSE Paper Trading Platform**
-
-```
-Stack  →  React · FastAPI · PostgreSQL
-         XGBoost · FinBERT · Socket.IO
-         Nginx · Docker · Vercel
-```
-- 🤖 3-class XGBoost signal classifier (BUY/HOLD/SELL) trained on 10 yrs OHLCV + FinBERT sentiment — 52.8% precision vs 33% random
-- 💬 RAG-backed AI chatbot (Gemini + pgvector)
-- ⚡ Real-time WebSocket leaderboard & community forums
-- 🚀 Microservices behind Nginx reverse proxy + CI/CD
-
-[![View Repo](https://img.shields.io/badge/GitHub-FinSocial-58A6FF?style=flat-square&logo=github)](https://github.com/FierceAdder/FinSocial)
-
-</td>
-
-<!-- Project Card 2 -->
-<td width="50%" valign="top">
-
-### 🧠 SENTINEL
-**Privacy-first LLM Message Classifier**
-
-```
-Stack  →  Python · Gemini / OpenAI / Claude
-         Tesseract OCR · faster-whisper
-         scikit-learn · TF-IDF
-```
-- 🛡️ 96.7% macro-avg accuracy (5-fold CV) — classify notify/digest/mute
-- 🔒 On-device OCR/ASR — raw media never leaves device
-- ⚡ Sub-10ms TF-IDF/LR classifier for prompt-injection & phishing
-- 🗜️ Context compressed 60–95% before LLM call
-
-[![View Repo](https://img.shields.io/badge/GitHub-SENTINEL-FF7B72?style=flat-square&logo=github)](https://github.com/FierceAdder/SENTINEL)
-
-</td>
-
-  </tr>
-  <tr>
-
-<!-- Project Card 3 -->
-<td width="50%" valign="top">
-
-### 🔗 SyncSpace
-**Collaborative Resource-Sharing Platform**
-
-```
-Stack  →  React · Node.js · Express
-         MongoDB · AWS S3 · Socket.IO
-```
-- 📁 Share links, files, notes, rich-text articles in real-time
-- ✍️ Live threads + typing indicators via Socket.IO
-- 🔑 JWT auth + RBAC with presigned AWS S3 URLs
-- 🔗 Open Graph link previews
-
-[![View Repo](https://img.shields.io/badge/GitHub-SyncSpace-3FB950?style=flat-square&logo=github)](https://github.com/FierceAdder/SyncSpace)
-
-</td>
-
-<!-- Project Card 4 — Research -->
-<td width="50%" valign="top">
-
-### 🔬 MESA *(Research)*
-**Moment Enriched Self Attention**
-
-```
-Domain →  NLP · Transformer Architecture
-Venue  →  Scaler Rethesis (2nd Prize 🥈)
-```
-- 📐 Augments Q/K projections with learnable higher-order statistical moments via Cross-Moment Projection (CMP) module
-- 🧪 Evaluated on AG News with multi-seed validation
-- Co-authored independent research
-
-[![View Paper](https://img.shields.io/badge/Paper-MESA-A371F7?style=flat-square&logo=arxiv)](https://github.com/FierceAdder)
-
-</td>
-
-  </tr>
-</table>
+<img src="./assets/projects.svg" alt="Projects — animated terminal cards" width="860" />
 
 </div>
 
@@ -215,15 +133,32 @@ Venue  →  Scaler Rethesis (2nd Prize 🥈)
 
 <div align="center">
 
-| 🏅 Achievement | Details |
-|:---|:---|
-| **LeetCode Knight** | Worldwide **top 1%** · Max rating **2073** · **700+** problems solved |
-| **Rank 417 / 27,000+** | LeetCode Weekly Contest 500 |
-| **Codeforces Pupil** | Current rating **1385** |
-| **Fidelity India Hackathon** | Finalist — Top 50 of 1200+ teams |
-| **NER Tech 2.0** | Top 60 of 2000+ teams |
-| **MSRIT Whackiest Hackathon** | Top 25 |
-| **Scaler Rethesis** | 2nd Prize — MESA research paper |
+```
+╔══════════════════════════════════════════════════════════════════════════════════╗
+║  $ cat achievements.log                                                          ║
+╠══════════════════════════════════════════════════════════════════════════════════╣
+║  [CP]  LeetCode Knight  ·  top 1% worldwide  ·  max rating 2073  ·  700+ solved ║
+║  [CP]  Rank 417 / 27,000+  ·  LeetCode Weekly Contest 500                       ║
+║  [CP]  Codeforces Pupil  ·  rating 1385                                         ║
+║  [HK]  Fidelity India Hackathon  ·  Finalist  ·  Top 50 of 1,200+ teams         ║
+║  [HK]  NER Tech 2.0  ·  Top 60 of 2,000+ teams                                 ║
+║  [HK]  MSRIT Whackiest Hackathon  ·  Top 25                                     ║
+║  [RS]  Scaler Rethesis  ·  2nd Prize 🥈  ·  MESA research paper                ║
+╚══════════════════════════════════════════════════════════════════════════════════╝
+  tags: [CP]=competitive-prog  [HK]=hackathon  [RS]=research
+```
+
+<p>
+  <img src="https://img.shields.io/badge/LeetCode-Knight_🏅-FFA116?style=flat-square&logo=leetcode&logoColor=white" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Max_Rating-2073-58A6FF?style=flat-square" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Solved-700+-3FB950?style=flat-square" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Codeforces-Pupil_1385-1F8ACB?style=flat-square&logo=codeforces&logoColor=white" />
+  &nbsp;
+  <img src="https://img.shields.io/badge/Scaler_Rethesis-2nd_Prize_🥈-A371F7?style=flat-square" />
+</p>
 
 </div>
 
