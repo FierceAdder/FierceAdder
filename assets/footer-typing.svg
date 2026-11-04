@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 700 40" width="700" height="40">
+  <defs>
+    <style>
+      .txt {
+        font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
+        font-size: 14px;
+        font-weight: 500;
+        fill: #3FB950;
+      }
+      @keyframes blink {
+        0%, 100% { opacity: 1; }
+        50%      { opacity: 0; }
+      }
+      @keyframes rot0 {
+        0%, 30%  { opacity: 1; }
+        33.3%, 100% { opacity: 0; }
+      }
+      @keyframes rot1 {
+        0%, 33.3% { opacity: 0; }
+        36.6%, 63.3% { opacity: 1; }
+        66.6%, 100% { opacity: 0; }
+      }
+      @keyframes rot2 {
+        0%, 66.6% { opacity: 0; }
+        70%, 96.6% { opacity: 1; }
+        100% { opacity: 0; }
+      }
+      .l0 { animation: rot0 12s infinite; }
+      .l1 { animation: rot1 12s infinite; }
+      .l2 { animation: rot2 12s infinite; }
+      .cursor {
+        fill: #3FB950;
+        animation: blink 0.9s infinite;
+      }
+    </style>
+  </defs>
+
+  <!-- Message 1 -->
+  <g class="l0">
+    <text x="350" y="24" class="txt" text-anchor="middle">
+      Thanks for stopping by! Have a great day 👾
+    </text>
+  </g>
+
+  <!-- Message 2 -->
+  <g class="l1">
+    <text x="350" y="24" class="txt" text-anchor="middle">
+      Building at the intersection of AI &amp; Systems Engineering
+    </text>
+  </g>
+
+  <!-- Message 3 -->
+  <g class="l2">
+    <text x="350" y="24" class="txt" text-anchor="middle">
+      Always learning, always building 🚀
+    </text>
+  </g>
+
+  <!-- Terminal cursor -->
+  <rect x="635" y="14" width="7" height="13" rx="1" class="cursor"/>
+</svg>
+

@@ -54,9 +54,9 @@
   <line x1="1" y1="35" x2="859" y2="35" stroke="#30363D" stroke-width="1" />
 
   <!-- Timeline Axis -->
-  <line x1="40" y1="68" x2="820" y2="68" stroke="#21262D" stroke-width="3" stroke-linecap="round" />
-  <line x1="40" y1="68" x2="820" y2="68" stroke="url(#axisGradient)" stroke-width="3" stroke-linecap="round" />
-  <polygon points="820,68 810,63.5 810,72.5" fill="#A371F7" />
+  <line x1="40" y1="66" x2="820" y2="66" stroke="#21262D" stroke-width="3" stroke-linecap="round" />
+  <line x1="40" y1="66" x2="820" y2="66" stroke="url(#axisGradient)" stroke-width="3" stroke-linecap="round" />
+  <polygon points="820,66 810,61.5 810,70.5" fill="#A371F7" />
 
   <!-- ═══════════════════════════════════════
        MILESTONE 1 — TATA COMMUNICATIONS
@@ -64,37 +64,36 @@
        ═══════════════════════════════════════ -->
   <g class="milestone-tata">
     <!-- Date pill above axis -->
-    <rect x="155" y="42" width="150" height="18" rx="9"
+    <rect x="155" y="40" width="150" height="18" rx="9"
           fill="#58A6FF" fill-opacity="0.15"
           stroke="#58A6FF" stroke-width="0.8" stroke-opacity="0.6" />
-    <text x="230" y="54.5" class="mono" font-size="9" font-weight="700" fill="#58A6FF" text-anchor="middle">
+    <text x="230" y="52.5" class="mono" font-size="9" font-weight="700" fill="#58A6FF" text-anchor="middle">
       AUG 2025 — SEP 2025
     </text>
 
     <!-- Node on axis -->
-    <circle cx="230" cy="68" r="9" fill="none" stroke="#58A6FF" stroke-width="2" filter="url(#glowBlue)" />
-    <circle cx="230" cy="68" r="4" fill="#58A6FF" />
+    <circle cx="230" cy="66" r="9" fill="none" stroke="#58A6FF" stroke-width="2" filter="url(#glowBlue)" />
+    <circle cx="230" cy="66" r="4" fill="#58A6FF" />
 
     <!-- Card below axis -->
-    <rect x="50" y="86" width="360" height="160" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <rect x="50" y="84" width="360" height="165" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
 
     <!-- Header bar -->
-    <rect x="50" y="86" width="360" height="30" rx="8" fill="#0D1117" />
-    <rect x="50" y="104" width="360" height="12" fill="#0D1117" />
-    <line x1="50" y1="116" x2="410" y2="116" stroke="#21262D" stroke-width="1" />
+    <rect x="50" y="84" width="360" height="36" rx="8" fill="#0D1117" />
+    <rect x="50" y="106" width="360" height="14" fill="#0D1117" />
+    <line x1="50" y1="120" x2="410" y2="120" stroke="#21262D" stroke-width="1" />
 
-    <text x="64" y="105" class="mono" font-size="12" font-weight="700" fill="#FFFFFF">
+    <!-- Role Title on top line -->
+    <text x="64" y="102" class="mono" font-size="12" font-weight="700" fill="#FFFFFF">
       📡 Project Trainee
     </text>
-    <text x="230" y="105" class="mono" font-size="11" font-weight="600" fill="#58A6FF">
-      Tata Communications
-    </text>
-    <text x="396" y="105" class="mono" font-size="9.5" fill="#8B949E" text-anchor="end">
-      Pune, India
+    <!-- Company & Location on clear subtitle line -->
+    <text x="64" y="115" class="mono" font-size="9.5" fill="#58A6FF" font-weight="600">
+      Tata Communications <tspan fill="#8B949E">· Pune, India</tspan>
     </text>
 
     <!-- Bullets -->
-    <g transform="translate(64, 132)">
+    <g transform="translate(64, 137)">
       <text x="0" y="0" class="mono" font-size="9.5" fill="#58A6FF">▸</text>
       <text x="12" y="0" class="mono" font-size="9" fill="#C9D1D9">
         Designed RESTful endpoints for Automated Incident Mgmt System
@@ -119,41 +118,40 @@
 
   <!-- ═══════════════════════════════════════
        MILESTONE 2 — RTIFACT
-       x-center: 630, Card: 360px wide (generous, no overflow)
+       x-center: 630, Card: 360px wide
        ═══════════════════════════════════════ -->
   <g class="milestone-rtifact">
     <!-- Date pill above axis -->
-    <rect x="555" y="42" width="150" height="18" rx="9"
+    <rect x="555" y="40" width="150" height="18" rx="9"
           fill="#A371F7" fill-opacity="0.15"
           stroke="#A371F7" stroke-width="0.8" stroke-opacity="0.6" />
-    <text x="630" y="54.5" class="mono" font-size="9" font-weight="700" fill="#A371F7" text-anchor="middle">
+    <text x="630" y="52.5" class="mono" font-size="9" font-weight="700" fill="#A371F7" text-anchor="middle">
       JUL 2026 — SEP 2026
     </text>
 
     <!-- Node on axis -->
-    <circle cx="630" cy="68" r="9" fill="none" stroke="#A371F7" stroke-width="2" filter="url(#glowPurple)" />
-    <circle cx="630" cy="68" r="4" fill="#A371F7" />
+    <circle cx="630" cy="66" r="9" fill="none" stroke="#A371F7" stroke-width="2" filter="url(#glowPurple)" />
+    <circle cx="630" cy="66" r="4" fill="#A371F7" />
 
-    <!-- Card below axis — spacious 360px wide -->
-    <rect x="450" y="86" width="360" height="160" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <!-- Card below axis -->
+    <rect x="450" y="84" width="360" height="165" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
 
     <!-- Header bar -->
-    <rect x="450" y="86" width="360" height="30" rx="8" fill="#0D1117" />
-    <rect x="450" y="104" width="360" height="12" fill="#0D1117" />
-    <line x1="450" y1="116" x2="810" y2="116" stroke="#21262D" stroke-width="1" />
+    <rect x="450" y="84" width="360" height="36" rx="8" fill="#0D1117" />
+    <rect x="450" y="106" width="360" height="14" fill="#0D1117" />
+    <line x1="450" y1="120" x2="810" y2="120" stroke="#21262D" stroke-width="1" />
 
-    <text x="464" y="105" class="mono" font-size="12" font-weight="700" fill="#FFFFFF">
+    <!-- Role Title on top line -->
+    <text x="464" y="102" class="mono" font-size="12" font-weight="700" fill="#FFFFFF">
       🤖 AI Engineer Intern
     </text>
-    <text x="618" y="105" class="mono" font-size="11" font-weight="600" fill="#A371F7">
-      Rtifact
-    </text>
-    <text x="796" y="105" class="mono" font-size="9.5" fill="#8B949E" text-anchor="end">
-      Remote / BLR
+    <!-- Company & Location on clear subtitle line (ZERO COLLISION!) -->
+    <text x="464" y="115" class="mono" font-size="9.5" fill="#A371F7" font-weight="600">
+      Rtifact <tspan fill="#8B949E">· Remote / Bengaluru</tspan>
     </text>
 
     <!-- Bullets -->
-    <g transform="translate(464, 132)">
+    <g transform="translate(464, 137)">
       <text x="0" y="0" class="mono" font-size="9.5" fill="#A371F7">▸</text>
       <text x="12" y="0" class="mono" font-size="9" fill="#C9D1D9">
         GitHub issue grounding: <tspan fill="#A371F7" font-weight="700">11,600+ nodes</tspan> @ 70ms warm latency

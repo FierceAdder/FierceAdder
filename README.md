@@ -201,7 +201,7 @@
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=4000&pause=1000&color=3FB950&center=true&vCenter=true&width=600&lines=Thanks+for+stopping+by!+Have+a+great+day+👾;Building+at+the+intersection+of+AI+%26+Systems+Engineering;Always+learning%2C+always+building+🚀" alt="Footer Typing" />
+<img src="./assets/footer-typing.svg" alt="Footer Typing" width="600" />
 
 <br/>
 

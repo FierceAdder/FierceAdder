@@ -160,15 +160,11 @@ def build_svg(stats: dict, mode: str) -> str:
         ("Education",  f"{stats['education']} "),
         ("Experience", stats["internship"],                     "value"),
         ("Research",   stats["research"],                       "purple"),
-        ("LeetCode",   stats["leetcode"],                       "gold"),
-        ("Codeforces", stats["codeforces"],                     "prompt"),
-        ("Core Stack", stats["stack"],                          "orange"),
         ("Interests",  stats["focus"],                          "highlight"),
         ("---",        "",                                      "sep"),
         ("Repos",      f"{stats['public_repos']} public repos",  "value"),
         ("Commits",    f"{stats['commits']} total contributions","value"),
         ("Stars",      f"⭐ {stats['stars']} stars",      "gold"),
-        ("Community",  f"{stats['followers']} followers · {stats['following']} following", "value"),
         ("System",     f"GitHub Profile v3.0 · Uptime: {stats['uptime']}", "text"),
     ]
 
