@@ -1,0 +1,156 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="310" viewBox="0 0 860 310">
+  <defs>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;display=swap');
+
+      .mono { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+
+      @keyframes fadeInUp {
+        from { opacity: 0; transform: translateY(6px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+
+      .g1 { animation: fadeInUp 0.5s ease forwards; animation-delay: 0.1s; opacity: 0; }
+      .g2 { animation: fadeInUp 0.5s ease forwards; animation-delay: 0.2s; opacity: 0; }
+      .g3 { animation: fadeInUp 0.5s ease forwards; animation-delay: 0.3s; opacity: 0; }
+      .g4 { animation: fadeInUp 0.5s ease forwards; animation-delay: 0.4s; opacity: 0; }
+      .hdr { animation: fadeInUp 0.4s ease forwards; animation-delay: 0.0s; opacity: 0; }
+    </style>
+
+    <!-- Completed tag pill clip -->
+    <clipPath id="clip-pill">
+      <rect rx="4" ry="4"/>
+    </clipPath>
+  </defs>
+
+  <!-- ═══════════════════════════ BACKGROUND ═══════════════════════════ -->
+  <rect width="860" height="310" rx="10" fill="#0D1117"/>
+  <rect width="858" height="308" x="1" y="1" rx="10" fill="none" stroke="#30363D" stroke-width="1.2"/>
+
+  <!-- ═══════════════════════════ TITLE BAR ════════════════════════════ -->
+  <circle cx="22" cy="20" r="5.5" fill="#FF5F56"/>
+  <circle cx="39" cy="20" r="5.5" fill="#FEBC2E"/>
+  <circle cx="56" cy="20" r="5.5" fill="#28C840"/>
+  <text x="430" y="24" class="mono" font-size="12" fill="#8B949E" text-anchor="middle">certifications.log — git log</text>
+  <line x1="1" y1="35" x2="859" y2="35" stroke="#30363D" stroke-width="1"/>
+
+  <!-- ════════════════════════ HEADER COMMAND ═══════════════════════════ -->
+  <g class="hdr">
+    <text x="20" y="55" class="mono" font-size="12" fill="#3FB950">$</text>
+    <text x="30" y="55" class="mono" font-size="12" fill="#C9D1D9"> git log --all --format="%h %s" --certs</text>
+  </g>
+
+  <!-- ═════════════════════════ TRUNK LINE ═════════════════════════════ -->
+  <!-- Faint vertical trunk running full content height -->
+  <line x1="46" y1="62" x2="46" y2="300" stroke="#21262D" stroke-width="2"/>
+
+  <!-- ═══════════════════════════ GROUP 1 — DeepLearning.AI ════════════ -->
+  <g class="g1">
+    <!-- Branch line segment (orange-red) -->
+    <line x1="46" y1="65" x2="46" y2="145" stroke="#FF7B72" stroke-width="2"/>
+
+    <!-- Commit node circle on branch -->
+    <circle cx="46" cy="78" r="4" fill="#FF7B72"/>
+
+    <!-- Provider icon circle -->
+    <circle cx="46" cy="78" r="14" fill="#1a0a00" stroke="#FF7B72" stroke-width="1.5"/>
+    <text x="46" y="83" class="mono" font-size="12" font-weight="700" fill="#FF7B72" text-anchor="middle">D</text>
+
+    <!-- Commit line: hash + provider -->
+    <text x="68" y="83" class="mono" font-size="12" fill="#8B949E">a3f2c91</text>
+    <text x="123" y="83" class="mono" font-size="12" font-weight="700" fill="#FF7B72">DeepLearning.AI</text>
+
+    <!-- Course 1 -->
+    <text x="72" y="102" class="mono" font-size="11" fill="#FF7B72">●</text>
+    <text x="84" y="102" class="mono" font-size="11" fill="#C9D1D9">Machine Learning Specialization</text>
+    <rect x="680" y="91" width="150" height="16" rx="4" fill="#122820" stroke="#3FB950" stroke-width="1"/>
+    <text x="755" y="103" class="mono" font-size="10" fill="#3FB950" text-anchor="middle">[COMPLETED ✓]</text>
+
+    <!-- Course 2 -->
+    <text x="72" y="120" class="mono" font-size="11" fill="#FF7B72">●</text>
+    <text x="84" y="120" class="mono" font-size="11" fill="#C9D1D9">Transformers in Practice</text>
+    <rect x="680" y="109" width="150" height="16" rx="4" fill="#122820" stroke="#3FB950" stroke-width="1"/>
+    <text x="755" y="121" class="mono" font-size="10" fill="#3FB950" text-anchor="middle">[COMPLETED ✓]</text>
+
+    <!-- Course 3 -->
+    <text x="72" y="138" class="mono" font-size="11" fill="#FF7B72">●</text>
+    <text x="84" y="138" class="mono" font-size="11" fill="#C9D1D9">Agentic AI</text>
+    <rect x="680" y="127" width="150" height="16" rx="4" fill="#122820" stroke="#3FB950" stroke-width="1"/>
+    <text x="755" y="139" class="mono" font-size="10" fill="#3FB950" text-anchor="middle">[COMPLETED ✓]</text>
+  </g>
+
+  <!-- ═══════════════════════════ GROUP 2 — TakeUForward ═══════════════ -->
+  <g class="g2">
+    <!-- Branch line segment (orange) -->
+    <line x1="46" y1="150" x2="46" y2="200" stroke="#F7931E" stroke-width="2"/>
+
+    <!-- Commit node -->
+    <circle cx="46" cy="163" r="4" fill="#F7931E"/>
+
+    <!-- Provider icon -->
+    <circle cx="46" cy="163" r="14" fill="#1a0d00" stroke="#F7931E" stroke-width="1.5"/>
+    <text x="46" y="168" class="mono" font-size="8" font-weight="700" fill="#F7931E" text-anchor="middle">TUF</text>
+
+    <!-- Commit line -->
+    <text x="68" y="168" class="mono" font-size="12" fill="#8B949E">7e1b4d0</text>
+    <text x="123" y="168" class="mono" font-size="12" font-weight="700" fill="#F7931E">TakeUForward</text>
+
+    <!-- Course 1 -->
+    <text x="72" y="187" class="mono" font-size="11" fill="#F7931E">●</text>
+    <text x="84" y="187" class="mono" font-size="11" fill="#C9D1D9">DSA — Basics to Advanced</text>
+    <rect x="680" y="176" width="150" height="16" rx="4" fill="#122820" stroke="#3FB950" stroke-width="1"/>
+    <text x="755" y="188" class="mono" font-size="10" fill="#3FB950" text-anchor="middle">[COMPLETED ✓]</text>
+  </g>
+
+  <!-- ═══════════════════════════ GROUP 3 — Google ══════════════════════ -->
+  <g class="g3">
+    <!-- Branch line segment (blue) -->
+    <line x1="46" y1="204" x2="46" y2="250" stroke="#58A6FF" stroke-width="2"/>
+
+    <!-- Commit node -->
+    <circle cx="46" cy="217" r="4" fill="#58A6FF"/>
+
+    <!-- Provider icon -->
+    <circle cx="46" cy="217" r="14" fill="#001a2e" stroke="#58A6FF" stroke-width="1.5"/>
+    <text x="46" y="222" class="mono" font-size="12" font-weight="700" fill="#58A6FF" text-anchor="middle">G</text>
+
+    <!-- Commit line -->
+    <text x="68" y="222" class="mono" font-size="12" fill="#8B949E">c94b82e</text>
+    <text x="123" y="222" class="mono" font-size="12" font-weight="700" fill="#58A6FF">Google</text>
+
+    <!-- Course 1 -->
+    <text x="72" y="241" class="mono" font-size="11" fill="#58A6FF">●</text>
+    <text x="84" y="241" class="mono" font-size="11" fill="#C9D1D9">Introduction to Git and GitHub</text>
+    <rect x="680" y="230" width="150" height="16" rx="4" fill="#122820" stroke="#3FB950" stroke-width="1"/>
+    <text x="755" y="242" class="mono" font-size="10" fill="#3FB950" text-anchor="middle">[COMPLETED ✓]</text>
+  </g>
+
+  <!-- ═══════════════════════════ GROUP 4 — HackerRank ═════════════════ -->
+  <g class="g4">
+    <!-- Branch line segment (green) -->
+    <line x1="46" y1="254" x2="46" y2="304" stroke="#3FB950" stroke-width="2"/>
+
+    <!-- Commit node -->
+    <circle cx="46" cy="265" r="4" fill="#3FB950"/>
+
+    <!-- Provider icon -->
+    <circle cx="46" cy="265" r="14" fill="#001a08" stroke="#3FB950" stroke-width="1.5"/>
+    <text x="46" y="270" class="mono" font-size="10" font-weight="700" fill="#3FB950" text-anchor="middle">HR</text>
+
+    <!-- Commit line -->
+    <text x="68" y="270" class="mono" font-size="12" fill="#8B949E">2f7a139</text>
+    <text x="123" y="270" class="mono" font-size="12" font-weight="700" fill="#3FB950">HackerRank</text>
+
+    <!-- Course 1 -->
+    <text x="72" y="288" class="mono" font-size="11" fill="#3FB950">●</text>
+    <text x="84" y="288" class="mono" font-size="11" fill="#C9D1D9">Python (Basic)</text>
+    <rect x="680" y="277" width="150" height="16" rx="4" fill="#122820" stroke="#3FB950" stroke-width="1"/>
+    <text x="755" y="289" class="mono" font-size="10" fill="#3FB950" text-anchor="middle">[COMPLETED ✓]</text>
+
+    <!-- Course 2 -->
+    <text x="72" y="304" class="mono" font-size="11" fill="#3FB950">●</text>
+    <text x="84" y="304" class="mono" font-size="11" fill="#C9D1D9">Java (Basic)</text>
+    <rect x="680" y="293" width="150" height="16" rx="4" fill="#122820" stroke="#3FB950" stroke-width="1"/>
+    <text x="755" y="305" class="mono" font-size="10" fill="#3FB950" text-anchor="middle">[COMPLETED ✓]</text>
+  </g>
+</svg>

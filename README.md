@@ -26,7 +26,6 @@
 
 <div align="center">
 
-<!-- Terminal-style contribution heatmap -->
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/contrib-heatmap-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/contrib-heatmap-light.svg" />
@@ -38,44 +37,32 @@
 ---
 
 <!-- ════════════════════════════════════════
-     §3  GITHUB STATS GRID
+     §3  GITHUB STATS — TERMINAL DASHBOARD
      ════════════════════════════════════════ -->
 
-## 📊 GitHub Stats
+## 📟 GitHub Stats
+
+> *`$ gh stats --verbose` — commit bars, language breakdown, streak indicators*
 
 <div align="center">
 
-<table>
-  <tr>
-    <td>
-      <img src="https://github-readme-stats-eight-theta.vercel.app/api?username=FierceAdder&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9&rank_icon=github" width="420" />
-    </td>
-    <td>
-      <img src="https://streak-stats.demolab.com/?user=FierceAdder&theme=github-dark-blue&hide_border=true&background=0D1117&ring=58A6FF&fire=FF7B72&currStreakLabel=58A6FF" width="420" />
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="https://github-readme-stats-eight-theta.vercel.app/api/top-langs/?username=FierceAdder&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&langs_count=8" width="420" />
-    </td>
-  </tr>
-</table>
+<img src="./assets/github-stats.svg" alt="GitHub Stats Terminal Dashboard" width="860" />
 
 </div>
 
 ---
 
 <!-- ════════════════════════════════════════
-     §4  TECH STACK — 3D KEYBOARD STYLE
+     §4  TECH STACK — ISOMETRIC 3D KEYBOARD
      ════════════════════════════════════════ -->
 
 ## 🎹 Tech Stack
 
-> Keys I press daily — 24 tools, 4 rows, one keyboard
+> *Keys I press daily — 24 tools, 4 rows, one keyboard*
 
 <div align="center">
 
-<img src="./assets/techstack-3d-dark.svg" alt="3D Tech Stack — Languages · ML/AI · Backend · Frontend" width="860" />
+<img src="./assets/techstack-3d-dark.svg" alt="Isometric 3D Tech Stack Keyboard" width="860" />
 
 </div>
 
@@ -243,31 +230,32 @@ Venue  →  Scaler Rethesis (2nd Prize 🥈)
 ---
 
 <!-- ════════════════════════════════════════
-     §8  EXPERIENCE & EDUCATION TIMELINE
+     §8  EXPERIENCE TIMELINE
      ════════════════════════════════════════ -->
 
-## 🏢 Experience & Education
+## 💼 Experience
+
+> *`$ cat experience.json | jq '.[]'`*
 
 <div align="center">
 
-<img src="./assets/timeline-horizontal.svg" alt="Experience & Education Horizontal Timeline" width="860" />
+<img src="./assets/timeline-horizontal.svg" alt="Experience Timeline" width="860" />
 
 </div>
 
 ---
 
 <!-- ════════════════════════════════════════
-     §9  CERTIFICATIONS & LEARNING
+     §9  CERTIFICATIONS
      ════════════════════════════════════════ -->
 
-## 📜 Certifications & Learning
+## 📜 Certifications
+
+> *`$ git log --all --format="%h %s" --certs`*
 
 <div align="center">
 
-| Provider | Course |
-|:---:|:---|
-| ![DeepLearning.AI](https://img.shields.io/badge/DeepLearning.AI-0059B3?style=flat-square&logo=coursera&logoColor=white) | Transformers in Practice · ML Specialization · Agentic AI |
-| ![TakeUForward](https://img.shields.io/badge/TakeUForward-FF6B00?style=flat-square&logoColor=white) | DSA — Basics to Advanced |
+<img src="./assets/certifications.svg" alt="Certifications — terminal git log view" width="860" />
 
 </div>
 
@@ -287,7 +275,7 @@ Venue  →  Scaler Rethesis (2nd Prize 🥈)
 
 <br/><br/>
 
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=4000&pause=1000&color=3FB950&center=true&vCenter=true&width=600&lines=Thanks+for+stopping+by!+Have+a+great+day+%F0%9F%91%BE;Building+at+the+intersection+of+AI+%26+Systems+Engineering;Always+learning%2C+always+building+%F0%9F%9A%80" alt="Footer Typing" />
+<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&size=14&duration=4000&pause=1000&color=3FB950&center=true&vCenter=true&width=600&lines=Thanks+for+stopping+by!+Have+a+great+day+👾;Building+at+the+intersection+of+AI+%26+Systems+Engineering;Always+learning%2C+always+building+🚀" alt="Footer Typing" />
 
 <br/>
 
