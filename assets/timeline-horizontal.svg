@@ -1,176 +1,77 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="265" viewBox="0 0 860 265">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="205" viewBox="0 0 860 205">
   <defs>
-    <linearGradient id="axisGradient" x1="0%" y1="0%" x2="100%" y2="0%">
-      <stop offset="0%" style="stop-color:#58A6FF;stop-opacity:1" />
-      <stop offset="100%" style="stop-color:#A371F7;stop-opacity:1" />
+    <linearGradient id="lineGrad" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#58A6FF" />
+      <stop offset="50%" stop-color="#3FB950" />
+      <stop offset="100%" stop-color="#A371F7" />
     </linearGradient>
-
-    <filter id="glowBlue" x="-60%" y="-60%" width="220%" height="220%">
+    <filter id="glow" x="-20%" y="-20%" width="140%" height="140%">
       <feGaussianBlur stdDeviation="2.5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
+      <feComposite in="SourceGraphic" in2="blur" operator="over" />
     </filter>
-
-    <filter id="glowPurple" x="-60%" y="-60%" width="220%" height="220%">
-      <feGaussianBlur stdDeviation="2.5" result="blur" />
-      <feMerge>
-        <feMergeNode in="blur" />
-        <feMergeNode in="SourceGraphic" />
-      </feMerge>
-    </filter>
-
-    <style>
-      .mono {
-        font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
-      }
-      @keyframes fadeIn {
-        from { opacity: 0; transform: translateY(-3px); }
-        to   { opacity: 1; transform: translateY(0); }
-      }
-      .milestone-tata {
-        animation: fadeIn 0.45s ease forwards;
-      }
-      .milestone-rtifact {
-        animation: fadeIn 0.45s ease forwards;
-        animation-delay: 0.15s;
-        opacity: 0;
-      }
-    </style>
   </defs>
 
-  <!-- Terminal Window Chrome -->
-  <rect width="860" height="265" rx="10" fill="#0D1117" />
-  <rect width="858" height="263" x="1" y="1" rx="10" fill="none" stroke="#30363D" stroke-width="1.2" />
+  <style>
+    .font-mono { font-family: 'JetBrains Mono', -apple-system, BlinkMacSystemFont, monospace; }
+    .card-title { font-size: 13px; font-weight: 700; fill: #FFFFFF; }
+    .card-sub { font-size: 11px; font-weight: 600; }
+    .card-body { font-size: 10px; fill: #8B949E; }
+  </style>
 
-  <circle cx="22" cy="20" r="5.5" fill="#FF5F56" />
-  <circle cx="39" cy="20" r="5.5" fill="#FEBC2E" />
-  <circle cx="56" cy="20" r="5.5" fill="#28C840" />
+  <!-- Container Box -->
+  <rect width="860" height="205" rx="12" fill="#0D1117" stroke="#30363D" stroke-width="1.2" />
 
-  <text x="430" y="24" class="mono" font-size="12" fill="#8B949E" text-anchor="middle">
-    $ cat experience.json | jq '.[]'
-  </text>
-  <line x1="1" y1="35" x2="859" y2="35" stroke="#30363D" stroke-width="1" />
+  <!-- Horizontal Axis Line -->
+  <line x1="50" y1="46" x2="810" y2="46" stroke="#21262D" stroke-width="3" stroke-linecap="round" />
+  <line x1="50" y1="46" x2="795" y2="46" stroke="url(#lineGrad)" stroke-width="3" stroke-linecap="round" filter="url(#glow)" />
+  <polygon points="808,46 795,41 795,51" fill="#A371F7" />
 
-  <!-- Timeline Axis -->
-  <line x1="40" y1="66" x2="820" y2="66" stroke="#21262D" stroke-width="3" stroke-linecap="round" />
-  <line x1="40" y1="66" x2="820" y2="66" stroke="url(#axisGradient)" stroke-width="3" stroke-linecap="round" />
-  <polygon points="820,66 810,61.5 810,70.5" fill="#A371F7" />
+  <!-- ── Milestone 1: Education ────────────────────────────────────────── -->
+  <g transform="translate(140, 0)">
+    <circle cx="0" cy="46" r="8" fill="#0D1117" stroke="#58A6FF" stroke-width="2.5" />
+    <circle cx="0" cy="46" r="3.5" fill="#58A6FF" />
 
-  <!-- ═══════════════════════════════════════
-       MILESTONE 1 — TATA COMMUNICATIONS
-       x-center: 230, Card: 360px wide
-       ═══════════════════════════════════════ -->
-  <g class="milestone-tata">
-    <!-- Date pill above axis -->
-    <rect x="155" y="40" width="150" height="18" rx="9"
-          fill="#58A6FF" fill-opacity="0.15"
-          stroke="#58A6FF" stroke-width="0.8" stroke-opacity="0.6" />
-    <text x="230" y="52.5" class="mono" font-size="9" font-weight="700" fill="#58A6FF" text-anchor="middle">
-      AUG 2025 — SEP 2025
-    </text>
+    <rect x="-60" y="14" width="120" height="20" rx="10" fill="#1F2D40" stroke="#58A6FF" stroke-width="0.8" />
+    <text x="0" y="28" class="font-mono" font-size="9" font-weight="700" fill="#58A6FF" text-anchor="middle">2024 — PRESENT</text>
 
-    <!-- Node on axis -->
-    <circle cx="230" cy="66" r="9" fill="none" stroke="#58A6FF" stroke-width="2" filter="url(#glowBlue)" />
-    <circle cx="230" cy="66" r="4" fill="#58A6FF" />
-
-    <!-- Card below axis -->
-    <rect x="50" y="84" width="360" height="165" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
-
-    <!-- Header bar -->
-    <rect x="50" y="84" width="360" height="36" rx="8" fill="#0D1117" />
-    <rect x="50" y="106" width="360" height="14" fill="#0D1117" />
-    <line x1="50" y1="120" x2="410" y2="120" stroke="#21262D" stroke-width="1" />
-
-    <!-- Role Title on top line -->
-    <text x="64" y="102" class="mono" font-size="12" font-weight="700" fill="#FFFFFF">
-      📡 Project Trainee
-    </text>
-    <!-- Company & Location on clear subtitle line -->
-    <text x="64" y="115" class="mono" font-size="9.5" fill="#58A6FF" font-weight="600">
-      Tata Communications <tspan fill="#8B949E">· Pune, India</tspan>
-    </text>
-
-    <!-- Bullets -->
-    <g transform="translate(64, 137)">
-      <text x="0" y="0" class="mono" font-size="9.5" fill="#58A6FF">▸</text>
-      <text x="12" y="0" class="mono" font-size="9" fill="#C9D1D9">
-        Designed RESTful endpoints for Automated Incident Mgmt System
-      </text>
-
-      <text x="0" y="22" class="mono" font-size="9.5" fill="#58A6FF">▸</text>
-      <text x="12" y="22" class="mono" font-size="9" fill="#C9D1D9">
-        Integrated New Relic alerts with ServiceNow (ingestion &amp; sync)
-      </text>
-
-      <text x="0" y="44" class="mono" font-size="9.5" fill="#58A6FF">▸</text>
-      <text x="12" y="44" class="mono" font-size="9" fill="#C9D1D9">
-        Reported deployment readiness &amp; performance telemetry to lead
-      </text>
-
-      <text x="0" y="66" class="mono" font-size="9.5" fill="#58A6FF">▸</text>
-      <text x="12" y="66" class="mono" font-size="9" fill="#C9D1D9">
-        Positioned to reduce NOC triage staffing from <tspan fill="#3FB950" font-weight="700">5 engineers → 1</tspan>
-      </text>
-    </g>
+    <rect x="-110" y="66" width="220" height="118" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="-96" y="88" class="font-mono card-title">🎓 B.Tech CSE</text>
+    <text x="-96" y="106" class="font-mono card-sub" fill="#58A6FF">Dayananda Sagar Univ.</text>
+    <text x="-96" y="126" class="font-mono card-body">• CGPA: 9.38 / 10.0</text>
+    <text x="-96" y="144" class="font-mono card-body">• Core CS &amp; Systems</text>
+    <text x="-96" y="162" class="font-mono card-body">• Bengaluru, Karnataka</text>
   </g>
 
-  <!-- ═══════════════════════════════════════
-       MILESTONE 2 — RTIFACT
-       x-center: 630, Card: 360px wide
-       ═══════════════════════════════════════ -->
-  <g class="milestone-rtifact">
-    <!-- Date pill above axis -->
-    <rect x="555" y="40" width="150" height="18" rx="9"
-          fill="#A371F7" fill-opacity="0.15"
-          stroke="#A371F7" stroke-width="0.8" stroke-opacity="0.6" />
-    <text x="630" y="52.5" class="mono" font-size="9" font-weight="700" fill="#A371F7" text-anchor="middle">
-      JUL 2026 — SEP 2026
-    </text>
+  <!-- ── Milestone 2: Tata Communications ─────────────────────────────── -->
+  <g transform="translate(420, 0)">
+    <circle cx="0" cy="46" r="8" fill="#0D1117" stroke="#3FB950" stroke-width="2.5" />
+    <circle cx="0" cy="46" r="3.5" fill="#3FB950" />
 
-    <!-- Node on axis -->
-    <circle cx="630" cy="66" r="9" fill="none" stroke="#A371F7" stroke-width="2" filter="url(#glowPurple)" />
-    <circle cx="630" cy="66" r="4" fill="#A371F7" />
+    <rect x="-65" y="14" width="130" height="20" rx="10" fill="#162F1E" stroke="#3FB950" stroke-width="0.8" />
+    <text x="0" y="28" class="font-mono" font-size="9" font-weight="700" fill="#3FB950" text-anchor="middle">AUG 2025 — SEP 2025</text>
 
-    <!-- Card below axis -->
-    <rect x="450" y="84" width="360" height="165" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
-
-    <!-- Header bar -->
-    <rect x="450" y="84" width="360" height="36" rx="8" fill="#0D1117" />
-    <rect x="450" y="106" width="360" height="14" fill="#0D1117" />
-    <line x1="450" y1="120" x2="810" y2="120" stroke="#21262D" stroke-width="1" />
-
-    <!-- Role Title on top line -->
-    <text x="464" y="102" class="mono" font-size="12" font-weight="700" fill="#FFFFFF">
-      🤖 AI Engineer Intern
-    </text>
-    <!-- Company & Location on clear subtitle line (ZERO COLLISION!) -->
-    <text x="464" y="115" class="mono" font-size="9.5" fill="#A371F7" font-weight="600">
-      Rtifact <tspan fill="#8B949E">· Remote / Bengaluru</tspan>
-    </text>
-
-    <!-- Bullets -->
-    <g transform="translate(464, 137)">
-      <text x="0" y="0" class="mono" font-size="9.5" fill="#A371F7">▸</text>
-      <text x="12" y="0" class="mono" font-size="9" fill="#C9D1D9">
-        GitHub issue grounding: <tspan fill="#A371F7" font-weight="700">11,600+ nodes</tspan> @ 70ms warm latency
-      </text>
-
-      <text x="0" y="22" class="mono" font-size="9.5" fill="#A371F7">▸</text>
-      <text x="12" y="22" class="mono" font-size="9" fill="#C9D1D9">
-        GraphRAG NLQ over 50 Cypher templates in <tspan fill="#3FB950" font-weight="700">&lt;30ms</tspan> at zero LLM cost
-      </text>
-
-      <text x="0" y="44" class="mono" font-size="9.5" fill="#A371F7">▸</text>
-      <text x="12" y="44" class="mono" font-size="9" fill="#C9D1D9">
-        AWS asset cartography: EC2/S3/RDS/Lambda in <tspan fill="#58A6FF" font-weight="700">&lt;185ms</tspan> per event
-      </text>
-
-      <text x="0" y="66" class="mono" font-size="9.5" fill="#A371F7">▸</text>
-      <text x="12" y="66" class="mono" font-size="9" fill="#C9D1D9">
-        5-pass extraction: Tree-sitter AST (37 langs) + OpenAI enrichment
-      </text>
-    </g>
+    <rect x="-115" y="66" width="230" height="118" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="-101" y="88" class="font-mono card-title">📡 Project Trainee</text>
+    <text x="-101" y="106" class="font-mono card-sub" fill="#3FB950">Tata Communications</text>
+    <text x="-101" y="126" class="font-mono card-body">• Incident Mgmt System</text>
+    <text x="-101" y="144" class="font-mono card-body">• ServiceNow + New Relic</text>
+    <text x="-101" y="162" class="font-mono card-body">• Pune, India</text>
   </g>
+
+  <!-- ── Milestone 3: Rtifact Internship ───────────────────────────────── -->
+  <g transform="translate(710, 0)">
+    <circle cx="0" cy="46" r="8" fill="#0D1117" stroke="#A371F7" stroke-width="2.5" />
+    <circle cx="0" cy="46" r="3.5" fill="#A371F7" />
+
+    <rect x="-65" y="14" width="130" height="20" rx="10" fill="#2E1B4E" stroke="#A371F7" stroke-width="0.8" />
+    <text x="0" y="28" class="font-mono" font-size="9" font-weight="700" fill="#A371F7" text-anchor="middle">JUL 2026 — SEP 2026</text>
+
+    <rect x="-120" y="66" width="240" height="118" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <text x="-106" y="88" class="font-mono card-title">🤖 AI Engineer Intern</text>
+    <text x="-106" y="106" class="font-mono card-sub" fill="#A371F7">Rtifact</text>
+    <text x="-106" y="126" class="font-mono card-body">• Agentic workflows (LangChain)</text>
+    <text x="-106" y="144" class="font-mono card-body">• Neo4j Knowledge Graph NLQ</text>
+    <text x="-106" y="162" class="font-mono card-body">• -38% latency via Redis cache</text>
+  </g>
+
 </svg>

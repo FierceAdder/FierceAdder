@@ -17,7 +17,8 @@ Features:
 
 import os
 import json
-import requests
+import urllib.request
+import urllib.error
 from datetime import datetime, timezone, timedelta
 
 GH_USERNAME = os.environ.get("GH_USERNAME", "FierceAdder")
@@ -105,9 +106,10 @@ def fetch_contributions_graphql():
         "to": end.isoformat(),
     }
     url = "https://api.github.com/graphql"
-    r = requests.post(url, json={"query": gql, "variables": variables}, headers=HEADERS, timeout=15)
-    r.raise_for_status()
-    data = r.json()
+    payload = json.dumps({"query": gql, "variables": variables}).encode("utf-8")
+    req = urllib.request.Request(url, data=payload, headers={**HEADERS, "Content-Type": "application/json", "User-Agent": "terminal-heatmap/1.0"})
+    with urllib.request.urlopen(req, timeout=15) as r:
+        data = json.loads(r.read().decode())
 
     if "errors" in data:
         raise RuntimeError(str(data["errors"]))
@@ -287,10 +289,12 @@ def main():
     total, streak, best_day = compute_metrics(days)
     print(f"[terminal-heatmap] Metrics: {total} total, {streak} streak, best day {best_day}")
 
-    os.makedirs("assets", exist_ok=True)
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    out_dir = os.path.join(repo_root, "assets")
+    os.makedirs(out_dir, exist_ok=True)
     for mode in ("dark", "light"):
         svg = build_terminal_svg(total, days, streak, best_day, mode=mode)
-        out_path = f"assets/contrib-heatmap-{mode}.svg"
+        out_path = os.path.join(out_dir, f"contrib-heatmap-{mode}.svg")
         with open(out_path, "w", encoding="utf-8") as f:
             f.write(svg)
         print(f"[terminal-heatmap] Written → {out_path}")

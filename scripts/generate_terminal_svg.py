@@ -12,7 +12,8 @@ import os
 import sys
 import argparse
 import json
-import requests
+import urllib.request
+import urllib.error
 from datetime import datetime, timezone
 
 # ─── Configuration ────────────────────────────────────────────────────────────
@@ -57,16 +58,16 @@ THEMES = {
 
 def gh_rest(path):
     url = f"https://api.github.com{path}"
-    r = requests.get(url, headers=HEADERS, timeout=10)
-    r.raise_for_status()
-    return r.json()
+    req = urllib.request.Request(url, headers=HEADERS)
+    with urllib.request.urlopen(req, timeout=10) as r:
+        return json.loads(r.read().decode())
 
 def gh_graphql(query, variables=None):
     url = "https://api.github.com/graphql"
-    payload = {"query": query, "variables": variables or {}}
-    r = requests.post(url, json=payload, headers=HEADERS, timeout=15)
-    r.raise_for_status()
-    return r.json()
+    payload = json.dumps({"query": query, "variables": variables or {}}).encode("utf-8")
+    req = urllib.request.Request(url, data=payload, headers={**HEADERS, "Content-Type": "application/json"})
+    with urllib.request.urlopen(req, timeout=15) as r:
+        return json.loads(r.read().decode())
 
 def fetch_stats():
     user = {}
@@ -156,7 +157,7 @@ def build_svg(stats: dict, mode: str) -> str:
     items = [
         ("User",       f"Ashmit Kumar Verma (@{username})",      "highlight"),
         ("Role",       stats["role"],                           "value"),
-        ("Education",  f"{stats['education']} "),
+        ("Education",  f"{stats['education']}",                 "value"),
         ("Experience", stats["internship"],                     "value"),
         ("Research",   stats["research"],                       "purple"),
         ("Interests",  stats["focus"],                          "highlight"),
@@ -273,8 +274,10 @@ def main():
     print(f"[terminal-svg] Stats loaded successfully.")
 
     svg = build_svg(stats, args.mode)
-    out_path = f"assets/{args.mode}_mode.svg"
-    os.makedirs("assets", exist_ok=True)
+    repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+    out_dir = os.path.join(repo_root, "assets")
+    os.makedirs(out_dir, exist_ok=True)
+    out_path = os.path.join(out_dir, f"{args.mode}_mode.svg")
     with open(out_path, "w", encoding="utf-8") as f:
         f.write(svg)
     print(f"[terminal-svg] Written → {out_path}")

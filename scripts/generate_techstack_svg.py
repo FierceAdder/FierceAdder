@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Generate true-proportioned 10-9-7 mechanical keyboard tech stack SVG with enhanced 3D depth."""
-import urllib.request, json, re, sys
+import urllib.request, json, re, sys, os
 
 ROWS = [
     # Row 1 (10 keys - Languages & Core AI/ML)
@@ -208,6 +208,9 @@ lines.append(f'''
 </svg>''')
 
 content = "\n".join(lines)
-with open("/Users/ashmit/Downloads/Github Portfolio/assets/techstack-3d-dark.svg", "w") as f:
+repo_root = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+out_path = os.path.join(repo_root, "assets", "techstack-3d-dark.svg")
+os.makedirs(os.path.dirname(out_path), exist_ok=True)
+with open(out_path, "w", encoding="utf-8") as f:
     f.write(content)
-print("Saved techstack-3d-dark.svg successfully!", file=sys.stderr)
+print(f"Saved techstack-3d-dark.svg successfully to {out_path}!", file=sys.stderr)

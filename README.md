@@ -199,17 +199,12 @@
 &nbsp;
 <a href="https://github.com/FierceAdder"><img src="https://img.shields.io/badge/GitHub-FierceAdder-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
 
-<br/><br/>
 
 <img src="./assets/footer-typing.svg" alt="Footer Typing" width="600" />
 
-<br/>
 
 <sub>Crafted with precision &amp; code · Ashmit Kumar Verma © 2026</sub>
 
-</div>
-
-<br/>
 
 *⭐ Star something interesting? Feel free to reach out!*
 
