@@ -1,0 +1,107 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="280" viewBox="0 0 860 280">
+  <defs>
+    <style>
+      @keyframes fadeIn {
+        from { opacity: 0; transform: translateY(4px); }
+        to   { opacity: 1; transform: translateY(0); }
+      }
+      .lbl { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+      .row { animation: fadeIn 0.4s ease both; }
+      .r0 { animation-delay: 0.05s; }
+      .r1 { animation-delay: 0.12s; }
+      .r2 { animation-delay: 0.19s; }
+      .r3 { animation-delay: 0.26s; }
+      .r4 { animation-delay: 0.33s; }
+      .r5 { animation-delay: 0.40s; }
+      .r6 { animation-delay: 0.47s; }
+    </style>
+  </defs>
+
+  <!-- Terminal Window Chrome -->
+  <rect width="860" height="280" rx="10" fill="#0D1117"/>
+  <rect width="858" height="278" x="1" y="1" rx="10" fill="none" stroke="#30363D" stroke-width="1.2"/>
+  <circle cx="22" cy="20" r="5.5" fill="#FF5F56"/>
+  <circle cx="39" cy="20" r="5.5" fill="#FEBC2E"/>
+  <circle cx="56" cy="20" r="5.5" fill="#28C840"/>
+  <text x="430" y="24" class="lbl" font-size="12" fill="#8B949E" text-anchor="middle">achievements.log — $ cat achievements.log</text>
+  <line x1="1" y1="35" x2="859" y2="35" stroke="#30363D" stroke-width="1"/>
+
+  <!-- Command Prompt -->
+  <text x="24" y="55" class="lbl" font-size="11" fill="#58A6FF" font-weight="600">FierceAdder@github</text>
+  <text x="186" y="55" class="lbl" font-size="11" fill="#8B949E">:~$</text>
+  <text x="210" y="55" class="lbl" font-size="11" fill="#3FB950" font-weight="600">cat achievements.log</text>
+
+  <!-- Header line -->
+  <line x1="24" y1="67" x2="836" y2="67" stroke="#21262D" stroke-width="1"/>
+
+  <!-- ── 1. LeetCode Knight ── -->
+  <g class="row r0">
+    <rect x="24" y="76" width="36" height="18" rx="4" fill="#FFA116" fill-opacity="0.15" stroke="#FFA116" stroke-width="0.8"/>
+    <text x="42" y="88.5" class="lbl" font-size="9" font-weight="800" fill="#FFA116" text-anchor="middle">CP</text>
+    <text x="72" y="89" class="lbl" font-size="11" font-weight="700" fill="#FFFFFF">LeetCode Knight</text>
+    <text x="205" y="89" class="lbl" font-size="11" fill="#30363D">·</text>
+    <text x="220" y="89" class="lbl" font-size="10.5" fill="#8B949E">Worldwide <tspan fill="#58A6FF" font-weight="700">Top 1%</tspan> · Max Rating <tspan fill="#58A6FF" font-weight="700">2073</tspan> · <tspan fill="#3FB950" font-weight="700">700+</tspan> problems solved</text>
+  </g>
+
+  <!-- ── 2. LeetCode Contest 500 ── -->
+  <g class="row r1">
+    <rect x="24" y="101" width="36" height="18" rx="4" fill="#FFA116" fill-opacity="0.15" stroke="#FFA116" stroke-width="0.8"/>
+    <text x="42" y="113.5" class="lbl" font-size="9" font-weight="800" fill="#FFA116" text-anchor="middle">CP</text>
+    <text x="72" y="114" class="lbl" font-size="11" font-weight="700" fill="#FFFFFF">Rank 417 / 27,000+</text>
+    <text x="235" y="114" class="lbl" font-size="11" fill="#30363D">·</text>
+    <text x="250" y="114" class="lbl" font-size="10.5" fill="#8B949E">LeetCode Weekly Contest 500 <tspan fill="#58A6FF">(Top 1.5% globally)</tspan></text>
+  </g>
+
+  <!-- ── 3. Codeforces Pupil ── -->
+  <g class="row r2">
+    <rect x="24" y="126" width="36" height="18" rx="4" fill="#1F8ACB" fill-opacity="0.15" stroke="#1F8ACB" stroke-width="0.8"/>
+    <text x="42" y="138.5" class="lbl" font-size="9" font-weight="800" fill="#1F8ACB" text-anchor="middle">CP</text>
+    <text x="72" y="139" class="lbl" font-size="11" font-weight="700" fill="#FFFFFF">Codeforces Pupil</text>
+    <text x="210" y="139" class="lbl" font-size="11" fill="#30363D">·</text>
+    <text x="225" y="139" class="lbl" font-size="10.5" fill="#8B949E">Competitive Programming · Current Rating <tspan fill="#1F8ACB" font-weight="700">1385</tspan></text>
+  </g>
+
+  <!-- ── 4. Fidelity India Hackathon ── -->
+  <g class="row r3">
+    <rect x="24" y="151" width="36" height="18" rx="4" fill="#3FB950" fill-opacity="0.15" stroke="#3FB950" stroke-width="0.8"/>
+    <text x="42" y="163.5" class="lbl" font-size="9" font-weight="800" fill="#3FB950" text-anchor="middle">HK</text>
+    <text x="72" y="164" class="lbl" font-size="11" font-weight="700" fill="#FFFFFF">Fidelity India Hackathon</text>
+    <text x="270" y="164" class="lbl" font-size="11" fill="#30363D">·</text>
+    <text x="285" y="164" class="lbl" font-size="10.5" fill="#8B949E"><tspan fill="#3FB950" font-weight="700">Finalist</tspan> — Top 50 out of 1,200+ engineering teams</text>
+  </g>
+
+  <!-- ── 5. NER Tech 2.0 ── -->
+  <g class="row r4">
+    <rect x="24" y="176" width="36" height="18" rx="4" fill="#3FB950" fill-opacity="0.15" stroke="#3FB950" stroke-width="0.8"/>
+    <text x="42" y="188.5" class="lbl" font-size="9" font-weight="800" fill="#3FB950" text-anchor="middle">HK</text>
+    <text x="72" y="189" class="lbl" font-size="11" font-weight="700" fill="#FFFFFF">NER Tech 2.0</text>
+    <text x="175" y="189" class="lbl" font-size="11" fill="#30363D">·</text>
+    <text x="190" y="189" class="lbl" font-size="10.5" fill="#8B949E"><tspan fill="#3FB950" font-weight="700">Top 60</tspan> out of 2,000+ participating teams nationwide</text>
+  </g>
+
+  <!-- ── 6. MSRIT Hackathon ── -->
+  <g class="row r5">
+    <rect x="24" y="201" width="36" height="18" rx="4" fill="#3FB950" fill-opacity="0.15" stroke="#3FB950" stroke-width="0.8"/>
+    <text x="42" y="213.5" class="lbl" font-size="9" font-weight="800" fill="#3FB950" text-anchor="middle">HK</text>
+    <text x="72" y="214" class="lbl" font-size="11" font-weight="700" fill="#FFFFFF">MSRIT 'Whackiest' Hackathon</text>
+    <text x="295" y="214" class="lbl" font-size="11" fill="#30363D">·</text>
+    <text x="310" y="214" class="lbl" font-size="10.5" fill="#8B949E"><tspan fill="#3FB950" font-weight="700">Top 25</tspan> — Fast-paced prototype sprint</text>
+  </g>
+
+  <!-- ── 7. Scaler Rethesis ── -->
+  <g class="row r6">
+    <rect x="24" y="226" width="36" height="18" rx="4" fill="#A371F7" fill-opacity="0.15" stroke="#A371F7" stroke-width="0.8"/>
+    <text x="42" y="238.5" class="lbl" font-size="9" font-weight="800" fill="#A371F7" text-anchor="middle">RS</text>
+    <text x="72" y="239" class="lbl" font-size="11" font-weight="700" fill="#FFFFFF">Scaler Rethesis</text>
+    <text x="205" y="239" class="lbl" font-size="11" fill="#30363D">·</text>
+    <text x="220" y="239" class="lbl" font-size="10.5" fill="#8B949E"><tspan fill="#A371F7" font-weight="700">2nd Prize 🥈</tspan> — MESA Research Paper (Moment Enriched Self-Attention)</text>
+  </g>
+
+  <!-- Divider & Legend -->
+  <line x1="24" y1="254" x2="836" y2="254" stroke="#21262D" stroke-width="1"/>
+  <text x="24" y="269" class="lbl" font-size="9" fill="#8B949E">TAGS:</text>
+  <text x="65" y="269" class="lbl" font-size="9" fill="#FFA116">[CP] Competitive Programming</text>
+  <text x="260" y="269" class="lbl" font-size="9" fill="#3FB950">[HK] Hackathons</text>
+  <text x="385" y="269" class="lbl" font-size="9" fill="#A371F7">[RS] Research Paper</text>
+</svg>
+

@@ -73,7 +73,32 @@ jobs:
           path: assets/*.svg
 
   # ─────────────────────────────────────────
-  # Job 3: 3D Tech Stack SVG
+  # Job 3: GitHub Stats Dashboard SVG
+  # ─────────────────────────────────────────
+  github-stats:
+    name: 📊 Generate GitHub Stats Dashboard SVG
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate stats dashboard SVG
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: ${{ github.repository_owner }}
+        run: python scripts/generate_github_stats_svg.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: github-stats-svg
+          path: assets/github-stats.svg
+
+  # ─────────────────────────────────────────
+  # Job 4: 3D Tech Stack SVG
   # ─────────────────────────────────────────
   techstack:
     name: 🎹 Generate 3D Tech Stack SVG
@@ -95,11 +120,11 @@ jobs:
           path: assets/techstack-3d-dark.svg
 
   # ─────────────────────────────────────────
-  # Job 4: Commit all generated assets
+  # Job 5: Commit all generated assets
   # ─────────────────────────────────────────
   commit-assets:
     name: 📦 Commit All Assets
-    needs: [terminal-stats, heatmap, techstack]
+    needs: [terminal-stats, heatmap, github-stats, techstack]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -114,6 +139,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: heatmap-svgs
+          path: assets/
+
+      - name: Download github stats SVG
+        uses: actions/download-artifact@v4
+        with:
+          name: github-stats-svg
           path: assets/
 
       - name: Download techstack SVG

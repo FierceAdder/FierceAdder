@@ -1,203 +1,148 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="480" viewBox="0 0 860 480">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="460" viewBox="0 0 860 460">
   <defs>
     <style>
       @keyframes slideUp {
-        from { opacity: 0; transform: translateY(18px); }
+        from { opacity: 0; transform: translateY(8px); }
         to   { opacity: 1; transform: translateY(0); }
       }
-      @keyframes borderPulse {
-        0%,100% { opacity: 0.6; }
-        50%      { opacity: 1.0; }
-      }
-      @keyframes typeIn {
-        from { clip-path: inset(0 100% 0 0); }
-        to   { clip-path: inset(0 0% 0 0); }
-      }
-      @keyframes blink {
-        0%,100% { opacity: 1; } 50% { opacity: 0; }
-      }
-      .lbl { font-family: 'JetBrains Mono','Fira Code',Consolas,monospace; }
-      .card { animation: slideUp 0.55s ease both; }
+      .lbl { font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }
+      .card { animation: slideUp 0.4s ease both; }
       .c0 { animation-delay: 0.05s; }
-      .c1 { animation-delay: 0.20s; }
-      .c2 { animation-delay: 0.35s; }
-      .c3 { animation-delay: 0.50s; }
-      .border-anim { animation: borderPulse 3s ease-in-out infinite; }
+      .c1 { animation-delay: 0.15s; }
+      .c2 { animation-delay: 0.25s; }
+      .c3 { animation-delay: 0.35s; }
     </style>
-    <filter id="cardGlow" x="-8%" y="-8%" width="116%" height="120%">
-      <feGaussianBlur stdDeviation="4" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
-    <filter id="hdr" x="-5%" y="-20%" width="110%" height="150%">
-      <feGaussianBlur stdDeviation="3" result="blur"/>
-      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
-    </filter>
   </defs>
 
-  <!-- Background -->
-  <rect width="860" height="480" rx="10" fill="#0D1117"/>
-  <rect width="858" height="478" x="1" y="1" rx="10" fill="none" stroke="#30363D" stroke-width="1.2"/>
+  <!-- Terminal Window Chrome -->
+  <rect width="860" height="460" rx="10" fill="#0D1117"/>
+  <rect width="858" height="458" x="1" y="1" rx="10" fill="none" stroke="#30363D" stroke-width="1.2"/>
   <circle cx="22" cy="20" r="5.5" fill="#FF5F56"/>
   <circle cx="39" cy="20" r="5.5" fill="#FEBC2E"/>
   <circle cx="56" cy="20" r="5.5" fill="#28C840"/>
   <text x="430" y="24" class="lbl" font-size="12" fill="#8B949E" text-anchor="middle">projects.db — $ ls -la ./projects/</text>
   <line x1="1" y1="35" x2="859" y2="35" stroke="#30363D" stroke-width="1"/>
 
-  <!-- Prompt -->
-  <text x="22" y="55" class="lbl" font-size="11" fill="#58A6FF" font-weight="600">FierceAdder@github</text>
-  <text x="184" y="55" class="lbl" font-size="11" fill="#8B949E">:~/projects$</text>
-  <text x="264" y="55" class="lbl" font-size="11" fill="#3FB950" font-weight="600"> ls --details</text>
-  <rect x="366" y="44" width="7" height="13" rx="1" fill="#3FB950" opacity="0.75">
-    <animate attributeName="opacity" values="0.75;0;0.75" dur="1.1s" repeatCount="indefinite"/>
-  </rect>
+  <!-- Prompt Command -->
+  <text x="24" y="55" class="lbl" font-size="11" fill="#58A6FF" font-weight="600">FierceAdder@github</text>
+  <text x="186" y="55" class="lbl" font-size="11" fill="#8B949E">:~/projects$</text>
+  <text x="266" y="55" class="lbl" font-size="11" fill="#3FB950" font-weight="600">ls --featured</text>
 
   <!-- ═══════════════════════════════════════
-       CARD 1 — FinSocial  (top-left, blue)
+       CARD 1 — FinSocial  (top-left)
        ═══════════════════════════════════════ -->
   <g class="card c0">
-    <!-- Glow border -->
-    <rect x="20" y="66" width="400" height="192" rx="10" fill="#58A6FF" opacity="0.08" class="border-anim" filter="url(#cardGlow)"/>
-    <!-- Card body -->
-    <rect x="20" y="66" width="400" height="192" rx="10" fill="#161B22" stroke="#58A6FF" stroke-width="1.2"/>
-    <!-- Header bar -->
-    <rect x="20" y="66" width="400" height="38" rx="10" fill="#1a2a3a"/>
-    <rect x="20" y="88" width="400" height="16" fill="#1a2a3a"/>
-    <!-- Header dots -->
-    <circle cx="38" cy="85" r="4" fill="#FF5F56" opacity="0.8"/>
-    <circle cx="52" cy="85" r="4" fill="#FEBC2E" opacity="0.8"/>
-    <circle cx="66" cy="85" r="4" fill="#28C840" opacity="0.8"/>
-    <!-- Badge -->
-    <rect x="310" y="73" width="98" height="18" rx="9" fill="#58A6FF" opacity="0.15" stroke="#58A6FF" stroke-width="0.8"/>
-    <text x="359" y="85" class="lbl" font-size="8" fill="#58A6FF" text-anchor="middle" font-weight="700">FULL-STACK · ML</text>
+    <!-- Card container -->
+    <rect x="24" y="68" width="396" height="180" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <!-- Card top header bar -->
+    <rect x="24" y="68" width="396" height="34" rx="8" fill="#0D1117"/>
+    <rect x="24" y="90" width="396" height="12" fill="#0D1117"/>
+    <line x1="24" y1="102" x2="420" y2="102" stroke="#21262D" stroke-width="1"/>
+    <!-- Dots -->
+    <circle cx="40" cy="85" r="3.5" fill="#FF5F56" opacity="0.6"/>
+    <circle cx="52" cy="85" r="3.5" fill="#FEBC2E" opacity="0.6"/>
+    <circle cx="64" cy="85" r="3.5" fill="#28C840" opacity="0.6"/>
     <!-- Title -->
-    <text x="88" y="88" class="lbl" font-size="13" font-weight="800" fill="#fff">📈 FinSocial</text>
+    <text x="80" y="89" class="lbl" font-size="12.5" font-weight="700" fill="#FFFFFF">📈 FinSocial</text>
+    <!-- Badge -->
+    <rect x="312" y="76" width="98" height="18" rx="4" fill="#1F2D40" stroke="#58A6FF" stroke-width="0.8"/>
+    <text x="361" y="88.5" class="lbl" font-size="8" fill="#58A6FF" text-anchor="middle" font-weight="700">PAPER TRADING</text>
     <!-- Subtitle -->
-    <text x="28" y="118" class="lbl" font-size="9.5" fill="#8B949E">NSE/BSE Paper Trading · AI Signal Classifier · RAG Chatbot</text>
-    <!-- Stack row -->
-    <rect x="28" y="128" width="384" height="22" rx="5" fill="#0D1117" opacity="0.6"/>
-    <text x="34" y="143" class="lbl" font-size="8.5" fill="#58A6FF">React</text>
-    <text x="66" y="143" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="76" y="143" class="lbl" font-size="8.5" fill="#3FB950">FastAPI</text>
-    <text x="118" y="143" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="128" y="143" class="lbl" font-size="8.5" fill="#A371F7">XGBoost</text>
-    <text x="178" y="143" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="188" y="143" class="lbl" font-size="8.5" fill="#E3B341">FinBERT</text>
-    <text x="232" y="143" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="242" y="143" class="lbl" font-size="8.5" fill="#58A6FF">pgvector</text>
-    <text x="291" y="143" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="301" y="143" class="lbl" font-size="8.5" fill="#FF7B72">Docker</text>
+    <text x="36" y="119" class="lbl" font-size="9" fill="#8B949E">NSE/BSE Social Trading · AI Classifier · RAG Chatbot</text>
+    <!-- Tech stack strip -->
+    <rect x="36" y="126" width="372" height="20" rx="4" fill="#0D1117"/>
+    <text x="44" y="139.5" class="lbl" font-size="8.5" fill="#58A6FF">React · FastAPI · XGBoost · FinBERT · pgvector · Docker</text>
     <!-- Bullets -->
-    <text x="28" y="167" class="lbl" font-size="9" fill="#3FB950">▸</text>
-    <text x="40" y="167" class="lbl" font-size="9" fill="#C9D1D9">XGBoost BUY/HOLD/SELL · <tspan fill="#58A6FF">52.8%</tspan> precision vs 33% random</text>
-    <text x="28" y="183" class="lbl" font-size="9" fill="#3FB950">▸</text>
-    <text x="40" y="183" class="lbl" font-size="9" fill="#C9D1D9">RAG chatbot (Gemini + pgvector) · real-time WebSocket leaderboard</text>
-    <text x="28" y="199" class="lbl" font-size="9" fill="#3FB950">▸</text>
-    <text x="40" y="199" class="lbl" font-size="9" fill="#C9D1D9">Microservices · Nginx reverse proxy · <tspan fill="#3FB950">GitHub Actions CI/CD</tspan></text>
-    <!-- Footer link -->
-    <line x1="20" y1="244" x2="420" y2="244" stroke="#21262D" stroke-width="1"/>
-    <text x="34" y="254" class="lbl" font-size="9" fill="#58A6FF">⎋  github.com/FierceAdder/FinSocial</text>
+    <text x="36" y="161" class="lbl" font-size="9" fill="#58A6FF">▸</text>
+    <text x="48" y="161" class="lbl" font-size="9" fill="#C9D1D9">XGBoost BUY/HOLD/SELL: <tspan fill="#58A6FF" font-weight="700">52.8%</tspan> precision vs 33% baseline</text>
+    <text x="36" y="176" class="lbl" font-size="9" fill="#58A6FF">▸</text>
+    <text x="48" y="176" class="lbl" font-size="9" fill="#C9D1D9">RAG chatbot (Gemini + pgvector) · real-time WebSocket chat</text>
+    <text x="36" y="191" class="lbl" font-size="9" fill="#58A6FF">▸</text>
+    <text x="48" y="191" class="lbl" font-size="9" fill="#C9D1D9">Microservices architecture · Nginx proxy · CI/CD pipeline</text>
+    <!-- Footer Link -->
+    <line x1="24" y1="228" x2="420" y2="228" stroke="#21262D" stroke-width="1"/>
+    <text x="36" y="240" class="lbl" font-size="8.5" fill="#58A6FF">⎋  github.com/FierceAdder/FinSocial</text>
   </g>
 
   <!-- ═══════════════════════════════════════
-       CARD 2 — SENTINEL  (top-right, red)
+       CARD 2 — SENTINEL  (top-right)
        ═══════════════════════════════════════ -->
   <g class="card c1">
-    <rect x="440" y="66" width="400" height="192" rx="10" fill="#FF7B72" opacity="0.08" class="border-anim" filter="url(#cardGlow)" style="animation-delay:1.5s"/>
-    <rect x="440" y="66" width="400" height="192" rx="10" fill="#161B22" stroke="#FF7B72" stroke-width="1.2"/>
-    <rect x="440" y="66" width="400" height="38" rx="10" fill="#2a1a1a"/>
-    <rect x="440" y="88" width="400" height="16" fill="#2a1a1a"/>
-    <circle cx="458" cy="85" r="4" fill="#FF5F56" opacity="0.8"/>
-    <circle cx="472" cy="85" r="4" fill="#FEBC2E" opacity="0.8"/>
-    <circle cx="486" cy="85" r="4" fill="#28C840" opacity="0.8"/>
-    <rect x="718" y="73" width="110" height="18" rx="9" fill="#FF7B72" opacity="0.15" stroke="#FF7B72" stroke-width="0.8"/>
-    <text x="773" y="85" class="lbl" font-size="8" fill="#FF7B72" text-anchor="middle" font-weight="700">PRIVACY · AI · NLP</text>
-    <text x="508" y="88" class="lbl" font-size="13" font-weight="800" fill="#fff">🧠 SENTINEL</text>
-    <text x="448" y="118" class="lbl" font-size="9.5" fill="#8B949E">Privacy-first LLM Classifier · On-device OCR/ASR · Guardrails</text>
-    <rect x="448" y="128" width="384" height="22" rx="5" fill="#0D1117" opacity="0.6"/>
-    <text x="454" y="143" class="lbl" font-size="8.5" fill="#3776AB">Python</text>
-    <text x="494" y="143" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="504" y="143" class="lbl" font-size="8.5" fill="#A371F7">Gemini/GPT/Claude</text>
-    <text x="604" y="143" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="614" y="143" class="lbl" font-size="8.5" fill="#E3B341">Tesseract</text>
-    <text x="660" y="143" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="670" y="143" class="lbl" font-size="8.5" fill="#3FB950">sklearn</text>
-    <text x="448" y="167" class="lbl" font-size="9" fill="#FF7B72">▸</text>
-    <text x="460" y="167" class="lbl" font-size="9" fill="#C9D1D9"><tspan fill="#58A6FF">96.7%</tspan> macro-avg accuracy · 5-fold CV (n=30)</text>
-    <text x="448" y="183" class="lbl" font-size="9" fill="#FF7B72">▸</text>
-    <text x="460" y="183" class="lbl" font-size="9" fill="#C9D1D9">On-device OCR/ASR — raw media never leaves device</text>
-    <text x="448" y="199" class="lbl" font-size="9" fill="#FF7B72">▸</text>
-    <text x="460" y="199" class="lbl" font-size="9" fill="#C9D1D9">Sub-10ms TF-IDF/LR for prompt-injection · <tspan fill="#3FB950">60–95%</tspan> context compression</text>
-    <line x1="440" y1="244" x2="840" y2="244" stroke="#21262D" stroke-width="1"/>
-    <text x="454" y="254" class="lbl" font-size="9" fill="#FF7B72">⎋  github.com/FierceAdder/SENTINEL</text>
+    <rect x="440" y="68" width="396" height="180" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <rect x="440" y="68" width="396" height="34" rx="8" fill="#0D1117"/>
+    <rect x="440" y="90" width="396" height="12" fill="#0D1117"/>
+    <line x1="440" y1="102" x2="836" y2="102" stroke="#21262D" stroke-width="1"/>
+    <circle cx="456" cy="85" r="3.5" fill="#FF5F56" opacity="0.6"/>
+    <circle cx="468" cy="85" r="3.5" fill="#FEBC2E" opacity="0.6"/>
+    <circle cx="480" cy="85" r="3.5" fill="#28C840" opacity="0.6"/>
+    <text x="496" y="89" class="lbl" font-size="12.5" font-weight="700" fill="#FFFFFF">🧠 SENTINEL</text>
+    <rect x="728" y="76" width="98" height="18" rx="4" fill="#2F1C1C" stroke="#FF7B72" stroke-width="0.8"/>
+    <text x="777" y="88.5" class="lbl" font-size="8" fill="#FF7B72" text-anchor="middle" font-weight="700">PRIVACY · AI · NLP</text>
+    <text x="452" y="119" class="lbl" font-size="9" fill="#8B949E">Privacy-first LLM Message Classifier · On-device OCR/ASR</text>
+    <rect x="452" y="126" width="372" height="20" rx="4" fill="#0D1117"/>
+    <text x="460" y="139.5" class="lbl" font-size="8.5" fill="#FF7B72">Python · Gemini · Claude · Tesseract OCR · faster-whisper</text>
+    <text x="452" y="161" class="lbl" font-size="9" fill="#FF7B72">▸</text>
+    <text x="464" y="161" class="lbl" font-size="9" fill="#C9D1D9"><tspan fill="#FF7B72" font-weight="700">96.7%</tspan> macro-avg accuracy (5-fold CV) · on-device OCR/ASR</text>
+    <text x="452" y="176" class="lbl" font-size="9" fill="#FF7B72">▸</text>
+    <text x="464" y="176" class="lbl" font-size="9" fill="#C9D1D9">Sub-10ms TF-IDF/LR for prompt-injection &amp; phishing detection</text>
+    <text x="452" y="191" class="lbl" font-size="9" fill="#FF7B72">▸</text>
+    <text x="464" y="191" class="lbl" font-size="9" fill="#C9D1D9">Context compressed <tspan fill="#3FB950" font-weight="700">60–95%</tspan> before dispatching LLM calls</text>
+    <line x1="440" y1="228" x2="836" y2="228" stroke="#21262D" stroke-width="1"/>
+    <text x="452" y="240" class="lbl" font-size="8.5" fill="#FF7B72">⎋  github.com/FierceAdder/SENTINEL</text>
   </g>
 
   <!-- ═══════════════════════════════════════
-       CARD 3 — SyncSpace  (bottom-left, green)
+       CARD 3 — RevBack  (bottom-left, replaces SyncSpace)
        ═══════════════════════════════════════ -->
   <g class="card c2">
-    <rect x="20" y="274" width="400" height="192" rx="10" fill="#3FB950" opacity="0.08" class="border-anim" filter="url(#cardGlow)" style="animation-delay:3s"/>
-    <rect x="20" y="274" width="400" height="192" rx="10" fill="#161B22" stroke="#3FB950" stroke-width="1.2"/>
-    <rect x="20" y="274" width="400" height="38" rx="10" fill="#1a2a1a"/>
-    <rect x="20" y="296" width="400" height="16" fill="#1a2a1a"/>
-    <circle cx="38" cy="293" r="4" fill="#FF5F56" opacity="0.8"/>
-    <circle cx="52" cy="293" r="4" fill="#FEBC2E" opacity="0.8"/>
-    <circle cx="66" cy="293" r="4" fill="#28C840" opacity="0.8"/>
-    <rect x="300" y="281" width="108" height="18" rx="9" fill="#3FB950" opacity="0.15" stroke="#3FB950" stroke-width="0.8"/>
-    <text x="354" y="293" class="lbl" font-size="8" fill="#3FB950" text-anchor="middle" font-weight="700">REAL-TIME · COLLAB</text>
-    <text x="88" y="296" class="lbl" font-size="13" font-weight="800" fill="#fff">🔗 SyncSpace</text>
-    <text x="28" y="326" class="lbl" font-size="9.5" fill="#8B949E">Collaborative Platform · Real-time Sharing · JWT Auth</text>
-    <rect x="28" y="336" width="384" height="22" rx="5" fill="#0D1117" opacity="0.6"/>
-    <text x="34" y="351" class="lbl" font-size="8.5" fill="#58A6FF">React</text>
-    <text x="66" y="351" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="76" y="351" class="lbl" font-size="8.5" fill="#3FB950">Node.js</text>
-    <text x="116" y="351" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="126" y="351" class="lbl" font-size="8.5" fill="#47A248">MongoDB</text>
-    <text x="174" y="351" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="184" y="351" class="lbl" font-size="8.5" fill="#E3B341">AWS S3</text>
-    <text x="222" y="351" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="232" y="351" class="lbl" font-size="8.5" fill="#A371F7">Socket.IO</text>
-    <text x="28" y="375" class="lbl" font-size="9" fill="#3FB950">▸</text>
-    <text x="40" y="375" class="lbl" font-size="9" fill="#C9D1D9">Real-time threads, typing indicators · Open Graph link previews</text>
-    <text x="28" y="391" class="lbl" font-size="9" fill="#3FB950">▸</text>
-    <text x="40" y="391" class="lbl" font-size="9" fill="#C9D1D9">JWT auth + RBAC · <tspan fill="#E3B341">presigned AWS S3</tspan> for direct-to-bucket uploads</text>
-    <text x="28" y="407" class="lbl" font-size="9" fill="#3FB950">▸</text>
-    <text x="40" y="407" class="lbl" font-size="9" fill="#C9D1D9">Share links, files, notes &amp; rich-text articles in real-time</text>
-    <line x1="20" y1="452" x2="420" y2="452" stroke="#21262D" stroke-width="1"/>
-    <text x="34" y="462" class="lbl" font-size="9" fill="#3FB950">⎋  github.com/FierceAdder/SyncSpace</text>
+    <rect x="24" y="260" width="396" height="180" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <rect x="24" y="260" width="396" height="34" rx="8" fill="#0D1117"/>
+    <rect x="24" y="282" width="396" height="12" fill="#0D1117"/>
+    <line x1="24" y1="294" x2="420" y2="294" stroke="#21262D" stroke-width="1"/>
+    <circle cx="40" cy="277" r="3.5" fill="#FF5F56" opacity="0.6"/>
+    <circle cx="52" cy="277" r="3.5" fill="#FEBC2E" opacity="0.6"/>
+    <circle cx="64" cy="277" r="3.5" fill="#28C840" opacity="0.6"/>
+    <text x="80" y="281" class="lbl" font-size="12.5" font-weight="700" fill="#FFFFFF">💳 RevBack</text>
+    <rect x="306" y="268" width="104" height="18" rx="4" fill="#1C2F20" stroke="#3FB950" stroke-width="0.8"/>
+    <text x="358" y="280.5" class="lbl" font-size="8" fill="#3FB950" text-anchor="middle" font-weight="700">AGENTIC AI · FINTECH</text>
+    <text x="36" y="311" class="lbl" font-size="9" fill="#8B949E">Autonomous B2B Receivables Recovery &amp; Escalation Agent</text>
+    <rect x="36" y="318" width="372" height="20" rx="4" fill="#0D1117"/>
+    <text x="44" y="331.5" class="lbl" font-size="8.5" fill="#3FB950">FastAPI · LangGraph · Redis · Next.js · Razorpay · LiteLLM</text>
+    <text x="36" y="353" class="lbl" font-size="9" fill="#3FB950">▸</text>
+    <text x="48" y="353" class="lbl" font-size="9" fill="#C9D1D9">Autonomous AR agent with <tspan fill="#3FB950" font-weight="700">P(recovery)</tspan> probability modeling</text>
+    <text x="36" y="368" class="lbl" font-size="9" fill="#3FB950">▸</text>
+    <text x="48" y="368" class="lbl" font-size="9" fill="#C9D1D9">Deterministic policy gating (L0–L6) + Redis thread approval</text>
+    <text x="36" y="383" class="lbl" font-size="9" fill="#3FB950">▸</text>
+    <text x="48" y="383" class="lbl" font-size="9" fill="#C9D1D9">Razorpay Payment Links + HMAC-SHA256 webhook settlement</text>
+    <line x1="24" y1="420" x2="420" y2="420" stroke="#21262D" stroke-width="1"/>
+    <text x="36" y="432" class="lbl" font-size="8.5" fill="#3FB950">⎋  github.com/FierceAdder/RevBack</text>
   </g>
 
   <!-- ═══════════════════════════════════════
-       CARD 4 — MESA Research  (bottom-right, purple)
+       CARD 4 — MESA Research  (bottom-right)
        ═══════════════════════════════════════ -->
   <g class="card c3">
-    <rect x="440" y="274" width="400" height="192" rx="10" fill="#A371F7" opacity="0.08" class="border-anim" filter="url(#cardGlow)" style="animation-delay:4.5s"/>
-    <rect x="440" y="274" width="400" height="192" rx="10" fill="#161B22" stroke="#A371F7" stroke-width="1.2"/>
-    <rect x="440" y="274" width="400" height="38" rx="10" fill="#201a2a"/>
-    <rect x="440" y="296" width="400" height="16" fill="#201a2a"/>
-    <circle cx="458" cy="293" r="4" fill="#FF5F56" opacity="0.8"/>
-    <circle cx="472" cy="293" r="4" fill="#FEBC2E" opacity="0.8"/>
-    <circle cx="486" cy="293" r="4" fill="#28C840" opacity="0.8"/>
-    <rect x="698" y="281" width="130" height="18" rx="9" fill="#A371F7" opacity="0.15" stroke="#A371F7" stroke-width="0.8"/>
-    <text x="763" y="293" class="lbl" font-size="8" fill="#A371F7" text-anchor="middle" font-weight="700">RESEARCH · NLP · 2nd 🥈</text>
-    <text x="508" y="296" class="lbl" font-size="13" font-weight="800" fill="#fff">🔬 MESA</text>
-    <text x="448" y="326" class="lbl" font-size="9.5" fill="#8B949E">Moment Enriched Self-Attention · Co-authored · Scaler Rethesis</text>
-    <rect x="448" y="336" width="384" height="22" rx="5" fill="#0D1117" opacity="0.6"/>
-    <text x="454" y="351" class="lbl" font-size="8.5" fill="#A371F7">NLP</text>
-    <text x="476" y="351" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="486" y="351" class="lbl" font-size="8.5" fill="#58A6FF">Transformers</text>
-    <text x="558" y="351" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="568" y="351" class="lbl" font-size="8.5" fill="#E3B341">PyTorch</text>
-    <text x="606" y="351" class="lbl" font-size="8.5" fill="#30363D"> · </text>
-    <text x="616" y="351" class="lbl" font-size="8.5" fill="#3FB950">AG News</text>
-    <text x="448" y="375" class="lbl" font-size="9" fill="#A371F7">▸</text>
-    <text x="460" y="375" class="lbl" font-size="9" fill="#C9D1D9">Augments Q/K projections with learnable <tspan fill="#A371F7">higher-order moments</tspan></text>
-    <text x="448" y="391" class="lbl" font-size="9" fill="#A371F7">▸</text>
-    <text x="460" y="391" class="lbl" font-size="9" fill="#C9D1D9">Cross-Moment Projection (CMP) module · multi-seed validation</text>
-    <text x="448" y="407" class="lbl" font-size="9" fill="#A371F7">▸</text>
-    <text x="460" y="407" class="lbl" font-size="9" fill="#C9D1D9">Won <tspan fill="#E3B341">2nd Prize 🥈</tspan> at Scaler's Rethesis research event</text>
-    <line x1="440" y1="452" x2="840" y2="452" stroke="#21262D" stroke-width="1"/>
-    <text x="454" y="462" class="lbl" font-size="9" fill="#A371F7">⎋  Independent Research · Co-authored</text>
+    <rect x="440" y="260" width="396" height="180" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1"/>
+    <rect x="440" y="260" width="396" height="34" rx="8" fill="#0D1117"/>
+    <rect x="440" y="282" width="396" height="12" fill="#0D1117"/>
+    <line x1="440" y1="294" x2="836" y2="294" stroke="#21262D" stroke-width="1"/>
+    <circle cx="456" cy="277" r="3.5" fill="#FF5F56" opacity="0.6"/>
+    <circle cx="468" cy="277" r="3.5" fill="#FEBC2E" opacity="0.6"/>
+    <circle cx="480" cy="277" r="3.5" fill="#28C840" opacity="0.6"/>
+    <text x="496" y="281" class="lbl" font-size="12.5" font-weight="700" fill="#FFFFFF">🔬 MESA</text>
+    <rect x="712" y="268" width="114" height="18" rx="4" fill="#281B3D" stroke="#A371F7" stroke-width="0.8"/>
+    <text x="769" y="280.5" class="lbl" font-size="8" fill="#A371F7" text-anchor="middle" font-weight="700">RESEARCH · NLP · 2nd 🥈</text>
+    <text x="452" y="311" class="lbl" font-size="9" fill="#8B949E">Moment Enriched Self Attention · Scaler Rethesis (2nd Prize)</text>
+    <rect x="452" y="318" width="372" height="20" rx="4" fill="#0D1117"/>
+    <text x="460" y="331.5" class="lbl" font-size="8.5" fill="#A371F7">NLP · PyTorch · Transformers · AG News · Scaler Rethesis</text>
+    <text x="452" y="353" class="lbl" font-size="9" fill="#A371F7">▸</text>
+    <text x="464" y="353" class="lbl" font-size="9" fill="#C9D1D9">Augments Q/K projections with learnable <tspan fill="#A371F7" font-weight="700">higher-order moments</tspan></text>
+    <text x="452" y="368" class="lbl" font-size="9" fill="#A371F7">▸</text>
+    <text x="464" y="368" class="lbl" font-size="9" fill="#C9D1D9">Cross-Moment Projection (CMP) module with multi-seed validation</text>
+    <text x="452" y="383" class="lbl" font-size="9" fill="#A371F7">▸</text>
+    <text x="464" y="383" class="lbl" font-size="9" fill="#C9D1D9">Won <tspan fill="#FFA116" font-weight="700">2nd Prize 🥈</tspan> at Scaler Rethesis research symposium</text>
+    <line x1="440" y1="420" x2="836" y2="420" stroke="#21262D" stroke-width="1"/>
+    <text x="452" y="432" class="lbl" font-size="8.5" fill="#A371F7">⎋  Independent Research · Co-authored</text>
   </g>
 
 </svg>
-

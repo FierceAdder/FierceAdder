@@ -1,12 +1,10 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="860" height="230" viewBox="0 0 860 230">
+<svg xmlns="http://www.w3.org/2000/svg" width="860" height="265" viewBox="0 0 860 265">
   <defs>
-    <!-- Gradient for timeline axis -->
     <linearGradient id="axisGradient" x1="0%" y1="0%" x2="100%" y2="0%">
       <stop offset="0%" style="stop-color:#58A6FF;stop-opacity:1" />
       <stop offset="100%" style="stop-color:#A371F7;stop-opacity:1" />
     </linearGradient>
 
-    <!-- Glow filter for Tata node -->
     <filter id="glowBlue" x="-60%" y="-60%" width="220%" height="220%">
       <feGaussianBlur stdDeviation="2.5" result="blur" />
       <feMerge>
@@ -15,7 +13,6 @@
       </feMerge>
     </filter>
 
-    <!-- Glow filter for Rtifact node -->
     <filter id="glowPurple" x="-60%" y="-60%" width="220%" height="220%">
       <feGaussianBlur stdDeviation="2.5" result="blur" />
       <feMerge>
@@ -24,275 +21,158 @@
       </feMerge>
     </filter>
 
-    <!-- Semi-transparent fills for date pills -->
     <style>
-      @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;600;700&amp;display=swap');
-
       .mono {
         font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace;
       }
-
-      /* Fade-in animations */
       @keyframes fadeIn {
-        from {
-          opacity: 0;
-          transform: translateY(-3px);
-        }
-        to {
-          opacity: 1;
-          transform: translateY(0);
-        }
+        from { opacity: 0; transform: translateY(-3px); }
+        to   { opacity: 1; transform: translateY(0); }
       }
-
       .milestone-tata {
-        animation: fadeIn 0.5s ease forwards;
-        animation-delay: 0s;
-        opacity: 0;
+        animation: fadeIn 0.45s ease forwards;
       }
-
       .milestone-rtifact {
-        animation: fadeIn 0.5s ease forwards;
-        animation-delay: 0.3s;
+        animation: fadeIn 0.45s ease forwards;
+        animation-delay: 0.15s;
         opacity: 0;
       }
     </style>
   </defs>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!--  TERMINAL CHROME                        -->
-  <!-- ═══════════════════════════════════════ -->
+  <!-- Terminal Window Chrome -->
+  <rect width="860" height="265" rx="10" fill="#0D1117" />
+  <rect width="858" height="263" x="1" y="1" rx="10" fill="none" stroke="#30363D" stroke-width="1.2" />
 
-  <!-- Background -->
-  <rect width="860" height="230" rx="10" fill="#0D1117" />
-  <!-- Border -->
-  <rect width="858" height="228" x="1" y="1" rx="10" fill="none" stroke="#30363D" stroke-width="1.2" />
-
-  <!-- macOS traffic-light dots -->
   <circle cx="22" cy="20" r="5.5" fill="#FF5F56" />
   <circle cx="39" cy="20" r="5.5" fill="#FEBC2E" />
   <circle cx="56" cy="20" r="5.5" fill="#28C840" />
 
-  <!-- Title bar text -->
-  <text x="430" y="24"
-        font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-        font-size="12" fill="#8B949E" text-anchor="middle">
+  <text x="430" y="24" class="mono" font-size="12" fill="#8B949E" text-anchor="middle">
     $ cat experience.json | jq '.[]'
   </text>
-
-  <!-- Header divider line -->
   <line x1="1" y1="35" x2="859" y2="35" stroke="#30363D" stroke-width="1" />
 
-  <!-- ═══════════════════════════════════════ -->
-  <!--  TIMELINE AXIS                          -->
-  <!-- ═══════════════════════════════════════ -->
+  <!-- Timeline Axis -->
+  <line x1="40" y1="68" x2="820" y2="68" stroke="#21262D" stroke-width="3" stroke-linecap="round" />
+  <line x1="40" y1="68" x2="820" y2="68" stroke="url(#axisGradient)" stroke-width="3" stroke-linecap="round" />
+  <polygon points="820,68 810,63.5 810,72.5" fill="#A371F7" />
 
-  <!-- Background dim line -->
-  <line x1="50" y1="70" x2="810" y2="70" stroke="#21262D" stroke-width="3" stroke-linecap="round" />
-
-  <!-- Gradient overlay line -->
-  <line x1="50" y1="70" x2="810" y2="70"
-        stroke="url(#axisGradient)" stroke-width="3" stroke-linecap="round" />
-
-  <!-- Arrow tip at right end -->
-  <polygon points="810,70 800,65.5 800,74.5" fill="#A371F7" />
-
-  <!-- ═══════════════════════════════════════ -->
-  <!--  MILESTONE 1 — TATA COMMUNICATIONS      -->
-  <!--  x-center: 215, color: #58A6FF (blue)  -->
-  <!-- ═══════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════
+       MILESTONE 1 — TATA COMMUNICATIONS
+       x-center: 230, Card: 360px wide
+       ═══════════════════════════════════════ -->
   <g class="milestone-tata">
-
     <!-- Date pill above axis -->
-    <rect x="150" y="43" width="130" height="16" rx="8"
+    <rect x="155" y="42" width="150" height="18" rx="9"
           fill="#58A6FF" fill-opacity="0.15"
-          stroke="#58A6FF" stroke-width="0.8" stroke-opacity="0.5" />
-    <text x="215" y="54.5"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9" font-weight="700" fill="#58A6FF" text-anchor="middle">
+          stroke="#58A6FF" stroke-width="0.8" stroke-opacity="0.6" />
+    <text x="230" y="54.5" class="mono" font-size="9" font-weight="700" fill="#58A6FF" text-anchor="middle">
       AUG 2025 — SEP 2025
     </text>
 
-    <!-- Node on axis — outer ring -->
-    <circle cx="215" cy="70" r="9" fill="none" stroke="#58A6FF" stroke-width="2"
-            filter="url(#glowBlue)" />
-    <!-- Node on axis — inner filled dot -->
-    <circle cx="215" cy="70" r="4" fill="#58A6FF" />
+    <!-- Node on axis -->
+    <circle cx="230" cy="68" r="9" fill="none" stroke="#58A6FF" stroke-width="2" filter="url(#glowBlue)" />
+    <circle cx="230" cy="68" r="4" fill="#58A6FF" />
 
     <!-- Card below axis -->
-    <rect x="110" y="85" width="210" height="128" rx="7"
-          fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <rect x="50" y="86" width="360" height="160" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
 
-    <!-- Card title -->
-    <text x="215" y="101"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+    <!-- Header bar -->
+    <rect x="50" y="86" width="360" height="30" rx="8" fill="#0D1117" />
+    <rect x="50" y="104" width="360" height="12" fill="#0D1117" />
+    <line x1="50" y1="116" x2="410" y2="116" stroke="#21262D" stroke-width="1" />
+
+    <text x="64" y="105" class="mono" font-size="12" font-weight="700" fill="#FFFFFF">
       📡 Project Trainee
     </text>
-
-    <!-- Company -->
-    <text x="215" y="116"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="11" font-weight="600" fill="#58A6FF" text-anchor="middle">
+    <text x="230" y="105" class="mono" font-size="11" font-weight="600" fill="#58A6FF">
       Tata Communications
     </text>
-
-    <!-- Location -->
-    <text x="215" y="129"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="10" fill="#8B949E" text-anchor="middle">
+    <text x="396" y="105" class="mono" font-size="9.5" fill="#8B949E" text-anchor="end">
       Pune, India
     </text>
 
-    <!-- Bullet separator -->
-    <line x1="125" y1="136" x2="305" y2="136" stroke="#30363D" stroke-width="0.6" />
+    <!-- Bullets -->
+    <g transform="translate(64, 132)">
+      <text x="0" y="0" class="mono" font-size="9.5" fill="#58A6FF">▸</text>
+      <text x="12" y="0" class="mono" font-size="9" fill="#C9D1D9">
+        Designed RESTful endpoints for Automated Incident Mgmt System
+      </text>
 
-    <!-- Bullet 1 -->
-    <text x="122" y="149"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#58A6FF">•</text>
-    <text x="133" y="149"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      Designed RESTful endpoints for
-    </text>
-    <text x="133" y="161"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      Automated Incident Mgmt System
-    </text>
+      <text x="0" y="22" class="mono" font-size="9.5" fill="#58A6FF">▸</text>
+      <text x="12" y="22" class="mono" font-size="9" fill="#C9D1D9">
+        Integrated New Relic alerts with ServiceNow (ingestion &amp; sync)
+      </text>
 
-    <!-- Bullet 2 -->
-    <text x="122" y="174"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#58A6FF">•</text>
-    <text x="133" y="174"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      Integrated New Relic alerts →
-    </text>
-    <text x="133" y="186"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      ServiceNow (ingest, dedup, sync)
-    </text>
+      <text x="0" y="44" class="mono" font-size="9.5" fill="#58A6FF">▸</text>
+      <text x="12" y="44" class="mono" font-size="9" fill="#C9D1D9">
+        Reported deployment readiness &amp; performance telemetry to lead
+      </text>
 
-    <!-- Bullet 3 -->
-    <text x="122" y="200"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#58A6FF">•</text>
-    <text x="133" y="200"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      NOC triage: 5 engineers → 1
-    </text>
-
+      <text x="0" y="66" class="mono" font-size="9.5" fill="#58A6FF">▸</text>
+      <text x="12" y="66" class="mono" font-size="9" fill="#C9D1D9">
+        Positioned to reduce NOC triage staffing from <tspan fill="#3FB950" font-weight="700">5 engineers → 1</tspan>
+      </text>
+    </g>
   </g>
 
-  <!-- ═══════════════════════════════════════ -->
-  <!--  MILESTONE 2 — RTIFACT                  -->
-  <!--  x-center: 645, color: #A371F7 (purple) -->
-  <!-- ═══════════════════════════════════════ -->
+  <!-- ═══════════════════════════════════════
+       MILESTONE 2 — RTIFACT
+       x-center: 630, Card: 360px wide (generous, no overflow)
+       ═══════════════════════════════════════ -->
   <g class="milestone-rtifact">
-
     <!-- Date pill above axis -->
-    <rect x="577" y="43" width="136" height="16" rx="8"
+    <rect x="555" y="42" width="150" height="18" rx="9"
           fill="#A371F7" fill-opacity="0.15"
-          stroke="#A371F7" stroke-width="0.8" stroke-opacity="0.5" />
-    <text x="645" y="54.5"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9" font-weight="700" fill="#A371F7" text-anchor="middle">
+          stroke="#A371F7" stroke-width="0.8" stroke-opacity="0.6" />
+    <text x="630" y="54.5" class="mono" font-size="9" font-weight="700" fill="#A371F7" text-anchor="middle">
       JUL 2026 — SEP 2026
     </text>
 
-    <!-- Node on axis — outer ring -->
-    <circle cx="645" cy="70" r="9" fill="none" stroke="#A371F7" stroke-width="2"
-            filter="url(#glowPurple)" />
-    <!-- Node on axis — inner filled dot -->
-    <circle cx="645" cy="70" r="4" fill="#A371F7" />
+    <!-- Node on axis -->
+    <circle cx="630" cy="68" r="9" fill="none" stroke="#A371F7" stroke-width="2" filter="url(#glowPurple)" />
+    <circle cx="630" cy="68" r="4" fill="#A371F7" />
 
-    <!-- Card below axis — wider to fit 4 bullets -->
-    <rect x="530" y="85" width="230" height="135" rx="7"
-          fill="#161B22" stroke="#30363D" stroke-width="1" />
+    <!-- Card below axis — spacious 360px wide -->
+    <rect x="450" y="86" width="360" height="160" rx="8" fill="#161B22" stroke="#30363D" stroke-width="1" />
 
-    <!-- Card title -->
-    <text x="645" y="101"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="12" font-weight="700" fill="#FFFFFF" text-anchor="middle">
+    <!-- Header bar -->
+    <rect x="450" y="86" width="360" height="30" rx="8" fill="#0D1117" />
+    <rect x="450" y="104" width="360" height="12" fill="#0D1117" />
+    <line x1="450" y1="116" x2="810" y2="116" stroke="#21262D" stroke-width="1" />
+
+    <text x="464" y="105" class="mono" font-size="12" font-weight="700" fill="#FFFFFF">
       🤖 AI Engineer Intern
     </text>
-
-    <!-- Company -->
-    <text x="645" y="116"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="11" font-weight="600" fill="#A371F7" text-anchor="middle">
+    <text x="618" y="105" class="mono" font-size="11" font-weight="600" fill="#A371F7">
       Rtifact
     </text>
-
-    <!-- Location -->
-    <text x="645" y="129"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="10" fill="#8B949E" text-anchor="middle">
-      Remote / Bengaluru
+    <text x="796" y="105" class="mono" font-size="9.5" fill="#8B949E" text-anchor="end">
+      Remote / BLR
     </text>
 
-    <!-- Bullet separator -->
-    <line x1="545" y1="136" x2="745" y2="136" stroke="#30363D" stroke-width="0.6" />
+    <!-- Bullets -->
+    <g transform="translate(464, 132)">
+      <text x="0" y="0" class="mono" font-size="9.5" fill="#A371F7">▸</text>
+      <text x="12" y="0" class="mono" font-size="9" fill="#C9D1D9">
+        GitHub issue grounding: <tspan fill="#A371F7" font-weight="700">11,600+ nodes</tspan> @ 70ms warm latency
+      </text>
 
-    <!-- Bullet 1 -->
-    <text x="537" y="149"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#A371F7">•</text>
-    <text x="548" y="149"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      GitHub issue grounding: 11,600+ nodes,
-    </text>
-    <text x="548" y="160"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      70ms latency
-    </text>
+      <text x="0" y="22" class="mono" font-size="9.5" fill="#A371F7">▸</text>
+      <text x="12" y="22" class="mono" font-size="9" fill="#C9D1D9">
+        GraphRAG NLQ over 50 Cypher templates in <tspan fill="#3FB950" font-weight="700">&lt;30ms</tspan> at zero LLM cost
+      </text>
 
-    <!-- Bullet 2 -->
-    <text x="537" y="172"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#A371F7">•</text>
-    <text x="548" y="172"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      GraphRAG NLQ: 50 Cypher templates,
-    </text>
-    <text x="548" y="183"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      &lt;30ms, zero LLM cost
-    </text>
+      <text x="0" y="44" class="mono" font-size="9.5" fill="#A371F7">▸</text>
+      <text x="12" y="44" class="mono" font-size="9" fill="#C9D1D9">
+        AWS asset cartography: EC2/S3/RDS/Lambda in <tspan fill="#58A6FF" font-weight="700">&lt;185ms</tspan> per event
+      </text>
 
-    <!-- Bullet 3 -->
-    <text x="537" y="195"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#A371F7">•</text>
-    <text x="548" y="195"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      AWS cartography: EC2/S3/RDS/Lambda
-    </text>
-    <text x="548" y="206"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      &lt;185ms per event
-    </text>
-
-    <!-- Bullet 4 -->
-    <text x="537" y="217"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#A371F7">•</text>
-    <text x="548" y="217"
-          font-family="'JetBrains Mono', 'Fira Code', Consolas, monospace"
-          font-size="9.5" fill="#8B949E">
-      Tree-sitter AST (37 langs) + OpenAI
-    </text>
-
+      <text x="0" y="66" class="mono" font-size="9.5" fill="#A371F7">▸</text>
+      <text x="12" y="66" class="mono" font-size="9" fill="#C9D1D9">
+        5-pass extraction: Tree-sitter AST (37 langs) + OpenAI enrichment
+      </text>
+    </g>
   </g>
-
 </svg>

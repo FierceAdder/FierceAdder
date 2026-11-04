@@ -1,7 +1,28 @@
-assets/.DS_Store
+# macOS system files
 .DS_Store
-.github/.DS_Store
 *.DS_Store
+.AppleDouble
+.LSOverride
+._*
+
+# Python virtual environment & cache
+.venv/
+venv/
+ENV/
+env/
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Logs & temp files
 *.log
 *_log
+.env
+.env.local
 
+# IDE / Editors
+.vscode/
+.idea/
+*.swp
+*~

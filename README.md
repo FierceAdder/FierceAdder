@@ -58,11 +58,11 @@
 
 ## 🎹 Tech Stack
 
-> *Keys I press daily — 24 tools, 4 rows, one keyboard*
+> *Keys I press daily — 26 tools, mechanical keyboard layout (10 / 9 / 7)*
 
 <div align="center">
 
-<img src="./assets/techstack-3d-dark.svg" alt="Isometric 3D Tech Stack Keyboard" width="860" />
+<img src="./assets/techstack-3d-dark.svg" alt="Mechanical Keyboard 3D Tech Stack" width="860" />
 
 </div>
 
@@ -131,22 +131,13 @@
 
 ## 🏆 Achievements
 
+> *`$ cat achievements.log`*
+
 <div align="center">
 
-```
-╔══════════════════════════════════════════════════════════════════════════════════╗
-║  $ cat achievements.log                                                          ║
-╠══════════════════════════════════════════════════════════════════════════════════╣
-║  [CP]  LeetCode Knight  ·  top 1% worldwide  ·  max rating 2073  ·  700+ solved ║
-║  [CP]  Rank 417 / 27,000+  ·  LeetCode Weekly Contest 500                       ║
-║  [CP]  Codeforces Pupil  ·  rating 1385                                         ║
-║  [HK]  Fidelity India Hackathon  ·  Finalist  ·  Top 50 of 1,200+ teams         ║
-║  [HK]  NER Tech 2.0  ·  Top 60 of 2,000+ teams                                 ║
-║  [HK]  MSRIT Whackiest Hackathon  ·  Top 25                                     ║
-║  [RS]  Scaler Rethesis  ·  2nd Prize 🥈  ·  MESA research paper                ║
-╚══════════════════════════════════════════════════════════════════════════════════╝
-  tags: [CP]=competitive-prog  [HK]=hackathon  [RS]=research
-```
+<img src="./assets/achievements.svg" alt="Achievements log" width="860" />
+
+<br/>
 
 <p>
   <img src="https://img.shields.io/badge/LeetCode-Knight_🏅-FFA116?style=flat-square&logo=leetcode&logoColor=white" />
