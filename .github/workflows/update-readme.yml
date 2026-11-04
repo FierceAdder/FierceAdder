@@ -42,18 +42,6 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           USERNAME: ${{ github.repository_owner }}
-          SETTING_JSON: |
-            {
-              "githubUserName": "${{ github.repository_owner }}",
-              "startForegroundColor": "#58A6FF",
-              "endForegroundColor": "#A371F7",
-              "backgroundColor": "#0D1117",
-              "backgroundSideColor": "#0D1117",
-              "backgroundCustomize": true,
-              "type": "normal",
-              "rotate": 30,
-              "lookUpView": false
-            }
 
       - uses: actions/upload-artifact@v4
         with:
@@ -123,11 +111,33 @@ jobs:
           path: assets/*.svg
 
   # ─────────────────────────────────────────
-  # Job 5: Commit all generated assets
+  # Job 5: 3D Tech Stack SVG
+  # ─────────────────────────────────────────
+  techstack:
+    name: 🎹 Generate 3D Tech Stack SVG
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Generate 3D keycap SVG
+        run: python scripts/generate_techstack_svg.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: techstack-svg
+          path: assets/techstack-3d-dark.svg
+
+  # ─────────────────────────────────────────
+  # Job 6: Commit all generated assets
   # ─────────────────────────────────────────
   commit-assets:
     name: 📦 Commit All Assets
-    needs: [snake, contrib_3d, terminal-stats, heatmap]
+    needs: [snake, contrib_3d, terminal-stats, heatmap, techstack]
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -154,6 +164,12 @@ jobs:
         uses: actions/download-artifact@v4
         with:
           name: heatmap-svgs
+          path: assets/
+
+      - name: Download techstack SVG
+        uses: actions/download-artifact@v4
+        with:
+          name: techstack-svg
           path: assets/
 
       - name: Commit and push

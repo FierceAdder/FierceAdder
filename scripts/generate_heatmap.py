@@ -20,7 +20,7 @@ import json
 import requests
 from datetime import datetime, timezone, timedelta
 
-GH_USERNAME = os.environ.get("GH_USERNAME", "ashmitv704")
+GH_USERNAME = os.environ.get("GH_USERNAME", "FierceAdder")
 GH_TOKEN = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
 HEADERS = {"Authorization": f"Bearer {GH_TOKEN}"} if GH_TOKEN else {}
 

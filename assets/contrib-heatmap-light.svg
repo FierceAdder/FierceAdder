@@ -17,10 +17,10 @@
 
   <!-- Prompt Command -->
   <g font-family="JetBrains Mono, Fira Code, 'Courier New', Menlo, Monaco, monospace" font-size="13">
-    <text x="35" y="42" fill="#24292F" font-weight="600">ashmitv704@github</text>
-    <text x="180" y="42" fill="#57606A">~ $</text>
-    <text x="213" y="42" fill="#216E39" font-weight="600">./contributions.sh</text>
-    <rect x="365" y="31" width="7" height="14" fill="#216E39" style="animation: blinkCursor 1s step-end infinite;" />
+    <text x="35" y="42" fill="#24292F" font-weight="600">FierceAdder@github</text>
+    <text x="188" y="42" fill="#57606A">~ $</text>
+    <text x="221" y="42" fill="#216E39" font-weight="600">./contributions.sh</text>
+    <rect x="373" y="31" width="7" height="14" fill="#216E39" style="animation: blinkCursor 1s step-end infinite;" />
   </g>
 
   <!-- ASCII Glyphs Grid (. : + # @) -->

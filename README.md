@@ -1,41 +1,15 @@
-<div align="center">
-
-<!-- ANIMATED TYPING HEADER -->
-<img src="https://readme-typing-svg.demolab.com?font=JetBrains+Mono&weight=700&size=28&duration=3000&pause=800&color=58A6FF&center=true&vCenter=true&multiline=true&width=700&height=80&lines=Hi+there%2C+I'm+Ashmit+%F0%9F%91%8B;AI+Engineer+%7C+Full-Stack+Dev+%7C+Researcher" alt="Typing SVG" />
-
-<!-- BADGE ROW -->
-<p>
-  <a href="https://www.linkedin.com/in/ashmit-kumar-verma"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
-  <a href="https://leetcode.com/Trying_out"><img src="https://img.shields.io/badge/LeetCode-Knight_🏅_2073-FFA116?style=for-the-badge&logo=leetcode&logoColor=black" /></a>
-  <a href="https://codeforces.com/profile/Scarceflyer7"><img src="https://img.shields.io/badge/Codeforces-Pupil_1385-1F8ACB?style=for-the-badge&logo=codeforces&logoColor=white" /></a>
-  <a href="mailto:ashmitv704@gmail.com"><img src="https://img.shields.io/badge/Email-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
-</p>
-
-<!-- PROFILE VIEWS + FOLLOWERS -->
-<p>
-  <img src="https://komarev.com/ghpvc/?username=ashmitv704&style=flat-square&color=58A6FF&label=PROFILE+VIEWS" />
-  <img src="https://img.shields.io/github/followers/ashmitv704?style=flat-square&color=58A6FF&label=FOLLOWERS" />
-</p>
-
-</div>
-
----
-
 <!-- ════════════════════════════════════════
-     §1  TERMINAL NEOFETCH CARD  (auto-generated SVG via GitHub Actions)
+     §1  TERMINAL NEOFETCH SYSTEM CARD
      ════════════════════════════════════════ -->
 
 <div align="center">
 
-### `$ neofetch --user ashmitv704`
-
-<!--  The two SVGs below are auto-regenerated daily by .github/workflows/metrics.yml  -->
-<!--  Light / dark mode toggle using GitHub's <picture> element                       -->
+### `$ neofetch --full`
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/dark_mode.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/light_mode.svg" />
-  <img alt="Ashmit's neofetch stats card" src="./assets/dark_mode.svg" width="720" />
+  <img alt="Ashmit's neofetch system card" src="./assets/dark_mode.svg" width="860" />
 </picture>
 
 </div>
@@ -43,109 +17,12 @@
 ---
 
 <!-- ════════════════════════════════════════
-     §2  ABOUT ME
-     ════════════════════════════════════════ -->
-
-<details open>
-<summary><b>⚡ Boot Sequence — About Me</b></summary>
-<br>
-
-```text
-$ cat about.txt
-╔══════════════════════════════════════════════════════════════════╗
-║  ashmit@bengaluru  ~  whoami                                     ║
-╠══════════════════════════════════════════════════════════════════╣
-║                                                                  ║
-║  🎓  B.E. CSE (AI/ML) — M. S. Ramaiah Institute of Technology   ║
-║      CGPA 9.46 | Bengaluru, India                                ║
-║                                                                  ║
-║  🔬  Researcher — MESA: Moment Enriched Self Attention           ║
-║      (2nd Prize @ Scaler Rethesis)                               ║
-║                                                                  ║
-║  🏢  Ex-AI Engineer Intern @ Rtifact                             ║
-║      GraphRAG · Neo4j · Multi-LLM Orchestration                  ║
-║                                                                  ║
-║  🏆  LeetCode Knight  |  Max Rating 2073  |  700+ solved         ║
-║      Top 1% worldwide  |  Rank 417 / 27,000+ (Weekly 500)        ║
-║                                                                  ║
-║  🎯  Current obsession: Agentic AI + Knowledge Graphs            ║
-║                                                                  ║
-╚══════════════════════════════════════════════════════════════════╝
-```
-
-</details>
-
----
-
-<!-- ════════════════════════════════════════
-     §3  TECH STACK — 3-D KEYBOARD STYLE
-     ════════════════════════════════════════ -->
-
-## 🎹 Tech Stack
-
-> Keys I press daily — inspired by the mechanical keyboard aesthetic
-
-<div align="center">
-
-<!-- ROW 1 — Languages -->
-**Languages**
-
-<img src="https://skillicons.dev/icons?i=python,java,c,js,ts,sql&theme=dark" /><br/><br/>
-
-<!-- ROW 2 — ML / AI -->
-**ML · AI · Research**
-
-<img src="https://skillicons.dev/icons?i=pytorch,sklearn,tensorflow,opencv,anaconda&theme=dark" /><br/><br/>
-
-<!-- ROW 3 — Backend / Infra -->
-**Backend & Infrastructure**
-
-<img src="https://skillicons.dev/icons?i=fastapi,nodejs,express,docker,nginx,postgres,mongodb,neo4j,redis,aws&theme=dark" /><br/><br/>
-
-<!-- ROW 4 — Frontend / Tools -->
-**Frontend & Tools**
-
-<img src="https://skillicons.dev/icons?i=react,nextjs,html,css,tailwind,git,github,postman,vscode,linux&theme=dark" />
-
-</div>
-
----
-
-<!-- ════════════════════════════════════════
-     §4  GITHUB STATS GRID
-     ════════════════════════════════════════ -->
-
-## 📊 GitHub Stats
-
-<div align="center">
-
-<table>
-  <tr>
-    <td>
-      <img src="https://github-readme-stats.vercel.app/api?username=ashmitv704&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9&rank_icon=github" width="420" />
-    </td>
-    <td>
-      <img src="https://github-readme-streak-stats.herokuapp.com/?user=ashmitv704&theme=github-dark-blue&hide_border=true&background=0D1117&ring=58A6FF&fire=FF7B72&currStreakLabel=58A6FF" width="420" />
-    </td>
-  </tr>
-  <tr>
-    <td colspan="2" align="center">
-      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=ashmitv704&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&langs_count=8" width="420" />
-    </td>
-  </tr>
-</table>
-
-</div>
-
----
-
-<!-- ════════════════════════════════════════
-     §5  CONTRIBUTION GRAPH — TERMINAL STYLE
+     §2  CONTRIBUTIONS GRAPH (TERMINAL EDITION)
      ════════════════════════════════════════ -->
 
 ## 🌱 Activity Graph — Terminal Edition
 
-> *Commit streaks live below — auto-updated nightly via GitHub Actions*
+> *Real-time contribution streaks — auto-updated nightly via GitHub Actions*
 
 <div align="center">
 
@@ -158,7 +35,7 @@ $ cat about.txt
 
 <br/>
 
-<!-- Terminal-style contribution heatmap (auto-generated SVG) -->
+<!-- Terminal-style contribution heatmap -->
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/contrib-heatmap-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/contrib-heatmap-light.svg" />
@@ -170,7 +47,51 @@ $ cat about.txt
 ---
 
 <!-- ════════════════════════════════════════
-     §6  COMPETITIVE PROGRAMMING — SPLIT CARDS
+     §3  GITHUB STATS GRID
+     ════════════════════════════════════════ -->
+
+## 📊 GitHub Stats
+
+<div align="center">
+
+<table>
+  <tr>
+    <td>
+      <img src="https://github-readme-stats.vercel.app/api?username=FierceAdder&show_icons=true&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&icon_color=58A6FF&text_color=C9D1D9&rank_icon=github" width="420" />
+    </td>
+    <td>
+      <img src="https://github-readme-streak-stats.herokuapp.com/?user=FierceAdder&theme=github-dark-blue&hide_border=true&background=0D1117&ring=58A6FF&fire=FF7B72&currStreakLabel=58A6FF" width="420" />
+    </td>
+  </tr>
+  <tr>
+    <td colspan="2" align="center">
+      <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=FierceAdder&layout=compact&theme=github_dark&hide_border=true&bg_color=0D1117&title_color=58A6FF&text_color=C9D1D9&langs_count=8" width="420" />
+    </td>
+  </tr>
+</table>
+
+</div>
+
+---
+
+<!-- ════════════════════════════════════════
+     §4  TECH STACK — 3D KEYBOARD STYLE
+     ════════════════════════════════════════ -->
+
+## 🎹 Tech Stack
+
+> Keys I press daily — 24 tools, 4 rows, one keyboard
+
+<div align="center">
+
+<img src="./assets/techstack-3d-dark.svg" alt="3D Tech Stack — Languages · ML/AI · Backend · Frontend" width="860" />
+
+</div>
+
+---
+
+<!-- ════════════════════════════════════════
+     §5  COMPETITIVE PROGRAMMING (LEETCODE & CODEFORCES)
      ════════════════════════════════════════ -->
 
 ## ⚔️ Competitive Programming
@@ -185,9 +106,11 @@ $ cat about.txt
 
 [![LeetCode Stats](https://leetcard.jacoblin.cool/Trying_out?theme=dark&font=JetBrains+Mono&ext=heatmap&border=0&bg=0D1117)](https://leetcode.com/Trying_out)
 
-**Knight 🏅** · Max Rating **2073** · **700+** solved
-
-`Easy` ████████████░ `Medium` ██████████░ `Hard` ██████░
+<p align="center">
+  <img src="https://img.shields.io/badge/LeetCode-Knight_🏅-FFA116?style=flat-square" />
+  <img src="https://img.shields.io/badge/Max_Rating-2073-58A6FF?style=flat-square" />
+  <img src="https://img.shields.io/badge/Solved-700+-3FB950?style=flat-square" />
+</p>
 
 </td>
     <td align="center" width="50%">
@@ -200,22 +123,21 @@ $ cat about.txt
 
 ![CF Card](https://codeforces-stats-vlx.vercel.app/api/card?username=Scarceflyer7&theme=github_dark)
 
-**Pupil** · Current Rating **1385**
+<p align="center">
+  <img src="https://img.shields.io/badge/Codeforces-Pupil-1F8ACB?style=flat-square" />
+  <img src="https://img.shields.io/badge/Rating-1385-58A6FF?style=flat-square" />
+</p>
 
 </td>
   </tr>
 </table>
-
-<!-- LeetCode heatmap / streak -->
-<br/>
-<img src="https://leetcard.jacoblin.cool/Trying_out?theme=dark&font=JetBrains+Mono&ext=activity&border=0&bg=0D1117" width="860" alt="LeetCode Activity" />
 
 </div>
 
 ---
 
 <!-- ════════════════════════════════════════
-     §7  PROJECTS
+     §6  PROJECTS
      ════════════════════════════════════════ -->
 
 ## 🛸 Projects
@@ -241,7 +163,7 @@ Stack  →  React · FastAPI · PostgreSQL
 - ⚡ Real-time WebSocket leaderboard & community forums
 - 🚀 Microservices behind Nginx reverse proxy + CI/CD
 
-[![View Repo](https://img.shields.io/badge/GitHub-FinSocial-58A6FF?style=flat-square&logo=github)](https://github.com/ashmitv704/finsocial)
+[![View Repo](https://img.shields.io/badge/GitHub-FinSocial-58A6FF?style=flat-square&logo=github)](https://github.com/FierceAdder/FinSocial)
 
 </td>
 
@@ -261,7 +183,7 @@ Stack  →  Python · Gemini / OpenAI / Claude
 - ⚡ Sub-10ms TF-IDF/LR classifier for prompt-injection & phishing
 - 🗜️ Context compressed 60–95% before LLM call
 
-[![View Repo](https://img.shields.io/badge/GitHub-SENTINEL-FF7B72?style=flat-square&logo=github)](https://github.com/ashmitv704/sentinel)
+[![View Repo](https://img.shields.io/badge/GitHub-SENTINEL-FF7B72?style=flat-square&logo=github)](https://github.com/FierceAdder/SENTINEL)
 
 </td>
 
@@ -283,7 +205,7 @@ Stack  →  React · Node.js · Express
 - 🔑 JWT auth + RBAC with presigned AWS S3 URLs
 - 🔗 Open Graph link previews
 
-[![View Repo](https://img.shields.io/badge/GitHub-SyncSpace-3FB950?style=flat-square&logo=github)](https://github.com/ashmitv704/syncspace)
+[![View Repo](https://img.shields.io/badge/GitHub-SyncSpace-3FB950?style=flat-square&logo=github)](https://github.com/FierceAdder/SyncSpace)
 
 </td>
 
@@ -301,12 +223,34 @@ Venue  →  Scaler Rethesis (2nd Prize 🥈)
 - 🧪 Evaluated on AG News with multi-seed validation
 - Co-authored independent research
 
-[![View Paper](https://img.shields.io/badge/Paper-MESA-A371F7?style=flat-square&logo=arxiv)](https://github.com/ashmitv704)
+[![View Paper](https://img.shields.io/badge/Paper-MESA-A371F7?style=flat-square&logo=arxiv)](https://github.com/FierceAdder)
 
 </td>
 
   </tr>
 </table>
+
+</div>
+
+---
+
+<!-- ════════════════════════════════════════
+     §7  ACHIEVEMENTS
+     ════════════════════════════════════════ -->
+
+## 🏆 Achievements
+
+<div align="center">
+
+| 🏅 Achievement | Details |
+|:---|:---|
+| **LeetCode Knight** | Worldwide **top 1%** · Max rating **2073** · **700+** problems solved |
+| **Rank 417 / 27,000+** | LeetCode Weekly Contest 500 |
+| **Codeforces Pupil** | Current rating **1385** |
+| **Fidelity India Hackathon** | Finalist — Top 50 of 1200+ teams |
+| **NER Tech 2.0** | Top 60 of 2000+ teams |
+| **MSRIT Whackiest Hackathon** | Top 25 |
+| **Scaler Rethesis** | 2nd Prize — MESA research paper |
 
 </div>
 
@@ -344,29 +288,7 @@ Venue  →  Scaler Rethesis (2nd Prize 🥈)
 ---
 
 <!-- ════════════════════════════════════════
-     §9  ACHIEVEMENTS
-     ════════════════════════════════════════ -->
-
-## 🏆 Achievements
-
-<div align="center">
-
-| 🏅 Achievement | Details |
-|:---|:---|
-| **LeetCode Knight** | Worldwide **top 1%** · Max rating **2073** · **700+** problems solved |
-| **Rank 417 / 27,000+** | LeetCode Weekly Contest 500 |
-| **Codeforces Pupil** | Current rating **1385** |
-| **Fidelity India Hackathon** | Finalist — Top 50 of 1200+ teams |
-| **NER Tech 2.0** | Top 60 of 2000+ teams |
-| **MSRIT Whackiest Hackathon** | Top 25 |
-| **Scaler Rethesis** | 2nd Prize — MESA research paper |
-
-</div>
-
----
-
-<!-- ════════════════════════════════════════
-     §10  3D CONTRIBUTION GRAPH
+     §9  3D CONTRIBUTION GLOBE
      ════════════════════════════════════════ -->
 
 ## 🌐 3D Contribution Globe
@@ -384,7 +306,7 @@ Venue  →  Scaler Rethesis (2nd Prize 🥈)
 ---
 
 <!-- ════════════════════════════════════════
-     §11  CERTIFICATIONS
+     §10  CERTIFICATIONS & LEARNING
      ════════════════════════════════════════ -->
 
 ## 📜 Certifications & Learning
@@ -401,7 +323,7 @@ Venue  →  Scaler Rethesis (2nd Prize 🥈)
 ---
 
 <!-- ════════════════════════════════════════
-     §12  FOOTER
+     §11  FOOTER
      ════════════════════════════════════════ -->
 
 <div align="center">
@@ -420,4 +342,3 @@ Venue  →  Scaler Rethesis (2nd Prize 🥈)
 *⭐ Star something interesting? Feel free to reach out!*
 
 </div>
-

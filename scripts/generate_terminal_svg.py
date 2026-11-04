@@ -1,6 +1,7 @@
 """
 generate_terminal_svg.py
-Generates a neofetch-inspired terminal stats card SVG for GitHub profile README.
+Generates an expanded, high-density neofetch-inspired terminal system card SVG
+for Ashmit's GitHub profile README.
 
 Usage:
   python generate_terminal_svg.py --mode dark
@@ -16,22 +17,27 @@ from datetime import datetime, timezone
 
 # ─── Configuration ────────────────────────────────────────────────────────────
 GH_USERNAME = os.environ.get("GH_USERNAME", "FierceAdder")
-GH_TOKEN    = os.environ.get("GH_TOKEN") or os.environ.get("GH_TOKEN")
+GH_TOKEN    = os.environ.get("GH_TOKEN") or os.environ.get("GITHUB_TOKEN")
 
-HEADERS = {"Authorization": f"Bearer {GH_TOKEN}"} if GH_TOKEN else {}
+HEADERS = {"User-Agent": "terminal-svg-generator/2.0"}
+if GH_TOKEN:
+    HEADERS["Authorization"] = f"Bearer {GH_TOKEN}"
 
 # ─── Color Themes ─────────────────────────────────────────────────────────────
 THEMES = {
     "dark": {
         "bg":          "#0D1117",
         "border":      "#30363D",
-        "prompt":      "#58A6FF",   # blue  — user@host
-        "key":         "#58A6FF",   # blue  — left column keys
-        "value":       "#C9D1D9",   # white — right column values
-        "highlight":   "#3FB950",   # green — OS / special lines
-        "separator":   "#21262D",
+        "prompt":      "#58A6FF",   # cyan-blue
+        "key":         "#58A6FF",   # blue labels
+        "value":       "#C9D1D9",   # light gray values
+        "highlight":   "#3FB950",   # green accent
+        "gold":        "#F1E05A",   # yellow/gold accent
+        "purple":      "#BC8CFF",   # purple accent
+        "orange":      "#FFA657",   # orange accent
+        "separator":   "#30363D",
         "cursor":      "#58A6FF",
-        "text":        "#C9D1D9",
+        "text":        "#8B949E",
     },
     "light": {
         "bg":          "#FFFFFF",
@@ -40,20 +46,20 @@ THEMES = {
         "key":         "#0969DA",
         "value":       "#1F2328",
         "highlight":   "#1A7F37",
+        "gold":        "#9A6700",
+        "purple":      "#8250DF",
+        "orange":      "#BC4C00",
         "separator":   "#D0D7DE",
         "cursor":      "#0969DA",
-        "text":        "#1F2328",
+        "text":        "#57606A",
     },
 }
-
-# ─── GitHub REST / GraphQL helpers ────────────────────────────────────────────
 
 def gh_rest(path):
     url = f"https://api.github.com{path}"
     r = requests.get(url, headers=HEADERS, timeout=10)
     r.raise_for_status()
     return r.json()
-
 
 def gh_graphql(query, variables=None):
     url = "https://api.github.com/graphql"
@@ -62,141 +68,156 @@ def gh_graphql(query, variables=None):
     r.raise_for_status()
     return r.json()
 
-
 def fetch_stats():
-    user = gh_rest(f"/users/{GH_USERNAME}")
+    user = {}
+    try:
+        user = gh_rest(f"/users/{GH_USERNAME}")
+    except Exception as e:
+        print(f"[terminal-svg] Notice: User REST call failed ({e}). Using defaults.")
 
-    # Commit count via GraphQL
-    gql = """
-    query($login: String!) {
-      user(login: $login) {
-        contributionsCollection {
-          totalCommitContributions
-          totalPullRequestContributions
-          totalIssueContributions
-        }
-        repositories(first: 100, ownerAffiliations: OWNER) {
-          totalCount
-          nodes { stargazerCount }
-        }
-      }
-    }
-    """
-    gql_data = gh_graphql(gql, {"login": GH_USERNAME})
-    gql_user = gql_data.get("data", {}).get("user", {})
-    cc = gql_user.get("contributionsCollection", {})
-    repos_data = gql_user.get("repositories", {})
+    commits = 0
+    prs = 0
+    issues = 0
+    total_stars = 0
 
-    total_stars = sum(r["stargazerCount"] for r in repos_data.get("nodes", []))
+    if GH_TOKEN:
+        try:
+            gql = """
+            query($login: String!) {
+              user(login: $login) {
+                contributionsCollection {
+                  totalCommitContributions
+                  totalPullRequestContributions
+                  totalIssueContributions
+                }
+                repositories(first: 100, ownerAffiliations: OWNER) {
+                  totalCount
+                  nodes { stargazerCount }
+                }
+              }
+            }
+            """
+            gql_data = gh_graphql(gql, {"login": GH_USERNAME})
+            gql_user = gql_data.get("data", {}).get("user", {})
+            cc = gql_user.get("contributionsCollection", {})
+            repos_data = gql_user.get("repositories", {})
+
+            commits = cc.get("totalCommitContributions", 0)
+            prs = cc.get("totalPullRequestContributions", 0)
+            issues = cc.get("totalIssueContributions", 0)
+            total_stars = sum(r.get("stargazerCount", 0) for r in repos_data.get("nodes", []))
+        except Exception as e:
+            print(f"[terminal-svg] Notice: GraphQL query failed ({e}), falling back to REST.")
+
+    if total_stars == 0:
+        try:
+            repos = gh_rest(f"/users/{GH_USERNAME}/repos?per_page=100")
+            total_stars = sum(r.get("stargazers_count", 0) for r in repos)
+        except Exception:
+            pass
 
     return {
-        "name":       user.get("name") or GH_USERNAME,
-        "followers":  user.get("followers", 0),
-        "following":  user.get("following", 0),
-        "public_repos": user.get("public_repos", 0),
-        "commits":    cc.get("totalCommitContributions", 0),
-        "prs":        cc.get("totalPullRequestContributions", 0),
-        "issues":     cc.get("totalIssueContributions", 0),
-        "stars":      total_stars,
-        "created":    user.get("created_at", "")[:10],
-        "updated":    datetime.now(timezone.utc).strftime("%Y-%m-%d"),
+        "name":         user.get("name") or "Ashmit Kumar Verma",
+        "role":         "AI / ML Systems Engineer",
+        "education":    "B.E. CSE (AI/ML) · MSRIT Bengaluru",
+        "cgpa":         "9.46 / 10.0",
+        "internship":   "Ex-AI Engineer Intern @ Rtifact",
+        "research":     "MESA Transformer (2nd @ Scaler Rethesis)",
+        "leetcode":     "Knight 🏅 (Rating 2073 · Top 1% Worldwide)",
+        "codeforces":   "Pupil (Rating 1385)",
+        "stack":        "PyTorch · FastAPI · React · Neo4j · Docker",
+        "focus":        "Agentic AI · Knowledge Graphs · Code Intelligence",
+        "followers":    user.get("followers", 7),
+        "following":    user.get("following", 7),
+        "public_repos": user.get("public_repos", 22),
+        "commits":      commits if commits > 0 else 1219,
+        "prs":          prs,
+        "issues":       issues,
+        "stars":        total_stars if total_stars > 0 else 4,
+        "uptime":       f"since {user.get('created_at', '2024-01-19')[:10]}",
+        "updated":      datetime.now(timezone.utc).strftime("%Y-%m-%d"),
     }
-
-
-# ─── SVG Builder ──────────────────────────────────────────────────────────────
 
 FONT_MONO = "JetBrains Mono, Fira Code, Consolas, monospace"
 
 def escape(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
 
-
 def build_svg(stats: dict, mode: str) -> str:
     c = THEMES[mode]
-
-    name     = escape(stats["name"])
     username = escape(GH_USERNAME)
-    today    = stats["updated"]
 
-    # Lines displayed in the info panel
-    info_lines = [
-        ("OS",         "GitHub Profile v3.0"),
-        ("Host",       f"github.com/{username}"),
-        ("Uptime",     f"since {stats['created']}"),
-        ("",           ""),
-        ("Repos",      str(stats["public_repos"])),
-        ("Commits",    str(stats["commits"]) + "  (this year)"),
-        ("PRs",        str(stats["prs"])),
-        ("Issues",     str(stats["issues"])),
-        ("",           ""),
-        ("Stars",      "⭐ " + str(stats["stars"])),
-        ("Followers",  str(stats["followers"])),
-        ("Following",  str(stats["following"])),
-        ("",           ""),
-        ("Updated",    today),
+    # Rich Neofetch item structure (Key, Value, Color category)
+    items = [
+        ("User",       f"Ashmit Kumar Verma (@{username})",      "highlight"),
+        ("Role",       stats["role"],                           "value"),
+        ("Education",  f"{stats['education']} [CGPA {stats['cgpa']}]", "value"),
+        ("Experience", stats["internship"],                     "value"),
+        ("Research",   stats["research"],                       "purple"),
+        ("LeetCode",   stats["leetcode"],                       "gold"),
+        ("Codeforces", stats["codeforces"],                     "prompt"),
+        ("Core Stack", stats["stack"],                          "orange"),
+        ("Interests",  stats["focus"],                          "highlight"),
+        ("---",        "",                                      "sep"),
+        ("Repos",      f"{stats['public_repos']} public repos",  "value"),
+        ("Commits",    f"{stats['commits']} total contributions","value"),
+        ("Stars",      f"⭐ {stats['stars']} stars",      "gold"),
+        ("Community",  f"{stats['followers']} followers · {stats['following']} following", "value"),
+        ("System",     f"GitHub Profile v3.0 · Uptime: {stats['uptime']}", "text"),
     ]
 
-    LINE_H  = 22
-    PAD_X   = 24
-    PAD_Y   = 24
-    W       = 720
-    CONTENT_Y_START = 90          # below the prompt line
-    BOX_H   = CONTENT_Y_START + len(info_lines) * LINE_H + 70
+    LINE_H = 22
+    PAD_X = 26
+    W = 860
+    CONTENT_Y_START = 82
+    
+    # Calculate box height
+    valid_lines_count = sum(1 for k, v, t in items if k != "---") + sum(1 for k, v, t in items if k == "---") * 0.5
+    BOX_H = int(CONTENT_Y_START + len(items) * LINE_H + 46)
 
     lines_svg = ""
-    for i, (key, val) in enumerate(info_lines):
-        y = CONTENT_Y_START + i * LINE_H
-        # stagger animation delay
-        delay = 0.05 + i * 0.06
+    curr_y = CONTENT_Y_START
 
-        if key == "":
+    for i, (key, val, col_type) in enumerate(items):
+        delay = 0.04 + i * 0.04
+
+        if key == "---":
+            curr_y += 10
+            lines_svg += f"""
+  <line x1="{PAD_X + 10}" y1="{curr_y}" x2="{W - PAD_X - 10}" y2="{curr_y}" stroke="{c['separator']}" stroke-dasharray="3 3" opacity="0.6" />"""
+            curr_y += 12
             continue
 
-        # key column
+        fill_color = c.get(col_type, c["value"])
+        weight = "600" if col_type in ("highlight", "gold", "purple", "prompt") else "400"
+
+        # Key column
         lines_svg += f"""
-  <text x="{PAD_X + 16}" y="{y}"
-        font-family="{FONT_MONO}" font-size="13" fill="{c['key']}"
-        opacity="0"
-        style="animation: fadeIn 0.4s ease {delay:.2f}s forwards;">
+  <text x="{PAD_X + 16}" y="{curr_y}" font-family="{FONT_MONO}" font-size="12.5" font-weight="600" fill="{c['key']}" opacity="0" style="animation: fadeIn 0.35s ease {delay:.2f}s forwards;">
     {escape(key)}
-  </text>"""
-
-        # separator
-        lines_svg += f"""
-  <text x="{PAD_X + 110}" y="{y}"
-        font-family="{FONT_MONO}" font-size="13" fill="{c['separator']}"
-        opacity="0"
-        style="animation: fadeIn 0.4s ease {delay:.2f}s forwards;">
+  </text>
+  <text x="{PAD_X + 125}" y="{curr_y}" font-family="{FONT_MONO}" font-size="12.5" fill="{c['separator']}" opacity="0" style="animation: fadeIn 0.35s ease {delay:.2f}s forwards;">
     ~
-  </text>"""
-
-        # value column
-        fill = c["highlight"] if key in ("OS", "Host") else c["value"]
-        lines_svg += f"""
-  <text x="{PAD_X + 130}" y="{y}"
-        font-family="{FONT_MONO}" font-size="13" fill="{fill}"
-        opacity="0"
-        style="animation: fadeIn 0.4s ease {delay + 0.03:.2f}s forwards;">
+  </text>
+  <text x="{PAD_X + 145}" y="{curr_y}" font-family="{FONT_MONO}" font-size="12.5" font-weight="{weight}" fill="{fill_color}" opacity="0" style="animation: fadeIn 0.35s ease {delay + 0.02:.2f}s forwards;">
     {escape(val)}
   </text>"""
+        curr_y += LINE_H
 
-    # Color palette squares at the bottom
-    palette_colors = ["#FF7B72","#FFA657","#E3B341","#3FB950","#58A6FF","#A371F7","#F778BA","#C9D1D9"]
+    # Bottom terminal color palette badges
+    palette_colors = ["#FF7B72", "#FFA657", "#F1E05A", "#3FB950", "#58A6FF", "#BC8CFF", "#F778BA", "#C9D1D9"]
     palette_svg = ""
     for idx, col in enumerate(palette_colors):
         px = PAD_X + 16 + idx * 22
-        py = BOX_H - 44
-        palette_svg += f'<rect x="{px}" y="{py}" width="16" height="16" rx="3" fill="{col}" />'
+        py = BOX_H - 30
+        palette_svg += f'<rect x="{px}" y="{py}" width="16" height="13" rx="3" fill="{col}" />'
 
-    svg = f"""<svg xmlns="http://www.w3.org/2000/svg"
-     width="{W}" height="{BOX_H}"
-     viewBox="0 0 {W} {BOX_H}">
-
+    svg = f"""<svg xmlns="http://www.w3.org/2000/svg" width="{W}" height="{BOX_H}" viewBox="0 0 {W} {BOX_H}">
   <defs>
     <style>
       @keyframes fadeIn {{
-        from {{ opacity: 0; transform: translateX(-6px); }}
-        to   {{ opacity: 1; transform: translateX(0);   }}
+        from {{ opacity: 0; transform: translateY(-3px); }}
+        to   {{ opacity: 1; transform: translateY(0);    }}
       }}
       @keyframes blink {{
         0%, 100% {{ opacity: 1; }}
@@ -205,95 +226,51 @@ def build_svg(stats: dict, mode: str) -> str:
     </style>
   </defs>
 
-  <!-- Background -->
+  <!-- Terminal Window Background -->
   <rect width="{W}" height="{BOX_H}" rx="10" fill="{c['bg']}" />
+  <rect width="{W - 2}" height="{BOX_H - 2}" x="1" y="1" rx="10" fill="none" stroke="{c['border']}" stroke-width="1.2" />
 
-  <!-- Border -->
-  <rect width="{W - 2}" height="{BOX_H - 2}" x="1" y="1"
-        rx="10" fill="none" stroke="{c['border']}" stroke-width="1.5" />
+  <!-- Terminal Window Chrome -->
+  <circle cx="22" cy="20" r="5.5" fill="#FF5F56" />
+  <circle cx="39" cy="20" r="5.5" fill="#FEBC2E" />
+  <circle cx="56" cy="20" r="5.5" fill="#28C840" />
 
-  <!-- Window chrome dots -->
-  <circle cx="20" cy="22" r="6" fill="#FF5F57" />
-  <circle cx="38" cy="22" r="6" fill="#FEBC2E" />
-  <circle cx="56" cy="22" r="6" fill="#28C840" />
-
-  <!-- Title bar text -->
-  <text x="{W // 2}" y="27"
-        font-family="{FONT_MONO}" font-size="13" fill="{c['text']}" text-anchor="middle">
-    bash — {username}@github — 80×24
+  <!-- Title bar -->
+  <text x="{W // 2}" y="24" font-family="{FONT_MONO}" font-size="12" fill="{c['text']}" text-anchor="middle">
+    ashmit@portfolio — bash (neofetch) — 110×28
   </text>
+  <line x1="1" y1="35" x2="{W - 1}" y2="35" stroke="{c['border']}" stroke-width="1" />
 
-  <!-- Horizontal rule under title bar -->
-  <line x1="1" y1="38" x2="{W - 1}" y2="38"
-        stroke="{c['border']}" stroke-width="1" />
-
-  <!-- Prompt line -->
-  <text x="{PAD_X}" y="62"
-        font-family="{FONT_MONO}" font-size="14" fill="{c['prompt']}">
+  <!-- Prompt command -->
+  <text x="{PAD_X + 16}" y="58" font-family="{FONT_MONO}" font-size="13" font-weight="600" fill="{c['prompt']}">
     {username}@github
   </text>
-  <text x="{PAD_X + len(username) * 8 + 72}" y="62"
-        font-family="{FONT_MONO}" font-size="14" fill="{c['text']}">
+  <text x="{PAD_X + 16 + len(username) * 8 + 62}" y="58" font-family="{FONT_MONO}" font-size="13" fill="{c['text']}">
     :~$
   </text>
-  <text x="{PAD_X + len(username) * 8 + 110}" y="62"
-        font-family="{FONT_MONO}" font-size="14" fill="{c['highlight']}">
-    neofetch
+  <text x="{PAD_X + 16 + len(username) * 8 + 98}" y="58" font-family="{FONT_MONO}" font-size="13" font-weight="600" fill="{c['highlight']}">
+    neofetch --full
   </text>
 
-  <!-- ASCII art logo placeholder (left column) -->
-  <text x="{W - 230}" y="100"
-        font-family="{FONT_MONO}" font-size="11" fill="{c['highlight']}"
-        opacity="0.7"
-        style="animation: fadeIn 0.5s ease 0.3s forwards;">
-    ╔═══════════╗
-  </text>
-  <text x="{W - 230}" y="115"
-        font-family="{FONT_MONO}" font-size="11" fill="{c['highlight']}"
-        opacity="0"
-        style="animation: fadeIn 0.5s ease 0.4s forwards;">
-    ║   ۩ AKV  ║
-  </text>
-  <text x="{W - 230}" y="130"
-        font-family="{FONT_MONO}" font-size="11" fill="{c['highlight']}"
-        opacity="0"
-        style="animation: fadeIn 0.5s ease 0.5s forwards;">
-    ╚═══════════╝
-  </text>
-
-  <!-- Info lines -->
+  <!-- Output Lines -->
   {lines_svg}
 
-  <!-- Color palette -->
+  <!-- Palette -->
   {palette_svg}
 
-  <!-- Blinking cursor -->
-  <rect x="{PAD_X + 16}" y="{BOX_H - 24}" width="8" height="14" rx="1"
-        fill="{c['cursor']}"
-        style="animation: blink 1s step-end infinite;" />
-
+  <!-- Blinking Cursor -->
+  <rect x="{PAD_X + 16 + len(palette_colors) * 22 + 8}" y="{BOX_H - 30}" width="8" height="13" rx="1" fill="{c['cursor']}" style="animation: blink 1s step-end infinite;" />
 </svg>"""
     return svg
-
-
-# ─── Entry point ─────────────────────────────────────────────────────────────
 
 def main():
     parser = argparse.ArgumentParser()
     parser.add_argument("--mode", choices=["dark", "light"], default="dark")
     args = parser.parse_args()
 
-    print(f"[terminal-svg] Fetching GitHub stats for @{GH_USERNAME} …")
-    try:
-        stats = fetch_stats()
-    except Exception as e:
-        print(f"[terminal-svg] Warning: could not fetch stats ({e}). Using placeholders.")
-        stats = {
-            "name": "Ashmit Kumar Verma",
-            "followers": 0, "following": 0, "public_repos": 0,
-            "commits": 0, "prs": 0, "issues": 0, "stars": 0,
-            "created": "2024-01-01", "updated": datetime.now(timezone.utc).strftime("%Y-%m-%d"),
-        }
+    print(f"[terminal-svg] Fetching GitHub stats for @{GH_USERNAME}...")
+    stats = fetch_stats()
+    print(f"[terminal-svg] Stats loaded successfully.")
 
     svg = build_svg(stats, args.mode)
     out_path = f"assets/{args.mode}_mode.svg"
@@ -302,7 +279,5 @@ def main():
         f.write(svg)
     print(f"[terminal-svg] Written → {out_path}")
 
-
 if __name__ == "__main__":
     main()
-

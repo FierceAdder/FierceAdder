@@ -1,0 +1,39 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="850" height="360" viewBox="0 0 850 360">
+  <defs>
+    <linearGradient id="gridGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#58A6FF" stop-opacity="0.8"/>
+      <stop offset="50%" stop-color="#39D353" stop-opacity="0.8"/>
+      <stop offset="100%" stop-color="#A371F7" stop-opacity="0.8"/>
+    </linearGradient>
+    <style>
+      @keyframes float {
+        0%, 100% { transform: translateY(0px); }
+        50% { transform: translateY(-6px); }
+      }
+    </style>
+  </defs>
+  <rect width="850" height="360" rx="10" fill="#0D1117" stroke="#30363D" stroke-width="1.2"/>
+  <g transform="translate(180, 70)" style="animation: float 4s ease-in-out infinite;">
+    <!-- 3D Isometric Base Grid -->
+    <path d="M 240 20 L 460 130 L 240 240 L 20 130 Z" fill="#161B22" stroke="#30363D" stroke-width="1.5"/>
+    <!-- Isometric Bar sample pillars -->
+    <path d="M 120 120 L 140 110 L 140 70 L 120 80 Z" fill="#26A641"/>
+    <path d="M 140 110 L 160 120 L 160 80 L 140 70 Z" fill="#39D353"/>
+    <path d="M 120 80 L 140 70 L 160 80 L 140 90 Z" fill="#56D364"/>
+
+    <path d="M 200 140 L 220 130 L 220 50 L 200 60 Z" fill="#006D32"/>
+    <path d="M 220 130 L 240 140 L 240 60 L 220 50 Z" fill="#26A641"/>
+    <path d="M 200 60 L 220 50 L 240 60 L 220 70 Z" fill="#39D353"/>
+
+    <path d="M 280 120 L 300 110 L 300 40 L 280 50 Z" fill="#238636"/>
+    <path d="M 300 110 L 320 120 L 320 50 L 300 40 Z" fill="#2EA043"/>
+    <path d="M 280 50 L 300 40 L 320 50 L 300 60 Z" fill="#3FB950"/>
+
+    <path d="M 340 140 L 360 130 L 360 80 L 340 90 Z" fill="#0E4429"/>
+    <path d="M 360 130 L 380 140 L 380 90 L 360 80 Z" fill="#006D32"/>
+    <path d="M 340 90 L 360 80 L 380 90 L 360 100 Z" fill="#26A641"/>
+  </g>
+  <text x="425" y="325" fill="#8B949E" font-family="JetBrains Mono, monospace" font-size="12" text-anchor="middle">
+    3D Contribution Globe • Generating live via GitHub Actions
+  </text>
+</svg>

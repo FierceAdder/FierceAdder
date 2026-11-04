@@ -1,0 +1,344 @@
+<svg xmlns="http://www.w3.org/2000/svg"
+     xmlns:xlink="http://www.w3.org/1999/xlink"
+     width="860" height="342"
+     viewBox="0 0 860 342">
+  
+    <style>
+      .key {
+        animation: key-pop 0.5s cubic-bezier(0.34, 1.56, 0.64, 1) both;
+      }
+      @keyframes key-pop {
+        from { transform: scale(0.6); opacity: 0; }
+        to   { transform: scale(1);   opacity: 1; }
+      }
+      @media (prefers-reduced-motion: reduce) {
+        .key { animation: none; }
+      }
+    </style>
+  <defs>
+    <linearGradient id="kg0" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#5b8eba" /><stop offset="100%" stop-color="#3776AB" /></linearGradient>
+    <linearGradient id="kg1" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#f09f2d" /><stop offset="100%" stop-color="#ED8B00" /></linearGradient>
+    <linearGradient id="kg2" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#b7c5d5" /><stop offset="100%" stop-color="#A8B9CC" /></linearGradient>
+    <linearGradient id="kg3" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#f8e446" /><stop offset="100%" stop-color="#F7DF1E" /></linearGradient>
+    <linearGradient id="kg4" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#5690d0" /><stop offset="100%" stop-color="#3178C6" /></linearGradient>
+    <linearGradient id="kg5" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#5782a4" /><stop offset="100%" stop-color="#336791" /></linearGradient>
+    <linearGradient id="kg6" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#f16c51" /><stop offset="100%" stop-color="#EE4C2C" /></linearGradient>
+    <linearGradient id="kg7" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#2da89d" /><stop offset="100%" stop-color="#009688" /></linearGradient>
+    <linearGradient id="kg8" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#2e5664" /><stop offset="100%" stop-color="#013243" /></linearGradient>
+    <linearGradient id="kg9" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#3f3176" /><stop offset="100%" stop-color="#150458" /></linearGradient>
+    <linearGradient id="kg10" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#f8a646" /><stop offset="100%" stop-color="#F7931E" /></linearGradient>
+    <linearGradient id="kg11" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#634fa4" /><stop offset="100%" stop-color="#412991" /></linearGradient>
+    <linearGradient id="kg12" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#57ab57" /><stop offset="100%" stop-color="#339933" /></linearGradient>
+    <linearGradient id="kg13" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#626262" /><stop offset="100%" stop-color="#404040" /></linearGradient>
+    <linearGradient id="kg14" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#68b268" /><stop offset="100%" stop-color="#47A248" /></linearGradient>
+    <linearGradient id="kg15" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#6384e6" /><stop offset="100%" stop-color="#4169E1" /></linearGradient>
+    <linearGradient id="kg16" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#e25b52" /><stop offset="100%" stop-color="#DC382D" /></linearGradient>
+    <linearGradient id="kg17" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#4ba8f0" /><stop offset="100%" stop-color="#2496ED" /></linearGradient>
+    <linearGradient id="kg18" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#7de0fb" /><stop offset="100%" stop-color="#61DAFB" /></linearGradient>
+    <linearGradient id="kg19" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#ffffff" /><stop offset="100%" stop-color="#FFFFFF" /></linearGradient>
+    <linearGradient id="kg20" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#32c3db" /><stop offset="100%" stop-color="#06B6D4" /></linearGradient>
+    <linearGradient id="kg21" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#f26f56" /><stop offset="100%" stop-color="#F05032" /></linearGradient>
+    <linearGradient id="kg22" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#8872a7" /><stop offset="100%" stop-color="#6E5494" /></linearGradient>
+    <linearGradient id="kg23" x1="0" y1="0" x2="0.6" y2="1"><stop offset="0%" stop-color="#ffab2d" /><stop offset="100%" stop-color="#FF9900" /></linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="860" height="342" fill="#0D1117" rx="12"/>
+
+  <!-- Section labels -->
+  <text x="430" y="24" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="10" font-weight="700" fill="#58A6FF" opacity="0.70" text-anchor="middle" letter-spacing="2">LANGUAGES</text>
+  <text x="430" y="97" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="10" font-weight="700" fill="#58A6FF" opacity="0.70" text-anchor="middle" letter-spacing="2">ML / AI</text>
+  <text x="430" y="170" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="10" font-weight="700" fill="#58A6FF" opacity="0.70" text-anchor="middle" letter-spacing="2">BACKEND / INFRA</text>
+  <text x="430" y="243" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="10" font-weight="700" fill="#58A6FF" opacity="0.70" text-anchor="middle" letter-spacing="2">FRONTEND / TOOLS</text>
+
+  <!-- Keys -->
+  
+  <g class="key" style="animation-delay:0.00s">
+    <clipPath id="cp0"><rect x="173.5" y="30" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 239.5,40 Q 249.5,30 256.5,47 L 256.5,79 Q 256.5,89 249.5,82 L 249.5,40 Z"  fill="#1b3b55" />
+    <path d="M 183.5,82 L 249.5,82 Q 256.5,89 246.5,89 L 190.5,89 Q 180.5,89 173.5,82 Z" fill="#162f44" />
+    <!-- Top face -->
+    <rect x="173.5" y="30" width="76" height="52" rx="10" ry="10" fill="url(#kg0)" stroke="#739fc4" stroke-width="0.8" />
+    <ellipse cx="200.1" cy="43.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/python/white" x="199.5" y="37.0" width="24" height="24" clip-path="url(#cp0)" />
+    <text x="211.5" y="74.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Python</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.08s">
+    <clipPath id="cp1"><rect x="259.5" y="30" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 325.5,40 Q 335.5,30 342.5,47 L 342.5,79 Q 342.5,89 335.5,82 L 335.5,40 Z"  fill="#764500" />
+    <path d="M 269.5,82 L 335.5,82 Q 342.5,89 332.5,89 L 276.5,89 Q 266.5,89 259.5,82 Z" fill="#5e3700" />
+    <!-- Top face -->
+    <rect x="259.5" y="30" width="76" height="52" rx="10" ry="10" fill="url(#kg1)" stroke="#f2ad4c" stroke-width="0.8" />
+    <ellipse cx="286.1" cy="43.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/openjdk/111111" x="285.5" y="37.0" width="24" height="24" clip-path="url(#cp1)" />
+    <text x="297.5" y="74.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#0D1117" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Java</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.16s">
+    <clipPath id="cp2"><rect x="345.5" y="30" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 411.5,40 Q 421.5,30 428.5,47 L 428.5,79 Q 428.5,89 421.5,82 L 421.5,40 Z"  fill="#545c66" />
+    <path d="M 355.5,82 L 421.5,82 Q 428.5,89 418.5,89 L 362.5,89 Q 352.5,89 345.5,82 Z" fill="#434a51" />
+    <!-- Top face -->
+    <rect x="345.5" y="30" width="76" height="52" rx="10" ry="10" fill="url(#kg2)" stroke="#c2cedb" stroke-width="0.8" />
+    <ellipse cx="372.1" cy="43.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/c/111111" x="371.5" y="37.0" width="24" height="24" clip-path="url(#cp2)" />
+    <text x="383.5" y="74.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#0D1117" opacity="0.90" text-anchor="middle" dominant-baseline="auto">C</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.24s">
+    <clipPath id="cp3"><rect x="431.5" y="30" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 497.5,40 Q 507.5,30 514.5,47 L 514.5,79 Q 514.5,89 507.5,82 L 507.5,40 Z"  fill="#7b6f0f" />
+    <path d="M 441.5,82 L 507.5,82 Q 514.5,89 504.5,89 L 448.5,89 Q 438.5,89 431.5,82 Z" fill="#62590c" />
+    <!-- Top face -->
+    <rect x="431.5" y="30" width="76" height="52" rx="10" ry="10" fill="url(#kg3)" stroke="#f9e861" stroke-width="0.8" />
+    <ellipse cx="458.1" cy="43.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/javascript/111111" x="457.5" y="37.0" width="24" height="24" clip-path="url(#cp3)" />
+    <text x="469.5" y="74.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#0D1117" opacity="0.90" text-anchor="middle" dominant-baseline="auto">JavaScript</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.32s">
+    <clipPath id="cp4"><rect x="517.5" y="30" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 583.5,40 Q 593.5,30 600.5,47 L 600.5,79 Q 600.5,89 593.5,82 L 593.5,40 Z"  fill="#183c63" />
+    <path d="M 527.5,82 L 593.5,82 Q 600.5,89 590.5,89 L 534.5,89 Q 524.5,89 517.5,82 Z" fill="#13304f" />
+    <!-- Top face -->
+    <rect x="517.5" y="30" width="76" height="52" rx="10" ry="10" fill="url(#kg4)" stroke="#6ea0d7" stroke-width="0.8" />
+    <ellipse cx="544.1" cy="43.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/typescript/white" x="543.5" y="37.0" width="24" height="24" clip-path="url(#cp4)" />
+    <text x="555.5" y="74.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">TypeScript</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.40s">
+    <clipPath id="cp5"><rect x="603.5" y="30" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 669.5,40 Q 679.5,30 686.5,47 L 686.5,79 Q 686.5,89 679.5,82 L 679.5,40 Z"  fill="#193348" />
+    <path d="M 613.5,82 L 679.5,82 Q 686.5,89 676.5,89 L 620.5,89 Q 610.5,89 603.5,82 Z" fill="#14293a" />
+    <!-- Top face -->
+    <rect x="603.5" y="30" width="76" height="52" rx="10" ry="10" fill="url(#kg5)" stroke="#7094b2" stroke-width="0.8" />
+    <ellipse cx="630.1" cy="43.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/postgresql/white" x="629.5" y="37.0" width="24" height="24" clip-path="url(#cp5)" />
+    <text x="641.5" y="74.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">SQL</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.00s">
+    <clipPath id="cp6"><rect x="195.0" y="103" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 261.0,113 Q 271.0,103 278.0,120 L 278.0,152 Q 278.0,162 271.0,155 L 271.0,113 Z"  fill="#772616" />
+    <path d="M 205.0,155 L 271.0,155 Q 278.0,162 268.0,162 L 212.0,162 Q 202.0,162 195.0,155 Z" fill="#5f1e11" />
+    <!-- Top face -->
+    <rect x="195.0" y="103" width="76" height="52" rx="10" ry="10" fill="url(#kg6)" stroke="#f3816b" stroke-width="0.8" />
+    <ellipse cx="221.6" cy="116.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/pytorch/white" x="221.0" y="110.0" width="24" height="24" clip-path="url(#cp6)" />
+    <text x="233.0" y="147.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">PyTorch</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.08s">
+    <clipPath id="cp7"><rect x="281.0" y="103" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 347.0,113 Q 357.0,103 364.0,120 L 364.0,152 Q 364.0,162 357.0,155 L 357.0,113 Z"  fill="#004b44" />
+    <path d="M 291.0,155 L 357.0,155 Q 364.0,162 354.0,162 L 298.0,162 Q 288.0,162 281.0,155 Z" fill="#003c36" />
+    <!-- Top face -->
+    <rect x="281.0" y="103" width="76" height="52" rx="10" ry="10" fill="url(#kg7)" stroke="#4cb5ab" stroke-width="0.8" />
+    <ellipse cx="307.6" cy="116.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/fastapi/white" x="307.0" y="110.0" width="24" height="24" clip-path="url(#cp7)" />
+    <text x="319.0" y="147.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">FastAPI</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.16s">
+    <clipPath id="cp8"><rect x="367.0" y="103" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 433.0,113 Q 443.0,103 450.0,120 L 450.0,152 Q 450.0,162 443.0,155 L 443.0,113 Z"  fill="#001921" />
+    <path d="M 377.0,155 L 443.0,155 Q 450.0,162 440.0,162 L 384.0,162 Q 374.0,162 367.0,155 Z" fill="#00141a" />
+    <!-- Top face -->
+    <rect x="367.0" y="103" width="76" height="52" rx="10" ry="10" fill="url(#kg8)" stroke="#4d6f7b" stroke-width="0.8" />
+    <ellipse cx="393.6" cy="116.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/numpy/white" x="393.0" y="110.0" width="24" height="24" clip-path="url(#cp8)" />
+    <text x="405.0" y="147.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">NumPy</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.24s">
+    <clipPath id="cp9"><rect x="453.0" y="103" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 519.0,113 Q 529.0,103 536.0,120 L 536.0,152 Q 536.0,162 529.0,155 L 529.0,113 Z"  fill="#0a022c" />
+    <path d="M 463.0,155 L 529.0,155 Q 536.0,162 526.0,162 L 470.0,162 Q 460.0,162 453.0,155 Z" fill="#080123" />
+    <!-- Top face -->
+    <rect x="453.0" y="103" width="76" height="52" rx="10" ry="10" fill="url(#kg9)" stroke="#5b4f8a" stroke-width="0.8" />
+    <ellipse cx="479.6" cy="116.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/pandas/white" x="479.0" y="110.0" width="24" height="24" clip-path="url(#cp9)" />
+    <text x="491.0" y="147.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Pandas</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.32s">
+    <clipPath id="cp10"><rect x="539.0" y="103" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 605.0,113 Q 615.0,103 622.0,120 L 622.0,152 Q 622.0,162 615.0,155 L 615.0,113 Z"  fill="#7b490f" />
+    <path d="M 549.0,155 L 615.0,155 Q 622.0,162 612.0,162 L 556.0,162 Q 546.0,162 539.0,155 Z" fill="#623a0c" />
+    <!-- Top face -->
+    <rect x="539.0" y="103" width="76" height="52" rx="10" ry="10" fill="url(#kg10)" stroke="#f9b361" stroke-width="0.8" />
+    <ellipse cx="565.6" cy="116.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/scikitlearn/111111" x="565.0" y="110.0" width="24" height="24" clip-path="url(#cp10)" />
+    <text x="577.0" y="147.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#0D1117" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Scikit</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.40s">
+    <clipPath id="cp11"><rect x="625.0" y="103" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 691.0,113 Q 701.0,103 708.0,120 L 708.0,152 Q 708.0,162 701.0,155 L 701.0,113 Z"  fill="#201448" />
+    <path d="M 635.0,155 L 701.0,155 Q 708.0,162 698.0,162 L 642.0,162 Q 632.0,162 625.0,155 Z" fill="#1a103a" />
+    <!-- Top face -->
+    <rect x="625.0" y="103" width="76" height="52" rx="10" ry="10" fill="url(#kg11)" stroke="#7a69b2" stroke-width="0.8" />
+    <ellipse cx="651.6" cy="116.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/openai/white" x="651.0" y="110.0" width="24" height="24" clip-path="url(#cp11)" />
+    <text x="663.0" y="147.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">OpenAI</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.00s">
+    <clipPath id="cp12"><rect x="173.5" y="176" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 239.5,186 Q 249.5,176 256.5,193 L 256.5,225 Q 256.5,235 249.5,228 L 249.5,186 Z"  fill="#194c19" />
+    <path d="M 183.5,228 L 249.5,228 Q 256.5,235 246.5,235 L 190.5,235 Q 180.5,235 173.5,228 Z" fill="#143d14" />
+    <!-- Top face -->
+    <rect x="173.5" y="176" width="76" height="52" rx="10" ry="10" fill="url(#kg12)" stroke="#70b770" stroke-width="0.8" />
+    <ellipse cx="200.1" cy="189.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/nodedotjs/white" x="199.5" y="183.0" width="24" height="24" clip-path="url(#cp12)" />
+    <text x="211.5" y="220.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Node.js</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.08s">
+    <clipPath id="cp13"><rect x="259.5" y="176" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 325.5,186 Q 335.5,176 342.5,193 L 342.5,225 Q 342.5,235 335.5,228 L 335.5,186 Z"  fill="#202020" />
+    <path d="M 269.5,228 L 335.5,228 Q 342.5,235 332.5,235 L 276.5,235 Q 266.5,235 259.5,228 Z" fill="#191919" />
+    <!-- Top face -->
+    <rect x="259.5" y="176" width="76" height="52" rx="10" ry="10" fill="url(#kg13)" stroke="#797979" stroke-width="0.8" />
+    <ellipse cx="286.1" cy="189.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/express/white" x="285.5" y="183.0" width="24" height="24" clip-path="url(#cp13)" />
+    <text x="297.5" y="220.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Express</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.16s">
+    <clipPath id="cp14"><rect x="345.5" y="176" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 411.5,186 Q 421.5,176 428.5,193 L 428.5,225 Q 428.5,235 421.5,228 L 421.5,186 Z"  fill="#235124" />
+    <path d="M 355.5,228 L 421.5,228 Q 428.5,235 418.5,235 L 362.5,235 Q 352.5,235 345.5,228 Z" fill="#1c401c" />
+    <!-- Top face -->
+    <rect x="345.5" y="176" width="76" height="52" rx="10" ry="10" fill="url(#kg14)" stroke="#7ebd7e" stroke-width="0.8" />
+    <ellipse cx="372.1" cy="189.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/mongodb/white" x="371.5" y="183.0" width="24" height="24" clip-path="url(#cp14)" />
+    <text x="383.5" y="220.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">MongoDB</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.24s">
+    <clipPath id="cp15"><rect x="431.5" y="176" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 497.5,186 Q 507.5,176 514.5,193 L 514.5,225 Q 514.5,235 507.5,228 L 507.5,186 Z"  fill="#203470" />
+    <path d="M 441.5,228 L 507.5,228 Q 514.5,235 504.5,235 L 448.5,235 Q 438.5,235 431.5,228 Z" fill="#1a2a5a" />
+    <!-- Top face -->
+    <rect x="431.5" y="176" width="76" height="52" rx="10" ry="10" fill="url(#kg15)" stroke="#7a96ea" stroke-width="0.8" />
+    <ellipse cx="458.1" cy="189.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/postgresql/white" x="457.5" y="183.0" width="24" height="24" clip-path="url(#cp15)" />
+    <text x="469.5" y="220.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">PostgreSQL</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.32s">
+    <clipPath id="cp16"><rect x="517.5" y="176" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 583.5,186 Q 593.5,176 600.5,193 L 600.5,225 Q 600.5,235 593.5,228 L 593.5,186 Z"  fill="#6e1c16" />
+    <path d="M 527.5,228 L 593.5,228 Q 600.5,235 590.5,235 L 534.5,235 Q 524.5,235 517.5,228 Z" fill="#581612" />
+    <!-- Top face -->
+    <rect x="517.5" y="176" width="76" height="52" rx="10" ry="10" fill="url(#kg16)" stroke="#e6736c" stroke-width="0.8" />
+    <ellipse cx="544.1" cy="189.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/redis/white" x="543.5" y="183.0" width="24" height="24" clip-path="url(#cp16)" />
+    <text x="555.5" y="220.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Redis</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.40s">
+    <clipPath id="cp17"><rect x="603.5" y="176" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 669.5,186 Q 679.5,176 686.5,193 L 686.5,225 Q 686.5,235 679.5,228 L 679.5,186 Z"  fill="#124b76" />
+    <path d="M 613.5,228 L 679.5,228 Q 686.5,235 676.5,235 L 620.5,235 Q 610.5,235 603.5,228 Z" fill="#0e3c5e" />
+    <!-- Top face -->
+    <rect x="603.5" y="176" width="76" height="52" rx="10" ry="10" fill="url(#kg17)" stroke="#65b5f2" stroke-width="0.8" />
+    <ellipse cx="630.1" cy="189.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/docker/white" x="629.5" y="183.0" width="24" height="24" clip-path="url(#cp17)" />
+    <text x="641.5" y="220.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Docker</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.00s">
+    <clipPath id="cp18"><rect x="195.0" y="249" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 261.0,259 Q 271.0,249 278.0,266 L 278.0,298 Q 278.0,308 271.0,301 L 271.0,259 Z"  fill="#306d7d" />
+    <path d="M 205.0,301 L 271.0,301 Q 278.0,308 268.0,308 L 212.0,308 Q 202.0,308 195.0,301 Z" fill="#265764" />
+    <!-- Top face -->
+    <rect x="195.0" y="249" width="76" height="52" rx="10" ry="10" fill="url(#kg18)" stroke="#90e5fc" stroke-width="0.8" />
+    <ellipse cx="221.6" cy="262.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/react/111111" x="221.0" y="256.0" width="24" height="24" clip-path="url(#cp18)" />
+    <text x="233.0" y="293.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#0D1117" opacity="0.90" text-anchor="middle" dominant-baseline="auto">React</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.08s">
+    <clipPath id="cp19"><rect x="281.0" y="249" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 347.0,259 Q 357.0,249 364.0,266 L 364.0,298 Q 364.0,308 357.0,301 L 357.0,259 Z"  fill="#7f7f7f" />
+    <path d="M 291.0,301 L 357.0,301 Q 364.0,308 354.0,308 L 298.0,308 Q 288.0,308 281.0,301 Z" fill="#666666" />
+    <!-- Top face -->
+    <rect x="281.0" y="249" width="76" height="52" rx="10" ry="10" fill="url(#kg19)" stroke="#ffffff" stroke-width="0.8" />
+    <ellipse cx="307.6" cy="262.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/nextdotjs/111111" x="307.0" y="256.0" width="24" height="24" clip-path="url(#cp19)" />
+    <text x="319.0" y="293.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#0D1117" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Next.js</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.16s">
+    <clipPath id="cp20"><rect x="367.0" y="249" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 433.0,259 Q 443.0,249 450.0,266 L 450.0,298 Q 450.0,308 443.0,301 L 443.0,259 Z"  fill="#035b6a" />
+    <path d="M 377.0,301 L 443.0,301 Q 450.0,308 440.0,308 L 384.0,308 Q 374.0,308 367.0,301 Z" fill="#024854" />
+    <!-- Top face -->
+    <rect x="367.0" y="249" width="76" height="52" rx="10" ry="10" fill="url(#kg20)" stroke="#50cbe0" stroke-width="0.8" />
+    <ellipse cx="393.6" cy="262.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/tailwindcss/white" x="393.0" y="256.0" width="24" height="24" clip-path="url(#cp20)" />
+    <text x="405.0" y="293.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Tailwind</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.24s">
+    <clipPath id="cp21"><rect x="453.0" y="249" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 519.0,259 Q 529.0,249 536.0,266 L 536.0,298 Q 536.0,308 529.0,301 L 529.0,259 Z"  fill="#782819" />
+    <path d="M 463.0,301 L 529.0,301 Q 536.0,308 526.0,308 L 470.0,308 Q 460.0,308 453.0,301 Z" fill="#602014" />
+    <!-- Top face -->
+    <rect x="453.0" y="249" width="76" height="52" rx="10" ry="10" fill="url(#kg21)" stroke="#f4846f" stroke-width="0.8" />
+    <ellipse cx="479.6" cy="262.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/git/white" x="479.0" y="256.0" width="24" height="24" clip-path="url(#cp21)" />
+    <text x="491.0" y="293.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">Git</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.32s">
+    <clipPath id="cp22"><rect x="539.0" y="249" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 605.0,259 Q 615.0,249 622.0,266 L 622.0,298 Q 622.0,308 615.0,301 L 615.0,259 Z"  fill="#372a4a" />
+    <path d="M 549.0,301 L 615.0,301 Q 622.0,308 612.0,308 L 556.0,308 Q 546.0,308 539.0,301 Z" fill="#2c213b" />
+    <!-- Top face -->
+    <rect x="539.0" y="249" width="76" height="52" rx="10" ry="10" fill="url(#kg22)" stroke="#9987b4" stroke-width="0.8" />
+    <ellipse cx="565.6" cy="262.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/github/white" x="565.0" y="256.0" width="24" height="24" clip-path="url(#cp22)" />
+    <text x="577.0" y="293.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#FFFFFF" opacity="0.90" text-anchor="middle" dominant-baseline="auto">GitHub</text>
+  </g>
+
+  <g class="key" style="animation-delay:0.40s">
+    <clipPath id="cp23"><rect x="625.0" y="249" width="76" height="52" rx="10" ry="10" /></clipPath>
+    <!-- Extrusion -->
+    <path d="M 691.0,259 Q 701.0,249 708.0,266 L 708.0,298 Q 708.0,308 701.0,301 L 701.0,259 Z"  fill="#7f4c00" />
+    <path d="M 635.0,301 L 701.0,301 Q 708.0,308 698.0,308 L 642.0,308 Q 632.0,308 625.0,301 Z" fill="#663d00" />
+    <!-- Top face -->
+    <rect x="625.0" y="249" width="76" height="52" rx="10" ry="10" fill="url(#kg23)" stroke="#ffb74c" stroke-width="0.8" />
+    <ellipse cx="651.6" cy="262.0" rx="21.3" ry="7.3" fill="white" opacity="0.12" />
+    <image href="https://cdn.simpleicons.org/amazonaws/111111" x="651.0" y="256.0" width="24" height="24" clip-path="url(#cp23)" />
+    <text x="663.0" y="293.0" font-family="JetBrains Mono, Fira Code, Cascadia Code, monospace" font-size="9" font-weight="600" fill="#0D1117" opacity="0.90" text-anchor="middle" dominant-baseline="auto">AWS</text>
+  </g>
+
+</svg>
