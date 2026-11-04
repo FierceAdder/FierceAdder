@@ -1,0 +1,166 @@
+name: Update README Assets
+
+on:
+  schedule:
+    # Runs daily at midnight UTC
+    - cron: "0 0 * * *"
+  workflow_dispatch: # Allow manual trigger
+
+permissions:
+  contents: write
+
+jobs:
+  # ─────────────────────────────────────────
+  # Job 1: Snake contribution animation
+  # ─────────────────────────────────────────
+  snake:
+    name: 🐍 Generate Snake Animation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: ${{ github.repository_owner }}
+          outputs: |
+            assets/github-snake.svg?palette=github
+            assets/github-snake-dark.svg?palette=github-dark
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: snake-svgs
+          path: assets/
+
+  # ─────────────────────────────────────────
+  # Job 2: 3D Contribution Graph
+  # ─────────────────────────────────────────
+  3d-contrib:
+    name: 🌐 Generate 3D Contribution Graph
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: yoshi389111/github-profile-3d-contrib@0.7.1
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          USERNAME: ${{ github.repository_owner }}
+          SETTING_JSON: |
+            {
+              "githubUserName": "${{ github.repository_owner }}",
+              "startForegroundColor": "#58A6FF",
+              "endForegroundColor": "#A371F7",
+              "backgroundColor": "#0D1117",
+              "backgroundSideColor": "#0D1117",
+              "backgroundCustomize": true,
+              "type": "normal",
+              "rotate": 30,
+              "lookUpView": false
+            }
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: 3d-contrib
+          path: profile-3d-contrib/
+
+  # ─────────────────────────────────────────
+  # Job 3: Neofetch / Terminal Stats SVG
+  # ─────────────────────────────────────────
+  terminal-stats:
+    name: 💻 Generate Terminal Stats SVG
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate dark mode SVG
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: ${{ github.repository_owner }}
+        run: python scripts/generate_terminal_svg.py --mode dark
+
+      - name: Generate light mode SVG
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: ${{ github.repository_owner }}
+        run: python scripts/generate_terminal_svg.py --mode light
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: terminal-svgs
+          path: assets/*.svg
+
+  # ─────────────────────────────────────────
+  # Job 4: Contribution Heatmap (terminal style)
+  # ─────────────────────────────────────────
+  heatmap:
+    name: 🔥 Generate Contribution Heatmap
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: pip install requests
+
+      - name: Generate heatmap SVGs
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          GH_USERNAME: ${{ github.repository_owner }}
+        run: python scripts/generate_heatmap.py
+
+      - uses: actions/upload-artifact@v4
+        with:
+          name: heatmap-svgs
+          path: assets/*.svg
+
+  # ─────────────────────────────────────────
+  # Job 5: Commit all generated assets
+  # ─────────────────────────────────────────
+  commit-assets:
+    name: 📦 Commit All Assets
+    needs: [snake, 3d-contrib, terminal-stats, heatmap]
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Download snake SVGs
+        uses: actions/download-artifact@v4
+        with:
+          name: snake-svgs
+          path: assets/
+
+      - name: Download 3D contrib
+        uses: actions/download-artifact@v4
+        with:
+          name: 3d-contrib
+          path: assets/profile-3d-contrib/
+
+      - name: Download terminal SVGs
+        uses: actions/download-artifact@v4
+        with:
+          name: terminal-svgs
+          path: assets/
+
+      - name: Download heatmap SVGs
+        uses: actions/download-artifact@v4
+        with:
+          name: heatmap-svgs
+          path: assets/
+
+      - name: Commit and push
+        run: |
+          git config user.name  "github-actions[bot]"
+          git config user.email "github-actions[bot]@users.noreply.github.com"
+          git add assets/
+          git diff --cached --quiet || git commit -m "chore: auto-update readme assets [skip ci]"
+          git push
+
