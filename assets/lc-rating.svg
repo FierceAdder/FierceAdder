@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="500" height="320" viewBox="0 0 500 320">
+  <defs>
+    <style>
+      .mono { font-family: "JetBrains Mono", "Fira Code", Consolas, monospace; }
+    </style>
+    <linearGradient id="areaGrad" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%"   stop-color="#FFA116" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#FFA116" stop-opacity="0.02"/>
+    </linearGradient>
+    <filter id="glow">
+      <feGaussianBlur stdDeviation="2.5" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+  <rect width="500" height="320" rx="10" fill="#0D1117" stroke="#30363D" stroke-width="1.2"/>
+  <text x="20" y="26" class="mono" font-size="12" font-weight="700" fill="#FFA116">⚔ Contest Rating</text>
+  <text x="480" y="26" class="mono" font-size="11" fill="#8B949E" text-anchor="end">Trying_out · 24 contests</text>
+  <rect x="20" y="36" width="76" height="18" rx="9" fill="#FFA116" opacity="0.18"/>
+  <text x="58" y="49" class="mono" font-size="9.5" font-weight="700" fill="#FFA116" text-anchor="middle">Knight</text>
+  <text x="480" y="48" class="mono" font-size="11" fill="#8B949E" text-anchor="end">Top 1.9%</text>
+  <line x1="54" y1="276.0" x2="476" y2="276.0" stroke="#21262D" stroke-width="1"/>
+  <text x="46" y="280.0" class="mono" font-size="8.5" fill="#484F58" text-anchor="end">1400</text>
+  <line x1="54" y1="223.5" x2="476" y2="223.5" stroke="#21262D" stroke-width="1"/>
+  <text x="46" y="227.5" class="mono" font-size="8.5" fill="#484F58" text-anchor="end">1600</text>
+  <line x1="54" y1="171.0" x2="476" y2="171.0" stroke="#21262D" stroke-width="1"/>
+  <text x="46" y="175.0" class="mono" font-size="8.5" fill="#484F58" text-anchor="end">1800</text>
+  <line x1="54" y1="118.5" x2="476" y2="118.5" stroke="#21262D" stroke-width="1"/>
+  <text x="46" y="122.5" class="mono" font-size="8.5" fill="#484F58" text-anchor="end">2000</text>
+  <line x1="54" y1="66.0" x2="476" y2="66.0" stroke="#21262D" stroke-width="1"/>
+  <text x="46" y="70.0" class="mono" font-size="8.5" fill="#484F58" text-anchor="end">2200</text>
+  <polygon points="54.0,244.6 72.3,234.7 90.7,239.1 109.0,243.2 127.4,243.0 145.7,229.3 164.1,223.1 182.4,219.5 200.8,206.2 219.1,208.1 237.5,201.2 255.8,179.8 274.2,178.5 292.5,167.1 310.9,157.7 329.2,149.2 347.6,140.1 365.9,137.2 384.3,131.1 402.6,115.2 421.0,116.1 439.3,108.1 457.7,99.3 476.0,101.5 476.0,276.0 54.0,276.0" fill="url(#areaGrad)"/>
+  <path d="M54.0,244.6 L72.3,234.7 L90.7,239.1 L109.0,243.2 L127.4,243.0 L145.7,229.3 L164.1,223.1 L182.4,219.5 L200.8,206.2 L219.1,208.1 L237.5,201.2 L255.8,179.8 L274.2,178.5 L292.5,167.1 L310.9,157.7 L329.2,149.2 L347.6,140.1 L365.9,137.2 L384.3,131.1 L402.6,115.2 L421.0,116.1 L439.3,108.1 L457.7,99.3 L476.0,101.5" fill="none" stroke="#FFA116" stroke-width="2" stroke-linejoin="round" filter="url(#glow)"/>
+  <circle cx="54.0" cy="244.6" r="2.5" fill="#FFA116"/>
+  <circle cx="72.3" cy="234.7" r="2.5" fill="#FFA116"/>
+  <circle cx="90.7" cy="239.1" r="2.5" fill="#FFA116"/>
+  <circle cx="109.0" cy="243.2" r="2.5" fill="#FFA116"/>
+  <circle cx="127.4" cy="243.0" r="2.5" fill="#FFA116"/>
+  <circle cx="145.7" cy="229.3" r="2.5" fill="#FFA116"/>
+  <circle cx="164.1" cy="223.1" r="2.5" fill="#FFA116"/>
+  <circle cx="182.4" cy="219.5" r="2.5" fill="#FFA116"/>
+  <circle cx="200.8" cy="206.2" r="2.5" fill="#FFA116"/>
+  <circle cx="219.1" cy="208.1" r="2.5" fill="#FFA116"/>
+  <circle cx="237.5" cy="201.2" r="2.5" fill="#FFA116"/>
+  <circle cx="255.8" cy="179.8" r="2.5" fill="#FFA116"/>
+  <circle cx="274.2" cy="178.5" r="2.5" fill="#FFA116"/>
+  <circle cx="292.5" cy="167.1" r="2.5" fill="#FFA116"/>
+  <circle cx="310.9" cy="157.7" r="2.5" fill="#FFA116"/>
+  <circle cx="329.2" cy="149.2" r="2.5" fill="#FFA116"/>
+  <circle cx="347.6" cy="140.1" r="2.5" fill="#FFA116"/>
+  <circle cx="365.9" cy="137.2" r="2.5" fill="#FFA116"/>
+  <circle cx="384.3" cy="131.1" r="2.5" fill="#FFA116"/>
+  <circle cx="402.6" cy="115.2" r="2.5" fill="#FFA116"/>
+  <circle cx="421.0" cy="116.1" r="2.5" fill="#FFA116"/>
+  <circle cx="439.3" cy="108.1" r="2.5" fill="#FFA116"/>
+  <circle cx="457.7" cy="99.3" r="2.5" fill="#FFA116"/>
+  <circle cx="476.0" cy="101.5" r="2.5" fill="#FFA116"/>
+  <circle cx="476.0" cy="101.5" r="5" fill="#0D1117" stroke="#FFA116" stroke-width="2"/>
+  <circle cx="476.0" cy="101.5" r="2.5" fill="#FFA116"/>
+  <text x="468.0" y="93.5" class="mono" font-size="11" font-weight="700" fill="#FFA116" text-anchor="end">2065</text>
+  <line x1="54" y1="276" x2="476" y2="276" stroke="#30363D" stroke-width="1"/>
+  <line x1="54" y1="66" x2="54" y2="276" stroke="#30363D" stroke-width="1"/>
+  <text x="265.0" y="308" class="mono" font-size="8.5" fill="#484F58" text-anchor="middle">contest history</text>
+</svg>

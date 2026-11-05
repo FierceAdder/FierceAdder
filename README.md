@@ -5,23 +5,30 @@
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/dark_mode.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/light_mode.svg" />
-  <img alt="Ashmit's neofetch system card" src="./assets/dark_mode.svg" width="860" />
+  <img alt="Ashmit Kumar Verma — neofetch system card showing OS, shell, languages and stats" src="./assets/dark_mode.svg" width="860" />
 </picture>
+
+<br/>
+
+<samp>
+CS undergrad · building at the intersection of ML, backend systems, and agentic AI.<br/>
+Currently open to full-time roles and research collaborations — <a href="mailto:ashmitv704@gmail.com">let's talk</a>.
+</samp>
 
 </div>
 
 ---
 
-## 🌱 Activity Graph
+## 📊 Activity Graph
 
-> *Real-time contribution streaks — auto-updated nightly*
+> *Contribution heatmap*
 
 <div align="center">
 
 <picture>
   <source media="(prefers-color-scheme: dark)"  srcset="./assets/contrib-heatmap-dark.svg" />
   <source media="(prefers-color-scheme: light)" srcset="./assets/contrib-heatmap-light.svg" />
-  <img alt="contribution heatmap" src="./assets/contrib-heatmap-dark.svg" width="860" />
+  <img alt="GitHub contribution heatmap showing daily commit activity over the past year" src="./assets/contrib-heatmap-dark.svg" width="860" />
 </picture>
 
 </div>
@@ -34,7 +41,7 @@
 
 <div align="center">
 
-<img src="./assets/github-stats.svg" alt="GitHub Stats Terminal Dashboard" width="860" />
+<img src="./assets/github-stats.svg" alt="GitHub stats dashboard — commits, PRs, issues, stars and language breakdown" width="860" />
 
 </div>
 
@@ -46,7 +53,7 @@
 
 <div align="center">
 
-<img src="./assets/techstack-3d-dark.svg" alt="Tech Stack" width="860" />
+<img src="./assets/techstack-3d-dark.svg" alt="Tech stack displayed as a 3D mechanical keyboard — Python, Java, JavaScript, TypeScript, PyTorch, TensorFlow, FastAPI, React, Docker, AWS and more" width="860" />
 
 </div>
 
@@ -60,26 +67,12 @@
   <tr>
     <td align="center" width="50%">
 
-### LeetCode
-
-[![LeetCode Stats](https://leetcard.jacoblin.cool/Trying_out?theme=dark&font=JetBrains+Mono&ext=heatmap&border=0&bg=0D1117)](https://leetcode.com/Trying_out)
-
-<p align="center">
-  <img src="https://img.shields.io/badge/LeetCode-Knight_🏅-FFA116?style=flat-square" />
-  <img src="https://img.shields.io/badge/Max_Rating-2073-58A6FF?style=flat-square" />
-  <img src="https://img.shields.io/badge/Solved-700+-3FB950?style=flat-square" />
-</p>
+[![LeetCode Questions & Heatmap](https://leetcard.jacoblin.cool/Trying_out?theme=dark&font=JetBrains+Mono&ext=heatmap&border=0&bg=0D1117)](https://leetcode.com/Trying_out)
 
 </td>
     <td align="center" width="50%">
 
-### Codeforces
-![CF Card](https://codeforces-stats-vlx.vercel.app/api/card?username=Scarceflyer7&theme=github_dark)
-
-<p align="center">
-  <img src="https://img.shields.io/badge/Codeforces-Pupil-1F8ACB?style=flat-square" />
-  <img src="https://img.shields.io/badge/Rating-1385-58A6FF?style=flat-square" />
-</p>
+[![LeetCode Contest Rating Graph](./assets/lc-rating.svg)](https://leetcode.com/Trying_out)
 
 </td>
   </tr>
@@ -95,12 +88,13 @@
 
 <div align="center">
 
-<img src="./assets/projects.svg" alt="Projects" width="860" />
+<img src="./assets/projects.svg" alt="Featured projects — FinSocial (paper trading platform), SENTINEL (privacy-first LLM classifier), RevBack (agentic AR recovery), MESA (research paper, 2nd prize)" width="860" />
 
 </div>
 
 ---
 
+<!--
 ## 🏆 Achievements
 
 > *`$ cat achievements.log`*
@@ -110,6 +104,7 @@
 <img src="./assets/achievements.svg" alt="Achievements log" width="860" />
 
 </div>
+-->
 
 ---
 
@@ -119,10 +114,11 @@
 
 <div align="center">
 
-<img src="./assets/timeline-horizontal.svg" alt="Experience Timeline" width="860" />
+<img src="./assets/timeline-horizontal.svg" alt="Work experience timeline — AI Engineer Intern at Rtifact (2026) and Project Trainee at Tata Communications (2025)" width="860" />
 
 </div>
 
+<!--
 ---
 
 ## 📜 Certifications
@@ -134,24 +130,22 @@
 <img src="./assets/certifications.svg" alt="Certifications" width="860" />
 
 </div>
+-->
 
 ---
 
 <div align="center">
 
-<a href="mailto:ashmitv704@gmail.com"><img src="https://img.shields.io/badge/Email-ashmitv704%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" /></a>
+<a href="mailto:ashmitv704@gmail.com"><img src="https://img.shields.io/badge/Email-ashmitv704%40gmail.com-EA4335?style=for-the-badge&logo=gmail&logoColor=white" alt="Email Ashmit" /></a>
 &nbsp;
-<a href="https://linkedin.com/in/ashmit-kumar-verma-9ba14a274"><img src="https://img.shields.io/badge/LinkedIn-Ashmit%20Kumar%20Verma-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" /></a>
+<a href="https://linkedin.com/in/ashmit-kumar-verma-9ba14a274"><img src="https://img.shields.io/badge/LinkedIn-Ashmit%20Kumar%20Verma-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white" alt="LinkedIn profile" /></a>
 &nbsp;
-<a href="https://github.com/FierceAdder"><img src="https://img.shields.io/badge/GitHub-FierceAdder-181717?style=for-the-badge&logo=github&logoColor=white" /></a>
+<a href="https://github.com/FierceAdder"><img src="https://img.shields.io/badge/GitHub-FierceAdder-181717?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile" /></a>
 
-
-<img src="./assets/footer-typing.svg" alt="Footer Typing" width="600" />
-
+<img src="./assets/footer-typing.svg" alt="Animated typing footer" width="600" />
 
 <sub>Crafted with precision &amp; code · Ashmit Kumar Verma © 2026</sub>
 
-
-*⭐ Star something interesting? Feel free to reach out!*
+*Building something with ML or backend systems? → [ashmitv704@gmail.com](mailto:ashmitv704@gmail.com)*
 
 </div>
