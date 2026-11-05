@@ -178,7 +178,7 @@ def build_svg(stats: dict, mode: str) -> str:
     items = [
         ("User",       f"Ashmit Kumar Verma (@{username})",      "highlight"),
         ("Role",       stats["role"],                           "value"),
-        ("Age",        stats["age"],                            "value"),
+        ("Uptime",     stats["age"],                            "value"),
         ("Education",  f"{stats['education']}",                 "value"),
         ("Experience", stats["internship"],                     "value"),
         ("Research",   stats["research"],                       "purple"),

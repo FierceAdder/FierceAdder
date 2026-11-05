@@ -109,20 +109,6 @@
 
 <img src="./assets/achievements.svg" alt="Achievements log" width="860" />
 
-<br/>
-
-<p>
-  <img src="https://img.shields.io/badge/LeetCode-Knight_🏅-FFA116?style=flat-square&logo=leetcode&logoColor=white" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Max_Rating-2073-58A6FF?style=flat-square" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Solved-700+-3FB950?style=flat-square" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Codeforces-Pupil_1385-1F8ACB?style=flat-square&logo=codeforces&logoColor=white" />
-  &nbsp;
-  <img src="https://img.shields.io/badge/Scaler_Rethesis-2nd_Prize_🥈-A371F7?style=flat-square" />
-</p>
-
 </div>
 
 ---

@@ -67,14 +67,10 @@
   </g>
 
   <!-- Info footer -->
-  <line x1="24" y1="156" x2="380" y2="156" stroke="#21262D" stroke-width="1"/>
+  <line x1="24" y1="168" x2="380" y2="168" stroke="#21262D" stroke-width="1"/>
   <g>
-    <circle cx="32" cy="172" r="5" fill="#3FB950"/>
-    <text x="44" y="176" class="lbl" font-size="9.5" fill="#C9D1D9">On GitHub since <tspan fill="#8B949E">Jan 2024</tspan></text>
-  </g>
-  <g>
-    <text x="32" y="195" class="lbl" font-size="9.5" fill="#A371F7">✦</text>
-    <text x="48" y="195" class="lbl" font-size="9.5" fill="#C9D1D9">LeetCode Knight · Max Rating <tspan fill="#58A6FF" font-weight="700">2073</tspan> · <tspan fill="#3FB950" font-weight="700">700+</tspan> solved</text>
+    <circle cx="32" cy="188" r="5" fill="#3FB950"/>
+    <text x="44" y="192" class="lbl" font-size="9.5" fill="#C9D1D9">On GitHub since <tspan fill="#8B949E">Jan 2024</tspan></text>
   </g>
 
   <!-- ═══ VERTICAL DIVIDER ═══ -->

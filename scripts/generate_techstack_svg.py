@@ -158,10 +158,25 @@ lines.append(f'''<svg xmlns="http://www.w3.org/2000/svg" width="{CANVAS_W}" heig
       }}
       {" ".join(f".k{i} {{ animation: popIn 0.35s ease both {0.035*i:.2f}s; }}" for i in range(26))}
       .lbl {{ font-family: 'JetBrains Mono', 'Fira Code', Consolas, monospace; }}
+
+      /* Hover: mechanical key-press depress effect */
+      [class^="k"] {{
+        cursor: pointer;
+        transition: transform 0.10s cubic-bezier(0.25, 0.46, 0.45, 0.94),
+                    filter 0.10s ease;
+      }}
+      [class^="k"]:hover {{
+        transform: translate(5px, 5px);
+        filter: url(#ks-pressed) brightness(1.3);
+      }}
     </style>
-    <!-- Enhanced tactile drop shadow for keycaps -->
+    <!-- Normal drop shadow for keycaps -->
     <filter id="ks" x="-25%" y="-20%" width="160%" height="170%">
       <feDropShadow dx="3" dy="9" stdDeviation="4.5" flood-color="#000000" flood-opacity="0.75"/>
+    </filter>
+    <!-- Pressed shadow (smaller, tighter - key is down) -->
+    <filter id="ks-pressed" x="-25%" y="-20%" width="160%" height="170%">
+      <feDropShadow dx="1" dy="2" stdDeviation="2" flood-color="#000000" flood-opacity="0.5"/>
     </filter>
     <linearGradient id="boardGrad" x1="0" y1="0" x2="0" y2="1">
       <stop offset="0%" stop-color="#161B22"/>
