@@ -23,28 +23,22 @@
     </clipPath>
   </defs>
 
-  <!-- ═══════════════════════════ BACKGROUND ═══════════════════════════ -->
   <rect width="860" height="310" rx="10" fill="#0D1117"/>
   <rect width="858" height="308" x="1" y="1" rx="10" fill="none" stroke="#30363D" stroke-width="1.2"/>
 
-  <!-- ═══════════════════════════ TITLE BAR ════════════════════════════ -->
   <circle cx="22" cy="20" r="5.5" fill="#FF5F56"/>
   <circle cx="39" cy="20" r="5.5" fill="#FEBC2E"/>
   <circle cx="56" cy="20" r="5.5" fill="#28C840"/>
   <text x="430" y="24" class="mono" font-size="12" fill="#8B949E" text-anchor="middle">certifications.log — git log</text>
   <line x1="1" y1="35" x2="859" y2="35" stroke="#30363D" stroke-width="1"/>
 
-  <!-- ════════════════════════ HEADER COMMAND ═══════════════════════════ -->
   <g class="hdr">
     <text x="20" y="55" class="mono" font-size="12" fill="#3FB950">$</text>
     <text x="30" y="55" class="mono" font-size="12" fill="#C9D1D9"> git log --all --format="%h %s" --certs</text>
   </g>
 
-  <!-- ═════════════════════════ TRUNK LINE ═════════════════════════════ -->
-  <!-- Faint vertical trunk running full content height -->
   <line x1="46" y1="62" x2="46" y2="300" stroke="#21262D" stroke-width="2"/>
 
-  <!-- ═══════════════════════════ GROUP 1 — DeepLearning.AI ════════════ -->
   <g class="g1">
     <!-- Branch line segment (orange-red) -->
     <line x1="46" y1="65" x2="46" y2="145" stroke="#FF7B72" stroke-width="2"/>
@@ -79,7 +73,6 @@
     <text x="755" y="139" class="mono" font-size="10" fill="#3FB950" text-anchor="middle">[COMPLETED ✓]</text>
   </g>
 
-  <!-- ═══════════════════════════ GROUP 2 — TakeUForward ═══════════════ -->
   <g class="g2">
     <!-- Branch line segment (orange) -->
     <line x1="46" y1="150" x2="46" y2="200" stroke="#F7931E" stroke-width="2"/>
@@ -102,7 +95,6 @@
     <text x="755" y="188" class="mono" font-size="10" fill="#3FB950" text-anchor="middle">[COMPLETED ✓]</text>
   </g>
 
-  <!-- ═══════════════════════════ GROUP 3 — Google ══════════════════════ -->
   <g class="g3">
     <!-- Branch line segment (blue) -->
     <line x1="46" y1="204" x2="46" y2="250" stroke="#58A6FF" stroke-width="2"/>
@@ -125,7 +117,6 @@
     <text x="755" y="242" class="mono" font-size="10" fill="#3FB950" text-anchor="middle">[COMPLETED ✓]</text>
   </g>
 
-  <!-- ═══════════════════════════ GROUP 4 — HackerRank ═════════════════ -->
   <g class="g4">
     <!-- Branch line segment (green) -->
     <line x1="46" y1="254" x2="46" y2="304" stroke="#3FB950" stroke-width="2"/>

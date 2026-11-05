@@ -1,7 +1,3 @@
-<!-- ════════════════════════════════════════
-     §1  TERMINAL NEOFETCH SYSTEM CARD
-     ════════════════════════════════════════ -->
-
 <div align="center">
 
 ### `$ neofetch --full`
@@ -16,13 +12,9 @@
 
 ---
 
-<!-- ════════════════════════════════════════
-     §2  CONTRIBUTIONS GRAPH (TERMINAL EDITION)
-     ════════════════════════════════════════ -->
+## 🌱 Activity Graph
 
-## 🌱 Activity Graph — Terminal Edition
-
-> *Real-time contribution streaks — auto-updated nightly via GitHub Actions*
+> *Real-time contribution streaks — auto-updated nightly*
 
 <div align="center">
 
@@ -36,13 +28,9 @@
 
 ---
 
-<!-- ════════════════════════════════════════
-     §3  GITHUB STATS — TERMINAL DASHBOARD
-     ════════════════════════════════════════ -->
-
 ## 📟 GitHub Stats
 
-> *`$ gh stats --verbose` — commit bars, language breakdown, streak indicators*
+> *`$ gh stats --verbose`*
 
 <div align="center">
 
@@ -52,25 +40,17 @@
 
 ---
 
-<!-- ════════════════════════════════════════
-     §4  TECH STACK — ISOMETRIC 3D KEYBOARD
-     ════════════════════════════════════════ -->
-
 ## 🎹 Tech Stack
 
-> *Keys I press daily — 26 tools, mechanical keyboard layout (10 / 9 / 7)*
+> *Keys I press daily*
 
 <div align="center">
 
-<img src="./assets/techstack-3d-dark.svg" alt="Mechanical Keyboard 3D Tech Stack" width="860" />
+<img src="./assets/techstack-3d-dark.svg" alt="Tech Stack" width="860" />
 
 </div>
 
 ---
-
-<!-- ════════════════════════════════════════
-     §5  COMPETITIVE PROGRAMMING (LEETCODE & CODEFORCES)
-     ════════════════════════════════════════ -->
 
 ## ⚔️ Competitive Programming
 
@@ -109,25 +89,17 @@
 
 ---
 
-<!-- ════════════════════════════════════════
-     §6  PROJECTS
-     ════════════════════════════════════════ -->
-
 ## 🛸 Projects
 
-> *`$ ls -la ./projects/` — hover to explore*
+> *`$ ls -la ./projects/`*
 
 <div align="center">
 
-<img src="./assets/projects.svg" alt="Projects — animated terminal cards" width="860" />
+<img src="./assets/projects.svg" alt="Projects" width="860" />
 
 </div>
 
 ---
-
-<!-- ════════════════════════════════════════
-     §7  ACHIEVEMENTS
-     ════════════════════════════════════════ -->
 
 ## 🏆 Achievements
 
@@ -155,10 +127,6 @@
 
 ---
 
-<!-- ════════════════════════════════════════
-     §8  EXPERIENCE TIMELINE
-     ════════════════════════════════════════ -->
-
 ## 💼 Experience
 
 > *`$ cat experience.json | jq '.[]'`*
@@ -171,25 +139,17 @@
 
 ---
 
-<!-- ════════════════════════════════════════
-     §9  CERTIFICATIONS
-     ════════════════════════════════════════ -->
-
 ## 📜 Certifications
 
 > *`$ git log --all --format="%h %s" --certs`*
 
 <div align="center">
 
-<img src="./assets/certifications.svg" alt="Certifications — terminal git log view" width="860" />
+<img src="./assets/certifications.svg" alt="Certifications" width="860" />
 
 </div>
 
 ---
-
-<!-- ════════════════════════════════════════
-     §10  FOOTER
-     ════════════════════════════════════════ -->
 
 <div align="center">
 

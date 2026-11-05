@@ -175,7 +175,7 @@ lines.append(f'''<svg xmlns="http://www.w3.org/2000/svg" width="{CANVAS_W}" heig
   <circle cx="22" cy="20" r="5.5" fill="#FF5F56"/>
   <circle cx="39" cy="20" r="5.5" fill="#FEBC2E"/>
   <circle cx="56" cy="20" r="5.5" fill="#28C840"/>
-  <text x="430" y="24" class="lbl" font-size="12" fill="#8B949E" text-anchor="middle">keyboard.layout — 26 keys (10 / 9 / 7)</text>
+  <text x="430" y="24" class="lbl" font-size="12" fill="#8B949E" text-anchor="middle">FierceAdder@github — ~/tech-stack</text>
   <line x1="1" y1="35" x2="{CANVAS_W-1}" y2="35" stroke="#30363D" stroke-width="1"/>
 
   <!-- Mechanical Keyboard Chassis / Plate -->
@@ -200,9 +200,9 @@ lines.append(f'''
   <!-- Footer prompt -->
   <text x="46" y="378" class="lbl" font-size="9.5" fill="#58A6FF" font-weight="600">FierceAdder@github</text>
   <text x="186" y="378" class="lbl" font-size="9.5" fill="#8B949E">:~$</text>
-  <text x="210" y="378" class="lbl" font-size="9.5" fill="#3FB950">cat layout.conf</text>
-  <text x="325" y="378" class="lbl" font-size="9.5" fill="#8B949E">|  26 keys  ·  Row 1 (10)  ·  Row 2 (9)  ·  Row 3 (7)</text>
-  <rect x="710" y="368" width="7" height="12" rx="1" fill="#3FB950" opacity="0.75">
+  <text x="210" y="378" class="lbl" font-size="9.5" fill="#3FB950">cat stack.conf</text>
+  <text x="315" y="378" class="lbl" font-size="9.5" fill="#8B949E"># daily driver stack</text>
+  <rect x="475" y="368" width="7" height="12" rx="1" fill="#3FB950" opacity="0.75">
     <animate attributeName="opacity" values="0.75;0;0.75" dur="1.1s" repeatCount="indefinite"/>
   </rect>
 </svg>''')

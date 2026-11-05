@@ -12,6 +12,7 @@ import os
 import sys
 import argparse
 import json
+import calendar
 import urllib.request
 import urllib.error
 from datetime import datetime, timezone
@@ -140,11 +141,31 @@ def fetch_stats():
         "prs":          prs,
         "issues":       issues,
         "stars":        total_stars if total_stars > 0 else 4,
-        "uptime":       f"since {user.get('created_at', '2024-01-19')[:10]}",
+        "age":          calculate_age(),
         "updated":      datetime.now(timezone.utc).strftime("%Y-%m-%d"),
     }
 
 FONT_MONO = "JetBrains Mono, Fira Code, Consolas, monospace"
+
+def calculate_age():
+    birth_date = datetime(2006, 10, 15, tzinfo=timezone.utc)
+    now = datetime.now(timezone.utc)
+
+    years = now.year - birth_date.year
+    months = now.month - birth_date.month
+    days = now.day - birth_date.day
+
+    if days < 0:
+        months -= 1
+        prev_month = now.month - 1 if now.month > 1 else 12
+        prev_year = now.year if now.month > 1 else now.year - 1
+        days += calendar.monthrange(prev_year, prev_month)[1]
+
+    if months < 0:
+        years -= 1
+        months += 12
+
+    return f"{years} years, {months} months, {days} days"
 
 def escape(s):
     return str(s).replace("&", "&amp;").replace("<", "&lt;").replace(">", "&gt;")
@@ -157,6 +178,7 @@ def build_svg(stats: dict, mode: str) -> str:
     items = [
         ("User",       f"Ashmit Kumar Verma (@{username})",      "highlight"),
         ("Role",       stats["role"],                           "value"),
+        ("Age",        stats["age"],                            "value"),
         ("Education",  f"{stats['education']}",                 "value"),
         ("Experience", stats["internship"],                     "value"),
         ("Research",   stats["research"],                       "purple"),
@@ -164,7 +186,6 @@ def build_svg(stats: dict, mode: str) -> str:
         ("Repos",      f"{stats['public_repos']} public repos",  "value"),
         ("Commits",    f"{stats['commits']} total contributions","value"),
         ("Stars",      f"⭐ {stats['stars']} stars",      "gold"),
-        ("System",     f"GitHub Profile v3.0 · Uptime: {stats['uptime']}", "text"),
     ]
 
     LINE_H = 22

@@ -104,22 +104,27 @@ def generate_svg():
     r_w = min(200, max(20, round((repos / 40) * 200)))
     f_w = min(200, max(15, forks * 8))
 
+    TRACK_W = 245
+    BAR_H = 7
+    widths = [round((le["pct"] / 100) * TRACK_W) for le in lang_entries]
+    diff = TRACK_W - sum(widths)
+    widths[0] += diff
+
     stacked_rects = []
     curr_x = 510
     for i, le in enumerate(lang_entries):
-        w = max(4, round((le["pct"] / 100) * TRACK_W))
-        rx = 'rx="4"' if (i == 0 or i == len(lang_entries)-1) else ''
-        stacked_rects.append(f'<rect x="{curr_x}" y="178" width="{w}" height="12" {rx} fill="{le["col"]}"/>')
-        curr_x += w
+        w = widths[i]
+        if w > 0:
+            stacked_rects.append(f'<rect x="{curr_x}" y="178" width="{w}" height="{BAR_H}" fill="{le["col"]}"/>')
+            curr_x += w
 
     legend_svg = []
-    leg_x = 514
+    leg_x = 510
     for le in lang_entries:
-        short = le["name"][:2] if le["name"] != "JavaScript" else "JS"
-        if le["name"] == "TypeScript": short = "TS"
-        if le["name"] == "Python": short = "Py"
-        legend_svg.append(f'<circle cx="{leg_x}" cy="202" r="3.5" fill="{le["col"]}"/><text x="{leg_x+8}" y="205.5" class="lbl" font-size="8.5" fill="#8B949E">{short}</text>')
-        leg_x += 32
+        name = le["name"]
+        short = "Py" if name == "Python" else ("TS" if name == "TypeScript" else ("JS" if name == "JavaScript" else name))
+        legend_svg.append(f'<circle cx="{leg_x}" cy="198" r="3" fill="{le["col"]}"/><text x="{leg_x+6}" y="201" class="lbl" font-size="8.5" fill="#8B949E">{short}</text>')
+        leg_x += len(short) * 6 + 18
 
     svg = f'''<svg xmlns="http://www.w3.org/2000/svg" width="860" height="220" viewBox="0 0 860 220">
   <defs>
@@ -139,6 +144,9 @@ def generate_svg():
       .d3 {{ animation-delay: 0.34s; }}
       .d4 {{ animation-delay: 0.42s; }}
     </style>
+    <clipPath id="langBarClip">
+      <rect x="510" y="178" width="245" height="7" rx="3.5"/>
+    </clipPath>
   </defs>
 
   <!-- Terminal Window Chrome -->
@@ -245,9 +253,11 @@ def generate_svg():
     <text x="768" y="166" class="lbl" font-size="10" fill="{lang_entries[4]['col']}" font-weight="700">{lang_entries[4]['pct']}%</text>
   </g>
 
-  <!-- Stacked proportion bar -->
-  <rect x="510" y="178" width="245" height="12" rx="4" fill="#21262D"/>
-  {" ".join(stacked_rects)}
+  <!-- Stacked language bar -->
+  <g clip-path="url(#langBarClip)">
+    <rect x="510" y="178" width="245" height="7" fill="#21262D"/>
+    {" ".join(stacked_rects)}
+  </g>
 
   <!-- Legend -->
   {" ".join(legend_svg)}

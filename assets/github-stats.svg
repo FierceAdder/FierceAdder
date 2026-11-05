@@ -16,6 +16,9 @@
       .d3 { animation-delay: 0.34s; }
       .d4 { animation-delay: 0.42s; }
     </style>
+    <clipPath id="langBarClip">
+      <rect x="510" y="178" width="245" height="7" rx="3.5"/>
+    </clipPath>
   </defs>
 
   <!-- Terminal Window Chrome -->
@@ -122,12 +125,14 @@
     <text x="768" y="166" class="lbl" font-size="10" fill="#8B949E" font-weight="700">10%</text>
   </g>
 
-  <!-- Stacked proportion bar -->
-  <rect x="510" y="178" width="245" height="12" rx="4" fill="#21262D"/>
-  <rect x="510" y="178" width="122" height="12" rx="4" fill="#3776AB"/> <rect x="632" y="178" width="49" height="12"  fill="#3178C6"/> <rect x="681" y="178" width="24" height="12"  fill="#F7DF1E"/> <rect x="705" y="178" width="24" height="12"  fill="#A8B9CC"/> <rect x="729" y="178" width="24" height="12" rx="4" fill="#8B949E"/>
+  <!-- Stacked language bar -->
+  <g clip-path="url(#langBarClip)">
+    <rect x="510" y="178" width="245" height="7" fill="#21262D"/>
+    <rect x="510" y="178" width="124" height="7" fill="#3776AB"/> <rect x="634" y="178" width="49" height="7" fill="#3178C6"/> <rect x="683" y="178" width="24" height="7" fill="#F7DF1E"/> <rect x="707" y="178" width="24" height="7" fill="#A8B9CC"/> <rect x="731" y="178" width="24" height="7" fill="#8B949E"/>
+  </g>
 
   <!-- Legend -->
-  <circle cx="514" cy="202" r="3.5" fill="#3776AB"/><text x="522" y="205.5" class="lbl" font-size="8.5" fill="#8B949E">Py</text> <circle cx="546" cy="202" r="3.5" fill="#3178C6"/><text x="554" y="205.5" class="lbl" font-size="8.5" fill="#8B949E">TS</text> <circle cx="578" cy="202" r="3.5" fill="#F7DF1E"/><text x="586" y="205.5" class="lbl" font-size="8.5" fill="#8B949E">JS</text> <circle cx="610" cy="202" r="3.5" fill="#A8B9CC"/><text x="618" y="205.5" class="lbl" font-size="8.5" fill="#8B949E">C</text> <circle cx="642" cy="202" r="3.5" fill="#8B949E"/><text x="650" y="205.5" class="lbl" font-size="8.5" fill="#8B949E">Ot</text>
+  <circle cx="510" cy="198" r="3" fill="#3776AB"/><text x="516" y="201" class="lbl" font-size="8.5" fill="#8B949E">Py</text> <circle cx="540" cy="198" r="3" fill="#3178C6"/><text x="546" y="201" class="lbl" font-size="8.5" fill="#8B949E">TS</text> <circle cx="570" cy="198" r="3" fill="#F7DF1E"/><text x="576" y="201" class="lbl" font-size="8.5" fill="#8B949E">JS</text> <circle cx="600" cy="198" r="3" fill="#A8B9CC"/><text x="606" y="201" class="lbl" font-size="8.5" fill="#8B949E">C</text> <circle cx="624" cy="198" r="3" fill="#8B949E"/><text x="630" y="201" class="lbl" font-size="8.5" fill="#8B949E">Other</text>
 
   <!-- Blinking cursor -->
   <rect x="836" y="200" width="7" height="11" rx="1" fill="#3FB950" opacity="0.75">
