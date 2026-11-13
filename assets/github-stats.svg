@@ -38,8 +38,8 @@
   <g>
     <text x="24" y="74" class="lbl" font-size="10" fill="#8B949E">COMMITS</text>
     <rect x="110" y="66" width="200" height="9" rx="4.5" fill="#21262D"/>
-    <rect x="110" y="66" width="150" height="9" rx="4.5" fill="#3FB950" class="anim-bar d0"/>
-    <text x="320" y="74" class="lbl" font-size="10" fill="#C9D1D9" font-weight="700">299</text>
+    <rect x="110" y="66" width="152" height="9" rx="4.5" fill="#3FB950" class="anim-bar d0"/>
+    <text x="320" y="74" class="lbl" font-size="10" fill="#C9D1D9" font-weight="700">304</text>
   </g>
 
   <!-- STARS -->
@@ -54,8 +54,8 @@
   <g>
     <text x="24" y="120" class="lbl" font-size="10" fill="#8B949E">REPOS</text>
     <rect x="110" y="112" width="200" height="9" rx="4.5" fill="#21262D"/>
-    <rect x="110" y="112" width="115" height="9" rx="4.5" fill="#58A6FF" class="anim-bar d2"/>
-    <text x="320" y="120" class="lbl" font-size="10" fill="#C9D1D9" font-weight="700">23</text>
+    <rect x="110" y="112" width="125" height="9" rx="4.5" fill="#58A6FF" class="anim-bar d2"/>
+    <text x="320" y="120" class="lbl" font-size="10" fill="#C9D1D9" font-weight="700">25</text>
   </g>
 
   <!-- FORKS -->
@@ -85,50 +85,50 @@
     <text x="415" y="74" class="lbl" font-size="10" fill="#3776AB">▸</text>
     <text x="429" y="74" class="lbl" font-size="10" fill="#C9D1D9">Python</text>
     <rect x="510" y="66" width="245" height="8" rx="4" fill="#21262D"/>
-    <rect x="510" y="66" width="122" height="8" rx="4" fill="#3776AB" class="anim-bar d0"/>
-    <text x="768" y="74" class="lbl" font-size="10" fill="#3776AB" font-weight="700">50%</text>
+    <rect x="510" y="66" width="118" height="8" rx="4" fill="#3776AB" class="anim-bar d0"/>
+    <text x="768" y="74" class="lbl" font-size="10" fill="#3776AB" font-weight="700">48%</text>
   </g>
 
   <g>
     <text x="415" y="97" class="lbl" font-size="10" fill="#3178C6">▸</text>
     <text x="429" y="97" class="lbl" font-size="10" fill="#C9D1D9">TypeScript</text>
     <rect x="510" y="89" width="245" height="8" rx="4" fill="#21262D"/>
-    <rect x="510" y="89" width="49" height="8" rx="4" fill="#3178C6" class="anim-bar d1"/>
-    <text x="768" y="97" class="lbl" font-size="10" fill="#3178C6" font-weight="700">20%</text>
+    <rect x="510" y="89" width="47" height="8" rx="4" fill="#3178C6" class="anim-bar d1"/>
+    <text x="768" y="97" class="lbl" font-size="10" fill="#3178C6" font-weight="700">19%</text>
   </g>
 
   <g>
-    <text x="415" y="120" class="lbl" font-size="10" fill="#F7DF1E">▸</text>
-    <text x="429" y="120" class="lbl" font-size="10" fill="#C9D1D9">JavaScript</text>
+    <text x="415" y="120" class="lbl" font-size="10" fill="#E34F26">▸</text>
+    <text x="429" y="120" class="lbl" font-size="10" fill="#C9D1D9">HTML</text>
     <rect x="510" y="112" width="245" height="8" rx="4" fill="#21262D"/>
-    <rect x="510" y="112" width="24" height="8" rx="4" fill="#F7DF1E" class="anim-bar d2"/>
-    <text x="768" y="120" class="lbl" font-size="10" fill="#F7DF1E" font-weight="700">10%</text>
+    <rect x="510" y="112" width="24" height="8" rx="4" fill="#E34F26" class="anim-bar d2"/>
+    <text x="768" y="120" class="lbl" font-size="10" fill="#E34F26" font-weight="700">10%</text>
   </g>
 
   <g>
-    <text x="415" y="143" class="lbl" font-size="10" fill="#A8B9CC">▸</text>
-    <text x="429" y="143" class="lbl" font-size="10" fill="#C9D1D9">C</text>
+    <text x="415" y="143" class="lbl" font-size="10" fill="#F7DF1E">▸</text>
+    <text x="429" y="143" class="lbl" font-size="10" fill="#C9D1D9">JavaScript</text>
     <rect x="510" y="135" width="245" height="8" rx="4" fill="#21262D"/>
-    <rect x="510" y="135" width="24" height="8" rx="4" fill="#A8B9CC" class="anim-bar d3"/>
-    <text x="768" y="143" class="lbl" font-size="10" fill="#A8B9CC" font-weight="700">10%</text>
+    <rect x="510" y="135" width="24" height="8" rx="4" fill="#F7DF1E" class="anim-bar d3"/>
+    <text x="768" y="143" class="lbl" font-size="10" fill="#F7DF1E" font-weight="700">10%</text>
   </g>
 
   <g>
     <text x="415" y="166" class="lbl" font-size="10" fill="#8B949E">▸</text>
     <text x="429" y="166" class="lbl" font-size="10" fill="#C9D1D9">Other</text>
     <rect x="510" y="158" width="245" height="8" rx="4" fill="#21262D"/>
-    <rect x="510" y="158" width="24" height="8" rx="4" fill="#8B949E" class="anim-bar d4"/>
-    <text x="768" y="166" class="lbl" font-size="10" fill="#8B949E" font-weight="700">10%</text>
+    <rect x="510" y="158" width="34" height="8" rx="4" fill="#8B949E" class="anim-bar d4"/>
+    <text x="768" y="166" class="lbl" font-size="10" fill="#8B949E" font-weight="700">14%</text>
   </g>
 
   <!-- Stacked language bar -->
   <g clip-path="url(#langBarClip)">
     <rect x="510" y="178" width="245" height="7" fill="#21262D"/>
-    <rect x="510" y="178" width="124" height="7" fill="#3776AB"/> <rect x="634" y="178" width="49" height="7" fill="#3178C6"/> <rect x="683" y="178" width="24" height="7" fill="#F7DF1E"/> <rect x="707" y="178" width="24" height="7" fill="#A8B9CC"/> <rect x="731" y="178" width="24" height="7" fill="#8B949E"/>
+    <rect x="510" y="178" width="116" height="7" fill="#3776AB"/> <rect x="626" y="178" width="47" height="7" fill="#3178C6"/> <rect x="673" y="178" width="24" height="7" fill="#E34F26"/> <rect x="697" y="178" width="24" height="7" fill="#F7DF1E"/> <rect x="721" y="178" width="34" height="7" fill="#8B949E"/>
   </g>
 
   <!-- Legend -->
-  <circle cx="510" cy="198" r="3" fill="#3776AB"/><text x="516" y="201" class="lbl" font-size="8.5" fill="#8B949E">Py</text> <circle cx="540" cy="198" r="3" fill="#3178C6"/><text x="546" y="201" class="lbl" font-size="8.5" fill="#8B949E">TS</text> <circle cx="570" cy="198" r="3" fill="#F7DF1E"/><text x="576" y="201" class="lbl" font-size="8.5" fill="#8B949E">JS</text> <circle cx="600" cy="198" r="3" fill="#A8B9CC"/><text x="606" y="201" class="lbl" font-size="8.5" fill="#8B949E">C</text> <circle cx="624" cy="198" r="3" fill="#8B949E"/><text x="630" y="201" class="lbl" font-size="8.5" fill="#8B949E">Other</text>
+  <circle cx="510" cy="198" r="3" fill="#3776AB"/><text x="516" y="201" class="lbl" font-size="8.5" fill="#8B949E">Py</text> <circle cx="540" cy="198" r="3" fill="#3178C6"/><text x="546" y="201" class="lbl" font-size="8.5" fill="#8B949E">TS</text> <circle cx="570" cy="198" r="3" fill="#E34F26"/><text x="576" y="201" class="lbl" font-size="8.5" fill="#8B949E">HTML</text> <circle cx="612" cy="198" r="3" fill="#F7DF1E"/><text x="618" y="201" class="lbl" font-size="8.5" fill="#8B949E">JS</text> <circle cx="642" cy="198" r="3" fill="#8B949E"/><text x="648" y="201" class="lbl" font-size="8.5" fill="#8B949E">Other</text>
 
   <!-- Blinking cursor -->
   <rect x="836" y="200" width="7" height="11" rx="1" fill="#3FB950" opacity="0.75">
